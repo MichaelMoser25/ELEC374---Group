@@ -1,0 +1,18 @@
+module MemoryDataRegister #(parameter INIT = 32'h0)(
+// MDMux
+input [31:0]BusMuxOut, input [31:0]Mdatain,
+input Read,
+// MDR
+input clr, input clk, input write,
+
+output MDRout
+
+);
+reg [31:0] data;
+always @(posedge clk) 
+	begin
+	if(clr)
+	
+	end
+	
+endmodule
