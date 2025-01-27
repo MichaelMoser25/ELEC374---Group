@@ -1,0 +1,24 @@
+module ALU ( 
+input wire [31:0] A, B,
+input wire [3:0]  op,
+output reg [7:0]  result
+);
+
+
+/* OPERATORS:
+	0 : or
+	1 : and
+	2 : not
+*/
+always @(*) begin
+	case(op)
+				0		: result = (A|B);
+				1		: result = (A&B);
+				2		: result = !A;
+
+				default: result = A;
+	endcase
+end
+
+endmodule
+
