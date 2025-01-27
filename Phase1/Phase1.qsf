@@ -58,3 +58,5 @@ set_global_assignment -name VERILOG_FILE register.v
 set_global_assignment -name VERILOG_FILE Bus.v
 set_global_assignment -name VERILOG_FILE MDR.v
 set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE CLA_4bit.v
+set_global_assignment -name VERILOG_FILE CLA_32bit.v
