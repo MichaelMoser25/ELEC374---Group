@@ -1,5 +1,5 @@
 Flow report for Phase1
-Tue Jan 28 20:19:52 2025
+Tue Jan 28 20:52:27 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Jan 28 20:19:52 2025       ;
+; Flow Status                     ; Successful - Tue Jan 28 20:52:27 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
-; Top-level Entity Name           ; CLA_4bit                                    ;
+; Top-level Entity Name           ; CLA_32bit                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 7 / 18,480 ( < 1 % )                        ;
+; Logic utilization (in ALMs)     ; 71 / 18,480 ( < 1 % )                       ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 14 / 224 ( 6 % )                            ;
+; Total pins                      ; 99 / 224 ( 44 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/28/2025 20:19:20 ;
+; Start date & time ; 01/28/2025 20:51:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -79,33 +79,38 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251545081669246.173811356037780        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251545081669246.173811550708188        ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CLA_4bit_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CLA_32bit_tb                           ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; CLA_32bit_tb.v                         ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_4bit_tb.v                          ; --            ; --          ; CLA_4bit_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; CLA_32bit_tb                           ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_4bit_tb                            ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_TEST_BENCH_NAME                  ; CLA_4bit_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; CLA_32bit_tb                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 110 ns                                 ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                 ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; CLA_4bit    ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; CLA_32bit   ; Top                               ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; CLA_4bit    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; CLA_32bit   ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; CLA_4bit    ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; CLA_32bit   ; Top                               ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; CLA_4bit                               ; Phase1        ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; CLA_32bit                              ; Phase1        ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -114,12 +119,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4832 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:15     ; 1.0                     ; 6807 MB             ; 00:01:10                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4818 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 5137 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4716 MB             ; 00:00:01                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:01:29                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4834 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:23     ; 1.0                     ; 6820 MB             ; 00:01:55                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4819 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 5142 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:02:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

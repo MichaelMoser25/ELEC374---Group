@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Jan 28 20:19:42 2025
+Fitter Status : Successful - Tue Jan 28 20:52:17 2025
 Quartus Prime Version : 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 Revision Name : Phase1
-Top-level Entity Name : CLA_4bit
+Top-level Entity Name : CLA_32bit
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 7 / 18,480 ( < 1 % )
+Logic utilization (in ALMs) : 71 / 18,480 ( < 1 % )
 Total registers : 0
-Total pins : 14 / 224 ( 6 % )
+Total pins : 99 / 224 ( 44 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )

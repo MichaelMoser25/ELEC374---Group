@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Tue Jan 28 20:19:26 2025
+Tue Jan 28 20:51:53 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 28 20:19:26 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jan 28 20:51:53 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
-; Top-level Entity Name           ; CLA_4bit                                    ;
+; Top-level Entity Name           ; CLA_32bit                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 14                                          ;
+; Total pins                      ; 99                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; CLA_4bit           ; Phase1             ;
+; Top-level entity name                                                           ; CLA_32bit          ; Phase1             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -166,49 +166,58 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v  ;         ;
+; CLA_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 7          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 11         ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 2          ;
-;     -- 5 input functions                    ; 2          ;
-;     -- 4 input functions                    ; 1          ;
-;     -- <=3 input functions                  ; 6          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 14         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; A[0]~input ;
-; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 59         ;
-; Average fan-out                             ; 1.51       ;
-+---------------------------------------------+------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 71           ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 115          ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 26           ;
+;     -- 5 input functions                    ; 24           ;
+;     -- 4 input functions                    ; 18           ;
+;     -- <=3 input functions                  ; 47           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 99           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; select~input ;
+; Maximum fan-out                             ; 56           ;
+; Total fan-out                               ; 595          ;
+; Average fan-out                             ; 1.90         ;
++---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |CLA_4bit                  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |CLA_4bit           ; CLA_4bit    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |CLA_32bit                 ; 115 (13)            ; 0 (0)                     ; 0                 ; 0          ; 99   ; 0            ; |CLA_32bit                 ; CLA_32bit   ; work         ;
+;    |CLA_4bit:adder1|       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder1 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder2|       ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder2 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder3|       ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder3 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder4|       ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder4 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder5|       ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder5 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder6|       ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder6 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder7|       ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder7 ; CLA_4bit    ; work         ;
+;    |CLA_4bit:adder8|       ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CLA_32bit|CLA_4bit:adder8 ; CLA_4bit    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -232,17 +241,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
-; boundary_port         ; 14                          ;
+; arriav_lcell_comb     ; 115                         ;
+;     normal            ; 115                         ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 26                          ;
+; boundary_port         ; 99                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.90                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 7.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Tue Jan 28 20:19:19 2025
+    Info: Processing started: Tue Jan 28 20:51:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -283,8 +292,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file fulladd
     Info (12023): Found entity 1: fulladd File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/fulladd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit_tb.v
     Info (12023): Found entity 1: CLA_4bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit_tb.v
+    Info (12023): Found entity 1: CLA_32bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit_tb.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(51): created implicit net for "BusMuxOut" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 51
-Info (12127): Elaborating entity "CLA_4bit" for the top level hierarchy
+Info (12127): Elaborating entity "CLA_32bit" for the top level hierarchy
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Phase1 -section_id Top was ignored
@@ -313,14 +325,14 @@ Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Phase1 -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 11 logic cells
+Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 115 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Tue Jan 28 20:19:26 2025
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Tue Jan 28 20:51:53 2025
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 
