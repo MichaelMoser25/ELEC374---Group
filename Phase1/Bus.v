@@ -4,8 +4,9 @@ module Bus (
 	input [31:0]BusMuxInR4, input [31:0]BusMuxInR5, input [31:0]BusMuxInR6, input [31:0]BusMuxInR7,
 	input [31:0]BusMuxInR8, input [31:0]BusMuxInR9, input [31:0]BusMuxInR10, input [31:0]BusMuxInR11,
 	input [31:0]BusMuxInR12,input [31:0]BusMuxInR13, input [31:0]BusMuxInR14, input [31:0]BusMuxInR15, 
-	input [31:0]BusMuxIn-LO, input [31:0]BusMuxIn-HI, input [31:0]BusMuxIn-Zhigh, input [31:0]BusMuxIn-Zlow,
-	input [31:0]BusMuxIn-PC, input [31:0]BusMuxIn-MDR, input [31:0]BusMuxIn_InPort, input [31:0]C_sign_extended,
+	input [31:0]BusMuxIn_LO, input [31:0]BusMuxIn_HI, input [31:0]BusMuxIn_Zhigh, input [31:0]BusMuxIn_Zlow,
+	input [31:0]BusMuxIn_PC, input [31:0]BusMuxIn_MDR, input [31:0]BusMuxIn_InPort, input [31:0]C_sign_extended,
+	//Get rid of __?
 	//Encoder
 	input R0out, input R1out, input R2out, input R3out, 
 	input R4out, input R5out, input R6out, input R7out, 
@@ -37,12 +38,12 @@ always @ (*) begin
 	if(R13out) q = BusMuxInR13;
 	if(R14out) q = BusMuxInR14;
 	if(R15out) q = BusMuxInR15;
-	if(HIout) q = BusMuxIn-HI;
-	if(LOout) q = BusMuxIn-LO;
-	if(Zhighout) q = BusMuxIn-Zhigh;
-	if(Zlowout) q = BusMuxIn-Zlow;
-	if(PCout) q = BusMuxIn-PC;
-	if(MDRout) q = BusMuxIn-MDR;
+	if(HIout) q = BusMuxIn_HI;
+	if(LOout) q = BusMuxIn_LO;
+	if(Zhighout) q = BusMuxIn_Zhigh;
+	if(Zlowout) q = BusMuxIn_Zlow;
+	if(PCout) q = BusMuxIn_PC;
+	if(MDRout) q = BusMuxIn_MDR;
 	if(InPortout) q = BusMuxIn_InPort;
 	if(Cout) q = C_sign_extended;
 end

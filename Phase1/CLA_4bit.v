@@ -1,8 +1,8 @@
 module CLA_4bit(
-input [3:0]  A, B,
-input Cin,
-output reg [3:0]  sum,
-output Cout
+input wire [3:0]  A, B,
+input  wire Cin,
+output wire [3:0] sum,
+output wire Cout
 );
 wire P0, P1, P2, P3;
 wire G0, G1, G2, G3;
@@ -23,10 +23,10 @@ assign C2 = G1 | P1&G0 | P1&P0&Cin;
 assign C3 = G2 | P2&G1 | P2&P1&C1 | P2&P1&P0&Cin;
 assign C4 = G3 | P3&G2 | P3&P2&C2 | P3&P2&P1&C1 | P3&P2&P1&P0&Cin;
 
-assign S[0] = P0^Cin
-assign S[1] = P1^C1
-assign S[2] = P2^C2
-assign S[3] = P3^C3	
+assign sum[0] = P0^Cin;
+assign sum[1] = P1^C1;
+assign sum[2] = P2^C2;
+assign sum[3] = P3^C3;
 assign Cout = C4;
 
 endmodule

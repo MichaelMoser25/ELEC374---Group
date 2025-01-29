@@ -6,7 +6,7 @@ module fulladd (
 	output wire sum
 );
 
-	assign sum = a^b^c;
+	assign sum = a^b^cin;
 	assign cout = a&b | a&cin | b&cin;
 
 endmodule

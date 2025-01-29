@@ -12,7 +12,7 @@ reg [31:0] operand;
 
 always @(*) begin
 	if (select==1) begin
-		operand = (~B) +1;
+		operand = (~B);
 	end else operand = B;
 end
 	
