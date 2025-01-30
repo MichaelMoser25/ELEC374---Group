@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Tue Jan 28 20:51:53 2025
+Thu Jan 30 16:36:17 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 28 20:51:53 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jan 30 16:36:17 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; CLA_32bit                                   ;
@@ -155,8 +155,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -171,8 +171,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v  ;         ;
-; CLA_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v ;         ;
+; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_4bit.v  ;         ;
+; CLA_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit.v ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
 
 
@@ -270,33 +270,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Tue Jan 28 20:51:46 2025
+    Info: Processing started: Thu Jan 30 16:35:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 1
+    Info (12023): Found entity 1: Bus File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Bus.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
-    Info (12023): Found entity 1: MemoryDataRegister File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/MDR.v Line: 1
+    Info (12023): Found entity 1: MemoryDataRegister File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/MDR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit.v
-    Info (12023): Found entity 1: CLA_4bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v Line: 1
+    Info (12023): Found entity 1: CLA_4bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_4bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit.v
-    Info (12023): Found entity 1: CLA_32bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 1
+    Info (12023): Found entity 1: CLA_32bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divider_cell.v
-    Info (12023): Found entity 1: divider_cell File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/divider_cell.v Line: 1
+    Info (12023): Found entity 1: divider_cell File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladd.v
-    Info (12023): Found entity 1: fulladd File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/fulladd.v Line: 1
+    Info (12023): Found entity 1: fulladd File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/fulladd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit_tb.v
-    Info (12023): Found entity 1: CLA_4bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit_tb.v Line: 3
+    Info (12023): Found entity 1: CLA_4bit_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_4bit_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit_tb.v
-    Info (12023): Found entity 1: CLA_32bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit_tb.v Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(51): created implicit net for "BusMuxOut" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 51
+    Info (12023): Found entity 1: CLA_32bit_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file array_divider.v
+    Info (12023): Found entity 1: array_divider File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rca_4bit.v
+    Info (12023): Found entity 1: RCA_4bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1_1bit.v
+    Info (12023): Found entity 1: mux_2_1_1bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Bus.v(51): created implicit net for "BusMuxOut" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Bus.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at divider_cell.v(13): created implicit net for "ain" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v Line: 13
 Info (12127): Elaborating entity "CLA_32bit" for the top level hierarchy
-Info (12128): Elaborating entity "CLA_4bit" for hierarchy "CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 20
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Phase1 -section_id Top was ignored
@@ -329,10 +336,10 @@ Info (21057): Implemented 214 device resources after synthesis - the final resou
     Info (21058): Implemented 66 input pins
     Info (21059): Implemented 33 output pins
     Info (21061): Implemented 115 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Jan 28 20:51:53 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Thu Jan 30 16:36:17 2025
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:10
 
 

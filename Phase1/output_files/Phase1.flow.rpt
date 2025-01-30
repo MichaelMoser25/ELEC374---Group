@@ -1,5 +1,5 @@
 Flow report for Phase1
-Tue Jan 28 20:52:27 2025
+Thu Jan 30 16:37:03 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Jan 28 20:52:27 2025       ;
+; Flow Status                     ; Successful - Thu Jan 30 16:37:03 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; CLA_32bit                                   ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/28/2025 20:51:47 ;
+; Start date & time ; 01/30/2025 16:35:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251545081669246.173811550708188        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 1098028399810.173827294705388          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
@@ -119,26 +119,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4834 MB             ; 00:00:15                           ;
-; Fitter               ; 00:00:23     ; 1.0                     ; 6820 MB             ; 00:01:55                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4819 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 5142 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:02:16                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4816 MB             ; 00:00:10                           ;
+; Fitter               ; 00:00:26     ; 1.0                     ; 6248 MB             ; 00:00:24                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4821 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5061 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
+; Total                ; 00:01:12     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+----------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname     ; OS Name    ; OS Version ; Processor type ;
++----------------------+----------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+----------------------+------------+------------+----------------+
 
 
 ------------
