@@ -10,6 +10,6 @@ module divider_cell(
 	assign modeout = modein;
 	assign bout = bin;
 	
-	fulladd FA(wXor, ain, cin, cout, sum); 
+	fulladd FA(wXor, a, cin, cout, sum); 
 	
 endmodule

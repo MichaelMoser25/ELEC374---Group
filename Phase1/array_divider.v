@@ -1,9 +1,9 @@
 module array_divider (
-	input wire [6:0] a,
-	input wire [3:0] b,
-	input wire mode,
-	output wire [3:0] q,
-	output wire [3:0] r
+	input [6:0] a,
+	input [3:0] b,
+	input	mode,
+	output [3:0] q,
+	output [3:0] r
 );
 
 	wire mode1, mode2, mode3, mode4;
@@ -45,7 +45,7 @@ module array_divider (
 	divider_cell inst11(sum8, bout7, cout12, mode10, bout11, cout11, sum11, mode11);
 	divider_cell inst12(a[1], bout8, mode12, mode11, bout12, cout12, sum12, mode12);
 	
-	divider_cell inst13(sum10, bout9, cout14, cout9, bout13, cout10, sum13, mode13);
+	divider_cell inst13(sum10, bout9, cout14, cout9, bout13, cout13, sum13, mode13);
 	divider_cell inst14(sum11, bout10, cout15, mode13, bout14, cout14, sum14, mode14);
 	divider_cell inst15(sum12, bout11, cout16, mode14, bout15, cout15, sum15, mode15);
 	divider_cell inst16(a[0], bout12, mode16, mode15, bout16, cout16, sum16, mode16);

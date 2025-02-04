@@ -1,397 +1,556 @@
-|CLA_32bit
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => A[8].IN1
-A[9] => A[9].IN1
-A[10] => A[10].IN1
-A[11] => A[11].IN1
-A[12] => A[12].IN1
-A[13] => A[13].IN1
-A[14] => A[14].IN1
-A[15] => A[15].IN1
-A[16] => A[16].IN1
-A[17] => A[17].IN1
-A[18] => A[18].IN1
-A[19] => A[19].IN1
-A[20] => A[20].IN1
-A[21] => A[21].IN1
-A[22] => A[22].IN1
-A[23] => A[23].IN1
-A[24] => A[24].IN1
-A[25] => A[25].IN1
-A[26] => A[26].IN1
-A[27] => A[27].IN1
-A[28] => A[28].IN1
-A[29] => A[29].IN1
-A[30] => A[30].IN1
-A[31] => A[31].IN1
-B[0] => operand.DATAA
-B[0] => operand.DATAB
-B[1] => operand.DATAA
-B[1] => operand.DATAB
-B[2] => operand.DATAA
-B[2] => operand.DATAB
-B[3] => operand.DATAA
-B[3] => operand.DATAB
-B[4] => operand.DATAA
-B[4] => operand.DATAB
-B[5] => operand.DATAA
-B[5] => operand.DATAB
-B[6] => operand.DATAA
-B[6] => operand.DATAB
-B[7] => operand.DATAA
-B[7] => operand.DATAB
-B[8] => operand.DATAA
-B[8] => operand.DATAB
-B[9] => operand.DATAA
-B[9] => operand.DATAB
-B[10] => operand.DATAA
-B[10] => operand.DATAB
-B[11] => operand.DATAA
-B[11] => operand.DATAB
-B[12] => operand.DATAA
-B[12] => operand.DATAB
-B[13] => operand.DATAA
-B[13] => operand.DATAB
-B[14] => operand.DATAA
-B[14] => operand.DATAB
-B[15] => operand.DATAA
-B[15] => operand.DATAB
-B[16] => operand.DATAA
-B[16] => operand.DATAB
-B[17] => operand.DATAA
-B[17] => operand.DATAB
-B[18] => operand.DATAA
-B[18] => operand.DATAB
-B[19] => operand.DATAA
-B[19] => operand.DATAB
-B[20] => operand.DATAA
-B[20] => operand.DATAB
-B[21] => operand.DATAA
-B[21] => operand.DATAB
-B[22] => operand.DATAA
-B[22] => operand.DATAB
-B[23] => operand.DATAA
-B[23] => operand.DATAB
-B[24] => operand.DATAA
-B[24] => operand.DATAB
-B[25] => operand.DATAA
-B[25] => operand.DATAB
-B[26] => operand.DATAA
-B[26] => operand.DATAB
-B[27] => operand.DATAA
-B[27] => operand.DATAB
-B[28] => operand.DATAA
-B[28] => operand.DATAB
-B[29] => operand.DATAA
-B[29] => operand.DATAB
-B[30] => operand.DATAA
-B[30] => operand.DATAB
-B[31] => operand.DATAA
-B[31] => operand.DATAB
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-select => operand.OUTPUTSELECT
-Cin => Cin.IN1
-sum[0] << CLA_4bit:adder1.port3
-sum[1] << CLA_4bit:adder1.port3
-sum[2] << CLA_4bit:adder1.port3
-sum[3] << CLA_4bit:adder1.port3
-sum[4] << CLA_4bit:adder2.port3
-sum[5] << CLA_4bit:adder2.port3
-sum[6] << CLA_4bit:adder2.port3
-sum[7] << CLA_4bit:adder2.port3
-sum[8] << CLA_4bit:adder3.port3
-sum[9] << CLA_4bit:adder3.port3
-sum[10] << CLA_4bit:adder3.port3
-sum[11] << CLA_4bit:adder3.port3
-sum[12] << CLA_4bit:adder4.port3
-sum[13] << CLA_4bit:adder4.port3
-sum[14] << CLA_4bit:adder4.port3
-sum[15] << CLA_4bit:adder4.port3
-sum[16] << CLA_4bit:adder5.port3
-sum[17] << CLA_4bit:adder5.port3
-sum[18] << CLA_4bit:adder5.port3
-sum[19] << CLA_4bit:adder5.port3
-sum[20] << CLA_4bit:adder6.port3
-sum[21] << CLA_4bit:adder6.port3
-sum[22] << CLA_4bit:adder6.port3
-sum[23] << CLA_4bit:adder6.port3
-sum[24] << CLA_4bit:adder7.port3
-sum[25] << CLA_4bit:adder7.port3
-sum[26] << CLA_4bit:adder7.port3
-sum[27] << CLA_4bit:adder7.port3
-sum[28] << CLA_4bit:adder8.port3
-sum[29] << CLA_4bit:adder8.port3
-sum[30] << CLA_4bit:adder8.port3
-sum[31] << CLA_4bit:adder8.port3
-Cout << CLA_4bit:adder8.port4
+|array_divider
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+mode => mode.IN1
+q[0] << cout13.DB_MAX_OUTPUT_PORT_TYPE
+q[1] << cout9.DB_MAX_OUTPUT_PORT_TYPE
+q[2] << cout5.DB_MAX_OUTPUT_PORT_TYPE
+q[3] << cout1.DB_MAX_OUTPUT_PORT_TYPE
+r[0] << mux_2_1_1bit:mux0.port3
+r[1] << mux_2_1_1bit:mux1.port3
+r[2] << mux_2_1_1bit:mux2.port3
+r[3] << mux_2_1_1bit:mux3.port3
 
 
-|CLA_32bit|CLA_4bit:adder1
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst1
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder2
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst1|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder3
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst2
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder4
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst2|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder5
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst3
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder6
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst3|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder7
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst4
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CLA_32bit|CLA_4bit:adder8
-A[0] => P0.IN0
-A[0] => G0.IN0
-A[1] => P1.IN0
-A[1] => G1.IN0
-A[2] => P2.IN0
-A[2] => G2.IN0
-A[3] => P3.IN0
-A[3] => G3.IN0
-B[0] => P0.IN1
-B[0] => G0.IN1
-B[1] => P1.IN1
-B[1] => G1.IN1
-B[2] => P2.IN1
-B[2] => G2.IN1
-B[3] => P3.IN1
-B[3] => G3.IN1
-Cin => C1.IN1
-Cin => C2.IN1
-Cin => C3.IN1
-Cin => C4.IN1
-Cin => sum.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= C4.DB_MAX_OUTPUT_PORT_TYPE
+|array_divider|divider_cell:inst4|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst5
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst5|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst6
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst6|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst7
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst7|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst8
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst8|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst9
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst9|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst10
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst10|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst11
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst11|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst12
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst12|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst13
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst13|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst14
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst14|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst15
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst15|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst16
+a => a.IN1
+bin => comb.IN0
+bin => bout.DATAIN
+cin => cin.IN1
+modein => comb.IN1
+modein => modeout.DATAIN
+bout <= bin.DB_MAX_OUTPUT_PORT_TYPE
+cout <= fulladd:FA.port3
+sum <= fulladd:FA.port4
+modeout <= modein.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|divider_cell:inst16|fulladd:FA
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|RCA_4bit:rca
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+c_in => c_in.IN1
+sum[0] <= fulladd:add1.port4
+sum[1] <= fulladd:add2.port4
+sum[2] <= fulladd:add3.port4
+sum[3] <= fulladd:add4.port4
+c_out <= fulladd:add4.port3
+
+
+|array_divider|RCA_4bit:rca|fulladd:add1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|RCA_4bit:rca|fulladd:add2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|RCA_4bit:rca|fulladd:add3
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|RCA_4bit:rca|fulladd:add4
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|mux_2_1_1bit:mux0
+data_1 => mux_out.DATAB
+data_0 => mux_out.DATAA
+select => mux_out.OUTPUTSELECT
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|mux_2_1_1bit:mux1
+data_1 => mux_out.DATAB
+data_0 => mux_out.DATAA
+select => mux_out.OUTPUTSELECT
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|mux_2_1_1bit:mux2
+data_1 => mux_out.DATAB
+data_0 => mux_out.DATAA
+select => mux_out.OUTPUTSELECT
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|array_divider|mux_2_1_1bit:mux3
+data_1 => mux_out.DATAB
+data_0 => mux_out.DATAA
+select => mux_out.OUTPUTSELECT
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
