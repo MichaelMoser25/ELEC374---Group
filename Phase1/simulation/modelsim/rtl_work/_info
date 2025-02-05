@@ -7,137 +7,92 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/simulation/modelsim
-varray_divider
-Z1 !s110 1738606944
+Z0 dC:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/simulation/modelsim
+varithmetic_shift_right
+Z1 !s110 1738714264
 !i10b 1
-!s100 Sm9Ob42YQL??ZHP?ho9zz1
-ICgf:3DWj6oE`d<VaHiCM83
+!s100 Wj;0K2FC`bSYbK>ZV=K`l1
+IaBONb=^lFP9J_`2YElJDG0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1738603516
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider.v
-L0 1
-Z3 OV;L;10.5b;63
+Z3 w1738704088
+Z4 8C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v
+Z5 FC:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v
+L0 19
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1738606944.000000
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider.v|
+Z7 !s108 1738714264.000000
+Z8 !s107 C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v|
 !i113 1
-Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1
-Z7 tCvgOpt 0
-varray_divider_tb
-!s110 1738606945
-!i10b 1
-!s100 =0dC6[6XII=8<8=Bn>oel2
-I<8D=JH`m<;;gg2RNcV:O[3
-R2
-R0
-w1738606798
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider_tb.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider_tb.v
-L0 3
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/array_divider_tb.v|
-!i113 1
-R5
-R6
-R7
-vdivider_cell
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1
+Z12 tCvgOpt 0
+vshift_left
 R1
 !i10b 1
-!s100 ZBVk8P]njji<f]J_9_EMo2
-ITFiVmbnWmH1U7CC[hETXk1
+!s100 <ITFWA^[QEVAlziad6YAF0
+II@9T:hX[_GbH`^?dV9=nD2
 R2
 R0
-w1738605902
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v
-L0 1
 R3
+R4
+R5
+L0 1
+R6
 r1
 !s85 0
 31
-R4
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/divider_cell.v|
-!i113 1
-R5
-R6
 R7
-vfulladd
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vshift_right
 R1
 !i10b 1
-!s100 ZW_X[nDCFM_bbQ3CRfNBe1
-IB]YGTeME=KZDDc8jV<8Lg1
+!s100 ]Hml8o`PSCLI^fQ59:m672
+ImSHW6KjWmdd7k5IJlnnUC3
 R2
 R0
-w1738173985
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/fulladd.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/fulladd.v
-L0 1
 R3
+R4
+R5
+L0 10
+R6
 r1
 !s85 0
 31
-R4
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/fulladd.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/fulladd.v|
-!i113 1
-R5
-R6
 R7
-vmux_2_1_1bit
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vsr_tb
 R1
 !i10b 1
-!s100 PQlG1;8@ob7;JLz@A=1fg0
-IL_DNaPE78395XEMhVUkol2
+!s100 N6J6Rm=Iz02@YMRn^70@>3
+I4WjCfh;<Dz^?L0C5V_aGZ3
 R2
 R0
-w1738272753
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v
-L0 1
-R3
+w1738714061
+8C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations_tb.v
+FC:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations_tb.v
+L0 2
+R6
 r1
 !s85 0
 31
-R4
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v|
-!i113 1
-R5
-R6
 R7
-vRCA_4bit
-R1
-!i10b 1
-!s100 JR<:PA7L;0[e?P8OgTdGC3
-Ikl895_]D7DRo5EmRGGdG50
-R2
-R0
-w1738270455
-8C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v
-FC:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v|
+!s107 C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1|C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations_tb.v|
 !i113 1
-R5
-R6
-R7
-n@r@c@a_4bit
+R10
+R11
+R12
