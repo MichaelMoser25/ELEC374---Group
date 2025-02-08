@@ -1,22 +1,20 @@
-module register #(parameter DATA_WIDTH_IN = 32, DATA_WIDTH_OUT = 32, INIT = 32'h0)(
+module register (
 input clr, clk, write,
-input [DATA_WIDTH_IN-1:0] BusMuxOut,
-output wire [DATA_WIDTH_OUT-1:0] BusMuxIn
+input [31:0] BusMuxOut,
+output reg [31:0] q
 );
 
-reg [DATA_WIDTH_IN-1:0]q;
-initial q = INIT;
+initial q = 0;
 
 always @ (posedge clk) begin
 	if (clr) begin
-		q <= {DATA_WIDTH_IN{1'b0}};
+		q = 0;
 	end
 	else if (write) begin
-		q <= BusMuxOut;
+		q = BusMuxOut;
 	end
 end
 
-assign BusMuxIn = q[DATA_WIDTH_OUT-1:0];
 endmodule
 					
 

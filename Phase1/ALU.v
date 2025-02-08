@@ -5,7 +5,7 @@ output reg [63:0]  result
 );
 	
 	
-wire [31:0] ADD, SUB, AND, OR, ROR, ROL, SHR, SHRA, SHL, DIV, MUL, NEG, NOT;
+wire [31:0] ADD, SUB, AND, OR, ROR, ROL, SHR, SHRA, SHL, DIVHI, DIVLO, MUL, NEG, NOT;
 wire ADD_cout, SUB_cout;
 
 /* Operations specified:
@@ -77,8 +77,8 @@ always @(*) begin
 						end
 						
 		01111		:	begin
-							result[63:32] = 0;
-							result[31:0] = DIV;
+							result[63:32] = DIVHI;
+							result[31:0] = DIVLO;
 						end
 						
 		10000		:	begin
@@ -103,36 +103,36 @@ always @(*) begin
 end
 
 
- CLA_32bit adder (
+CLA_32bit adder (
 	  .A(A),
 	  .B(B),
-	  .select(0),
-	  .Cin(0),
+	  .select(1'b0),
+	  .Cin(1'b0),
 	  .sum(ADD),
 	  .Cout(ADD_cout)
  );
-	  CLA_32bit subtractor (
+CLA_32bit subtractor (
 	  .A(A),
 	  .B(B),
-	  .select(1),
-	  .Cin(1),
+	  .select(1'b1),
+	  .Cin(1'b1),
 	  .sum(SUB),
 	  .Cout(SUB_cout)
  );
- 
-		logic_and l_and (
-		.A(A),
-		.B(B),
-		.result(AND)
- );
 
-	 logic_or l_or (
-		 .A(A),
-		 .B(B),
-		 .result(OR)
-	);
-	
-	shift_left s_left (
+logic_and l_and (
+	.A(A),
+	.B(B),
+	.result(AND)
+);
+
+logic_or l_or (
+	 .A(A),
+	 .B(B),
+	 .result(OR)
+);
+
+shift_left s_left (
     .data_in(A),
     .shift_val(B),
     .data_out(SHL)
@@ -162,16 +162,25 @@ rotate_right r_right (
     .data_out(ROR)
 );
 	
+	
+NRdiv divider (
+	.dividend(A),
+	.divisor(B),
+	.quotient(DIVHI),
+	.remainder(DIVLO)
+);
 
-	logic_not l_not (
-		 .A(A),
-		 .result(NOT)
-	);
+logic_not l_not (
+	 .A(A),
+	 .result(NOT)
+);
 
-	logic_negate l_neg (
-		 .A(A),
-		 .result(NEG)
-	);
+logic_negate l_neg (
+	 .A(A),
+	 .result(NEG)
+);
+
+
 
 endmodule
 

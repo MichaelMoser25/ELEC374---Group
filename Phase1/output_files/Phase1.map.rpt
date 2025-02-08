@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Tue Feb 04 20:29:00 2025
+Fri Feb 07 21:39:45 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -13,21 +13,25 @@ Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "logic_negate:l_neg"
- 10. Port Connectivity Checks: "logic_not:l_not"
- 11. Port Connectivity Checks: "rotate_right:r_right"
- 12. Port Connectivity Checks: "rotate_left:r_left"
- 13. Port Connectivity Checks: "arithmetic_shift_right:s_right_a"
- 14. Port Connectivity Checks: "shift_right:s_right"
- 15. Port Connectivity Checks: "shift_left:s_left"
- 16. Port Connectivity Checks: "logic_or:l_or"
- 17. Port Connectivity Checks: "logic_and:l_and"
- 18. Port Connectivity Checks: "CLA_32bit:subtractor"
- 19. Port Connectivity Checks: "CLA_32bit:adder"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "ALU:alu_unit|logic_negate:l_neg"
+ 12. Port Connectivity Checks: "ALU:alu_unit|logic_not:l_not"
+ 13. Port Connectivity Checks: "ALU:alu_unit|NRdiv:divider"
+ 14. Port Connectivity Checks: "ALU:alu_unit|rotate_right:r_right"
+ 15. Port Connectivity Checks: "ALU:alu_unit|rotate_left:r_left"
+ 16. Port Connectivity Checks: "ALU:alu_unit|arithmetic_shift_right:s_right_a"
+ 17. Port Connectivity Checks: "ALU:alu_unit|shift_right:s_right"
+ 18. Port Connectivity Checks: "ALU:alu_unit|shift_left:s_left"
+ 19. Port Connectivity Checks: "ALU:alu_unit|logic_or:l_or"
+ 20. Port Connectivity Checks: "ALU:alu_unit|logic_and:l_and"
+ 21. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:subtractor"
+ 22. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:adder"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,14 +58,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 04 20:29:00 2025       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 07 21:39:45 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
-; Top-level Entity Name           ; ALU                                         ;
+; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 133                                         ;
+; Total registers                 ; 704                                         ;
+; Total pins                      ; 155                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -80,9 +84,10 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; ALU                ; Phase1             ;
+; Top-level entity name                                                           ; Datapath           ; Phase1             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
+; Use smart compilation                                                           ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
@@ -170,10 +175,15 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processors 6-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -182,58 +192,100 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; register.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/register.v                ;         ;
+; Bus.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v                     ;         ;
+; MDR.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/MDR.v                     ;         ;
 ; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v                     ;         ;
 ; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v                ;         ;
 ; CLA_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v               ;         ;
 ; shift_rotate_operations.v        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v ;         ;
 ; logic_operations.v               ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v        ;         ;
+; NRdiv.v                          ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv.v                   ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v                ;         ;
+; pc_register.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/pc_register.v             ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 64       ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 101      ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 26       ;
-;     -- 5 input functions                    ; 10       ;
-;     -- 4 input functions                    ; 44       ;
-;     -- <=3 input functions                  ; 21       ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 133      ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; Equal0~0 ;
-; Maximum fan-out                             ; 32       ;
-; Total fan-out                               ; 593      ;
-; Average fan-out                             ; 1.62     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 555       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 647       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 260       ;
+;     -- 5 input functions                    ; 115       ;
+;     -- 4 input functions                    ; 171       ;
+;     -- <=3 input functions                  ; 100       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 704       ;
+;                                             ;           ;
+; I/O pins                                    ; 155       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 704       ;
+; Total fan-out                               ; 6074      ;
+; Average fan-out                             ; 3.66      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
-; |ALU                       ; 101 (33)            ; 0 (0)                     ; 0                 ; 0          ; 133  ; 0            ; |ALU                                 ; ALU         ; work         ;
-;    |CLA_32bit:adder|       ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder                 ; CLA_32bit   ; work         ;
-;       |CLA_4bit:adder1|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder1 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder2|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder2 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder3|    ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder3 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder4|    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder4 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder5|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder5 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder6|    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder6 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder7|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder7 ; CLA_4bit    ; work         ;
-;       |CLA_4bit:adder8|    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|CLA_32bit:adder|CLA_4bit:adder8 ; CLA_4bit    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; |Datapath                  ; 647 (0)             ; 704 (0)                   ; 0                 ; 0          ; 155  ; 0            ; |Datapath                                              ; Datapath    ; work         ;
+;    |ALU:alu_unit|          ; 120 (33)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit                                 ; ALU         ; work         ;
+;       |CLA_32bit:adder|    ; 87 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder                 ; CLA_32bit   ; work         ;
+;          |CLA_4bit:adder1| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder2| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder2 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder3| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder3 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder4| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder4 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder5| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder5 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder6| ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder6 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder7| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder7 ; CLA_4bit    ; work         ;
+;          |CLA_4bit:adder8| ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder8 ; CLA_4bit    ; work         ;
+;    |Bus:bus_unit|          ; 473 (473)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|Bus:bus_unit                                 ; Bus         ; work         ;
+;    |pc_register:PC_reg|    ; 33 (33)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|pc_register:PC_reg                           ; pc_register ; work         ;
+;    |register:r0|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r0                                  ; register    ; work         ;
+;    |register:r10|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r10                                 ; register    ; work         ;
+;    |register:r11|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r11                                 ; register    ; work         ;
+;    |register:r12|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r12                                 ; register    ; work         ;
+;    |register:r13|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r13                                 ; register    ; work         ;
+;    |register:r14|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r14                                 ; register    ; work         ;
+;    |register:r15|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r15                                 ; register    ; work         ;
+;    |register:r1|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r1                                  ; register    ; work         ;
+;    |register:r2|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r2                                  ; register    ; work         ;
+;    |register:r3|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r3                                  ; register    ; work         ;
+;    |register:r4|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r4                                  ; register    ; work         ;
+;    |register:r5|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r5                                  ; register    ; work         ;
+;    |register:r6|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r6                                  ; register    ; work         ;
+;    |register:r7|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r7                                  ; register    ; work         ;
+;    |register:r8|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r8                                  ; register    ; work         ;
+;    |register:r9|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r9                                  ; register    ; work         ;
+;    |register:rC|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:rC                                  ; register    ; work         ;
+;    |register:rIR|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:rIR                                 ; register    ; work         ;
+;    |register:rInPort|      ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:rInPort                             ; register    ; work         ;
+;    |register:rY|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:rY                                  ; register    ; work         ;
+;    |register:rZlow|        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:rZlow                               ; register    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; MemoryDataRegister:mdr_unit|data[0..31] ; Lost fanout                            ;
+; register:rZhigh|q[1..31]                ; Merged with register:rZhigh|q[0]       ;
+; register:rZhigh|q[0]                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 64  ;                                        ;
++-----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -241,18 +293,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 704   ;
+; Number of registers using Synchronous Clear  ; 672   ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 704   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rY|q[0]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rC|q[22]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rInPort|q[0]        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rIR|q[0]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|pc_register:PC_reg|pc_out[0] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rZlow|q[0]          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r15|q[0]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r14|q[3]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r13|q[12]           ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r12|q[20]           ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r11|q[0]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r10|q[0]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r9|q[31]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r8|q[4]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r7|q[0]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r6|q[0]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r5|q[8]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r4|q[8]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r3|q[19]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r2|q[30]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r1|q[7]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r0|q[0]             ;
+; 25:1               ; 32 bits   ; 512 LEs       ; 512 LEs              ; 0 LEs                  ; No         ; |Datapath|Bus:bus_unit|Selector27      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "logic_negate:l_neg"                                                                   ;
+; Port Connectivity Checks: "ALU:alu_unit|logic_negate:l_neg"                                                      ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -261,7 +344,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "logic_not:l_not"                                                                      ;
+; Port Connectivity Checks: "ALU:alu_unit|logic_not:l_not"                                                         ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -269,8 +352,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_unit|NRdiv:divider"                                                              ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; quotient  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; remainder ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rotate_right:r_right"                                                                   ;
+; Port Connectivity Checks: "ALU:alu_unit|rotate_right:r_right"                                                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -279,7 +372,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rotate_left:r_left"                                                                     ;
+; Port Connectivity Checks: "ALU:alu_unit|rotate_left:r_left"                                                        ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -288,7 +381,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "arithmetic_shift_right:s_right_a"                                                       ;
+; Port Connectivity Checks: "ALU:alu_unit|arithmetic_shift_right:s_right_a"                                          ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -297,7 +390,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shift_right:s_right"                                                                    ;
+; Port Connectivity Checks: "ALU:alu_unit|shift_right:s_right"                                                       ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -306,7 +399,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shift_left:s_left"                                                                      ;
+; Port Connectivity Checks: "ALU:alu_unit|shift_left:s_left"                                                         ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -315,7 +408,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "logic_or:l_or"                                                                        ;
+; Port Connectivity Checks: "ALU:alu_unit|logic_or:l_or"                                                           ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -324,7 +417,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "logic_and:l_and"                                                                      ;
+; Port Connectivity Checks: "ALU:alu_unit|logic_and:l_and"                                                         ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -332,31 +425,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CLA_32bit:subtractor"                                                                                                                                                                    ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; select     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; select[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; Cin        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Cin[-1]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; sum        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; Cout       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:subtractor"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; select ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cin    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; sum    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Cout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CLA_32bit:adder"                                                                                                                                                                         ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; select     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; select[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; Cin        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Cin[-1]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; Cout       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:adder"                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; select ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cin    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -364,18 +453,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 102                         ;
-;     normal            ; 102                         ;
+; arriav_ff             ; 704                         ;
+;     ENA SCLR          ; 672                         ;
+;     ENA SLD           ; 32                          ;
+; arriav_lcell_comb     ; 648                         ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 32                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 615                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 44                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 26                          ;
-; boundary_port         ; 133                         ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 171                         ;
+;         5 data inputs ; 115                         ;
+;         6 data inputs ; 260                         ;
+; boundary_port         ; 155                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 6.91                        ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 10.51                       ;
 +-----------------------+-----------------------------+
 
 
@@ -384,7 +480,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -394,9 +490,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Tue Feb 04 20:28:52 2025
+    Info: Processing started: Fri Feb 07 21:39:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/register.v Line: 1
@@ -410,22 +505,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file cla_4bi
     Info (12023): Found entity 1: CLA_4bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit.v
     Info (12023): Found entity 1: CLA_32bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file divider_cell.v
-    Info (12023): Found entity 1: divider_cell File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/divider_cell.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fulladd.v
-    Info (12023): Found entity 1: fulladd File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/fulladd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit_tb.v
     Info (12023): Found entity 1: CLA_4bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit_tb.v
     Info (12023): Found entity 1: CLA_32bit_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file array_divider.v
-    Info (12023): Found entity 1: array_divider File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/array_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rca_4bit.v
     Info (12023): Found entity 1: RCA_4bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/RCA_4bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1_1bit.v
-    Info (12023): Found entity 1: mux_2_1_1bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/mux_2_1_1bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file array_divider_tb.v
-    Info (12023): Found entity 1: array_divider_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/array_divider_tb.v Line: 3
 Info (12021): Found 5 design units, including 5 entities, in source file shift_rotate_operations.v
     Info (12023): Found entity 1: shift_left File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 1
     Info (12023): Found entity 2: shift_right File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 10
@@ -439,9 +524,27 @@ Info (12021): Found 4 design units, including 4 entities, in source file logic_o
     Info (12023): Found entity 2: logic_or File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 9
     Info (12023): Found entity 3: logic_not File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 17
     Info (12023): Found entity 4: logic_negate File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(51): created implicit net for "BusMuxOut" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 51
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU.v(8): object DIV used but never assigned File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file nrdiv.v
+    Info (12023): Found entity 1: NRdiv File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nrdiv_tb.v
+    Info (12023): Found entity 1: NRdiv_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv_tb.v Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file boothmul.v
+    Info (12023): Found entity 1: booth_algorithm File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 1
+    Info (12023): Found entity 2: booth_algorithm_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: Datapath File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc_register.v
+    Info (12023): Found entity 1: pc_register File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/pc_register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
+    Info (12023): Found entity 1: Datapath_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_tb.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(55): created implicit net for "MDRout" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 55
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 58
+Warning (10763): Verilog HDL warning at Bus.v(19): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
+Warning (10270): Verilog HDL Case Statement warning at Bus.v(19): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
+Info (12128): Elaborating entity "register" for hierarchy "register:r0" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 61
+Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC_reg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 85
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 100
 Warning (10858): Verilog HDL warning at ALU.v(8): object MUL used but never assigned File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 8
 Warning (10199): Verilog HDL Case Statement warning at ALU.v(38): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 38
 Warning (10199): Verilog HDL Case Statement warning at ALU.v(44): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 44
@@ -455,54 +558,56 @@ Warning (10199): Verilog HDL Case Statement warning at ALU.v(79): case item expr
 Warning (10199): Verilog HDL Case Statement warning at ALU.v(84): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 84
 Warning (10199): Verilog HDL Case Statement warning at ALU.v(90): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 90
 Warning (10199): Verilog HDL Case Statement warning at ALU.v(95): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 95
-Info (12128): Elaborating entity "CLA_32bit" for hierarchy "CLA_32bit:adder" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 113
-Info (12128): Elaborating entity "CLA_4bit" for hierarchy "CLA_32bit:adder|CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 20
-Info (12128): Elaborating entity "logic_and" for hierarchy "logic_and:l_and" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 127
-Info (12128): Elaborating entity "logic_or" for hierarchy "logic_or:l_or" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 133
-Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:s_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 139
-Info (12128): Elaborating entity "shift_right" for hierarchy "shift_right:s_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 145
-Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "arithmetic_shift_right:s_right_a" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 151
-Info (12128): Elaborating entity "rotate_left" for hierarchy "rotate_left:r_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 157
+Info (12128): Elaborating entity "CLA_32bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 113
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 20
+Info (12128): Elaborating entity "logic_and" for hierarchy "ALU:alu_unit|logic_and:l_and" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 127
+Info (12128): Elaborating entity "logic_or" for hierarchy "ALU:alu_unit|logic_or:l_or" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 133
+Info (12128): Elaborating entity "shift_left" for hierarchy "ALU:alu_unit|shift_left:s_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 139
+Info (12128): Elaborating entity "shift_right" for hierarchy "ALU:alu_unit|shift_right:s_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 145
+Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "ALU:alu_unit|arithmetic_shift_right:s_right_a" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 151
+Info (12128): Elaborating entity "rotate_left" for hierarchy "ALU:alu_unit|rotate_left:r_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 157
 Warning (10230): Verilog HDL assignment warning at shift_rotate_operations.v(35): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 35
-Info (12128): Elaborating entity "rotate_right" for hierarchy "rotate_right:r_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 163
+Info (12128): Elaborating entity "rotate_right" for hierarchy "ALU:alu_unit|rotate_right:r_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 163
 Warning (10230): Verilog HDL assignment warning at shift_rotate_operations.v(48): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 48
-Info (12128): Elaborating entity "logic_not" for hierarchy "logic_not:l_not" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 169
-Info (12128): Elaborating entity "logic_negate" for hierarchy "logic_negate:l_neg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 174
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "NRdiv" for hierarchy "ALU:alu_unit|NRdiv:divider" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 171
+Info (12128): Elaborating entity "logic_not" for hierarchy "ALU:alu_unit|logic_not:l_not" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 176
+Info (12128): Elaborating entity "logic_negate" for hierarchy "ALU:alu_unit|logic_negate:l_neg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 181
+Info (12128): Elaborating entity "MemoryDataRegister" for hierarchy "MemoryDataRegister:mdr_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 115
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[32]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[33]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[34]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[35]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[36]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[37]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[38]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[39]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[40]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[41]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[42]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[43]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[44]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[45]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[46]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[47]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[48]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[49]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[50]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[51]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[52]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[53]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[54]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[55]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[56]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[57]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[58]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[59]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[60]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[61]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[62]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
-    Warning (13410): Pin "result[63]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 5
+    Warning (13410): Pin "dataHI[0]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[1]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[2]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[3]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[4]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[5]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[6]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[7]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[8]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[9]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[10]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[11]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[12]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[13]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[14]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[15]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[16]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[17]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[18]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[19]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[20]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[21]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[22]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[23]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[24]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[25]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[26]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[27]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[28]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[29]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[30]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
+    Warning (13410): Pin "dataHI[31]" is stuck at GND File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Phase1 -section_id Top was ignored
@@ -528,16 +633,61 @@ Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Phase1 -section_id Top was ignored
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 234 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 69 input pins
+Warning (21074): Design contains 37 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "mdr_in" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 2
+    Warning (15610): No output dependent on input pin "mdr_out" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 2
+    Warning (15610): No output dependent on input pin "data_in[0]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[1]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[2]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[3]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[4]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[5]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[6]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[7]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[8]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[9]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[10]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[11]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[12]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[13]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[14]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[15]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[16]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[17]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[18]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[19]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[20]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[21]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[22]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[23]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[24]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[25]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[26]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[27]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[28]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[29]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[30]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "data_in[31]" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "HIin" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "LOin" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "Zhighin" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 8
+Info (21057): Implemented 1474 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 91 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 101 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Tue Feb 04 20:29:00 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21061): Implemented 1319 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 114 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Fri Feb 07 21:39:45 2025
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:24
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg.
 
 
