@@ -170,6 +170,11 @@ NRdiv divider (
 	.remainder(DIVLO)
 );
 
+//BoothMul multiplier (
+//	.multiplicand(A),
+//   .multiplier(B),
+//   .product(MUL)
+
 logic_not l_not (
 	 .A(A),
 	 .result(NOT)
