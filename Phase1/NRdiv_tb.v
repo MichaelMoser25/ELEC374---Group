@@ -55,7 +55,6 @@ module NRdiv_tb;
         divisor = 0;
         #50;
         
-        // Stop simulation after 500ms
         #150;
     end
     
