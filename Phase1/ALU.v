@@ -109,7 +109,6 @@ end
 CLA_32bit adder (
 	  .A(A),
 	  .B(B),
-	  .select(1'b0),
 	  .Cin(1'b0),
 	  .sum(ADD),
 	  .Cout(ADD_cout)
@@ -117,7 +116,6 @@ CLA_32bit adder (
 CLA_32bit subtractor (
 	  .A(A),
 	  .B(B),
-	  .select(1'b1),
 	  .Cin(1'b1),
 	  .sum(SUB),
 	  .Cout(SUB_cout)

@@ -1,7 +1,6 @@
 module CLA_32bit(
 input wire [31:0] A, B,
-input wire select, // 0: addition, 1: subtraction
-input wire Cin,
+input wire Cin, // 0: addition, 1: subtraction
 output wire [31:0] sum,
 output wire Cout
 
@@ -11,8 +10,8 @@ wire C0, C1, C2, C3, C4, C5, C6;
 reg [31:0] operand;
 
 always @(*) begin
-	if (select==1) begin
-		operand = (-B);
+	if (Cin==1) begin
+		operand = (~B);
 	end else operand = B;
 end
 	

@@ -1,5 +1,5 @@
 Flow report for Phase1
-Tue Feb 11 20:13:00 2025
+Tue Feb 11 22:48:40 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Feb 11 20:13:00 2025       ;
+; Flow Status                     ; Successful - Tue Feb 11 22:48:40 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,366 / 18,480 ( 7 % )                      ;
+; Logic utilization (in ALMs)     ; 1,342 / 18,480 ( 7 % )                      ;
 ; Total registers                 ; 768                                         ;
 ; Total pins                      ; 157 / 224 ( 70 % )                          ;
 ; Total virtual pins              ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/11/2025 20:09:32 ;
+; Start date & time ; 02/11/2025 22:41:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -79,39 +79,54 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251545081669246.173932257226972        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251545081669246.173933166115700        ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_and_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_sub_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; array_divider_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sr_tb                             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_4bit_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_or_tb                    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_sub_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_32bit_tb.v                         ; --            ; --          ; CLA_32bit_tb                      ;
-; EDA_TEST_BENCH_FILE                  ; Datapath_tb.v                          ; --            ; --          ; Datapath_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_andor_tb.v                    ; --            ; --          ; Datapath_and_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_addsub_tb.v                   ; --            ; --          ; Datapath_add_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_addsub_tb.v                   ; --            ; --          ; Datapath_sub_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; array_divider_tb.v                     ; --            ; --          ; array_divider_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; shift_rotate_operations_tb.v           ; --            ; --          ; sr_tb                             ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_4bit_tb.v                          ; --            ; --          ; CLA_4bit_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_andor_tb.v                    ; --            ; --          ; Datapath_or_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_32bit_tb                           ; --            ; --          ; CLA_32bit_tb                      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_tb                            ; --            ; --          ; Datapath_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_and_tb                        ; --            ; --          ; Datapath_and_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_add_tb                        ; --            ; --          ; Datapath_add_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_sub_tb                        ; --            ; --          ; Datapath_sub_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; array_divider_tb                       ; --            ; --          ; array_divider_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; sr_tb                                  ; --            ; --          ; sr_tb                             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_4bit_tb                            ; --            ; --          ; CLA_4bit_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_or_tb                         ; --            ; --          ; Datapath_or_tb                    ;
 ; EDA_TEST_BENCH_NAME                  ; CLA_4bit_tb                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; CLA_32bit_tb                           ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; array_divider_tb                       ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; sr_tb                                  ; --            ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; Datapath_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_and_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_or_tb                         ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_add_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_sub_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 110 ns                                 ; --            ; --          ; CLA_32bit_tb                      ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_tb                       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_and_tb                   ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_sub_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; array_divider_tb                  ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                 ; --            ; --          ; CLA_4bit_tb                       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_or_tb                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -137,12 +152,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4915 MB             ; 00:00:19                           ;
-; Fitter               ; 00:03:05     ; 1.2                     ; 6869 MB             ; 00:11:56                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4837 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.8                     ; 5059 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:01                           ;
-; Total                ; 00:03:23     ; --                      ; --                  ; 00:12:23                           ;
+; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4904 MB             ; 00:00:29                           ;
+; Fitter               ; 00:05:41     ; 1.0                     ; 6873 MB             ; 00:23:52                           ;
+; Assembler            ; 00:00:42     ; 1.0                     ; 4853 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:30     ; 2.2                     ; 5039 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:25     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
+; Total                ; 00:07:59     ; --                      ; --                  ; 00:24:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
