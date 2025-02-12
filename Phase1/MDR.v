@@ -5,22 +5,20 @@ input read,
 // MDR
 input clr, input clk, input write,
 
-output[31:0] MDRout
+output reg [31:0] MDRout
 
 );
-reg [31:0] data = 0;
 always @(posedge clk) begin
 	if(clr) begin
-		data = 32'h0;
+		MDRout = 32'h0;
 	end else if(write) begin
 		if(read) begin
-			data <= Mdatain;
+			MDRout <= Mdatain;
 		end else begin
-			data <= BusMuxOut;
+			MDRout <= BusMuxOut;
 		end
 	end
 end
-assign MDRout = data;
 
 	
 endmodule

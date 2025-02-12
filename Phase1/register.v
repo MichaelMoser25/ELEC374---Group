@@ -1,17 +1,17 @@
 module register (
 input clr, clk, write,
-input [31:0] BusMuxOut,
+input [31:0] d,
 output reg [31:0] q
 );
 
 initial q = 0;
 
-always @ (posedge clk) begin
+always @ (negedge clk) begin
 	if (clr) begin
-		q = 0;
+		q <= 0;
 	end
 	else if (write) begin
-		q = BusMuxOut;
+		q <= d;
 	end
 end
 

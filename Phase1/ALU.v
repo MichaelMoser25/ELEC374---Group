@@ -1,7 +1,8 @@
 module ALU ( 
 input wire [31:0] A, B,
 input wire [4:0]  op,
-output reg [63:0]  result
+output reg [63:0]  result,
+input clk
 );
 	
 	
@@ -28,77 +29,79 @@ wire ADD_cout, SUB_cout;
 */
  
 always @(*) begin
+
 	case(op)
-		00011		:	begin
+
+		5'b00011		:	begin
 							result[63:32] = 0;
 							result[31:0] = ADD;
 
 						end
 						
-		00100		:	begin
+		5'b00100		:	begin
 							result[63:32] = 0;
 							result[31:0] = SUB;
 
 						end
 						
-		00101		:	begin
+		5'b00101		:	begin
 							result[63:32] = 0;
 							result[31:0] = AND;
 						end
 						
-		00110		:	begin
+		5'b00110		:	begin
 							result[63:32] = 0;
 							result[31:0] = OR;
 						end
 		
-		00111		:	begin
+		5'b00111		:	begin
 							result[63:32] = 0;
 							result[31:0] = ROR;
 						end
 		
-		01000		:	begin
+		5'b01000		:	begin
 							result[63:32] = 0;
 							result[31:0] = ROL;
 						end
 		
-		01001		:	begin
+		5'b01001		:	begin
 							result[63:32] = 0;
 							result[31:0] = SHR;
 						end
 						
-		01010		:	begin
+		5'b01010		:	begin
 							result[63:32] = 0;
 							result[31:0] = SHRA;
 						end
 		
-		01011		:	begin
+		5'b01011		:	begin
 							result[63:32] = 0;
 							result[31:0] = SHL;
 						end
 						
-		01111		:	begin
+		5'b01111		:	begin
 							result[63:32] = DIVHI;
 							result[31:0] = DIVLO;
 						end
 						
-		10000		:	begin
+		5'b10000		:	begin
 							result[63:32] = 0;
 							result[31:0] = MUL;
 						end						
 
 						
-		10001		:	begin
+		5'b10001		:	begin
 							result[63:32] = 0;
 							result[31:0] = NEG;
 						end
 						
-		10010		:	begin
+		5'b10010		:	begin
 							result[63:32] = 0;
 							result[31:0] = NOT;
 						end
 				
 
-				default: result = A;
+				default: result = 0;
 	endcase
 end
 

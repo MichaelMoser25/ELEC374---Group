@@ -7,7 +7,6 @@ vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/register.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v}
-vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/MDR.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v}
@@ -16,6 +15,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---G
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/pc_register.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/mux.v}
 
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_tb.v}
 
@@ -24,4 +24,4 @@ vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lns
 add wave *
 view structure
 view signals
-run 1000 ns
+run 300 ns
