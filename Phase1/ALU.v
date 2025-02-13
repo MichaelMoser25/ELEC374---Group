@@ -80,8 +80,8 @@ always @(*) begin
 						end
 						
 		5'b01111		:	begin
-							result[63:32] = DIVHI;
-							result[31:0] = DIVLO;
+							result[63:32] = DIVLO;
+							result[31:0] = DIVHI;
 						end
 						
 		5'b10000		:	begin
@@ -167,8 +167,8 @@ rotate_right r_right (
 NRdiv divider (
 	.dividend(A),
 	.divisor(B),
-	.quotient(DIVHI),
-	.remainder(DIVLO)
+	.quotient(DIVLO),
+	.remainder(DIVHI)
 );
 
 //BoothMul multiplier (
