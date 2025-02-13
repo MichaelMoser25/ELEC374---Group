@@ -1,5 +1,5 @@
 Assembler report for Phase1
-Tue Feb 11 22:47:43 2025
+Thu Feb 13 15:41:05 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 11 22:47:43 2025 ;
+; Assembler Status      ; Successful - Thu Feb 13 15:41:05 2025 ;
 ; Revision Name         ; Phase1                                ;
 ; Top-level Entity Name ; Datapath                              ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                ;
 +----------------+----------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x007D3F51                                                                             ;
-; Checksum       ; 0x007D3F51                                                                             ;
+; JTAG usercode  ; 0x007DCA7C                                                                             ;
+; Checksum       ; 0x007DCA7C                                                                             ;
 +----------------+----------------------------------------------------------------------------------------+
 
 
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Tue Feb 11 22:47:01 2025
+    Info: Processing started: Thu Feb 13 15:41:01 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Tue Feb 11 22:47:43 2025
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Thu Feb 13 15:41:05 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

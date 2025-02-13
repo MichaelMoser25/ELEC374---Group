@@ -1,4 +1,4 @@
-module BoothMul_tb;
+module boothMul_tb;
     // Testbench signals
     reg  signed [31:0] multiplicand;
     reg  signed [31:0] multiplier;
@@ -19,7 +19,7 @@ module BoothMul_tb;
             multiplicand = a;
             multiplier = b;
             #10; // Wait for computation
-            $display("\nTest Case: %s");
+            $display("\nTest Case: ");
             $display("Multiplicand: %d (0x%h)", multiplicand, multiplicand);
             $display("Multiplier  : %d (0x%h)", multiplier, multiplier);
             $display("Product     : %d (0x%h)", product, product);
@@ -73,7 +73,7 @@ module BoothMul_tb;
     // Generate VCD file
     initial begin
         $dumpfile("booth_mult_32bit.vcd");
-        $dumpvars(0, BoothMul_tb);
+        $dumpvars(0, boothMul_tb);
     end
 
     // Optional: Add timeout to catch hanging simulations

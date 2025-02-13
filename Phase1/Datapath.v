@@ -18,7 +18,7 @@ wire [31:0] bus, MDmuxOut;
 
 wire [31:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, 
     reg8, reg9, reg10, reg11, reg12, reg13, reg14, reg15, regY, 
-    regHI, regLO,  regPC, regIR, regMDR, regInPort, regC, regZlow, regZhigh;
+    regHI, regLO, regIR, regMDR, regInPort, regC, regZlow, regZhigh;
 	 
 
 
@@ -67,6 +67,9 @@ register r12 (clr, clk, R12in, bus, reg12);
 register r13 (clr, clk, R13in, bus, reg13);
 register r14 (clr, clk, R14in, bus, reg14);
 register r15 (clr, clk, R15in, bus, reg15);
+register rHI (clr, clk, HIin, bus, regHI);
+register rLO (clr, clk, LOin, bus, regLO);
+
 
 pc_register PC_reg (
     .clk(clk), 
