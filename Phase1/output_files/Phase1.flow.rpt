@@ -1,5 +1,9 @@
 Flow report for Phase1
+<<<<<<< HEAD
 Mon Feb 17 16:00:47 2025
+=======
+Thu Feb 13 15:41:15 2025
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,15 +45,24 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                     ; Successful - Mon Feb 17 16:00:47 2025       ;
+=======
+; Flow Status                     ; Successful - Thu Feb 13 15:41:15 2025       ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
+<<<<<<< HEAD
 ; Logic utilization (in ALMs)     ; 1,320 / 18,480 ( 7 % )                      ;
 ; Total registers                 ; 768                                         ;
+=======
+; Logic utilization (in ALMs)     ; 1,335 / 18,480 ( 7 % )                      ;
+; Total registers                 ; 832                                         ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; Total pins                      ; 157 / 224 ( 70 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +81,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 02/17/2025 15:59:04 ;
+=======
+; Start date & time ; 02/13/2025 15:36:41 ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -79,12 +96,21 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID                ; 1098028399810.173982594407860          ; --            ; --          ; --                                ;
+=======
+; COMPILER_SIGNATURE_ID                ; 251545081669246.173947900129788        ; --            ; --          ; --                                ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_and_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_sub_tb                   ;
+<<<<<<< HEAD
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_div_tb                   ;
+=======
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; boothMul_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; array_divider_tb                  ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sr_tb                             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_or_tb                    ;
@@ -100,7 +126,12 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; Datapath_andor_tb.v                    ; --            ; --          ; Datapath_and_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_addsub_tb.v                   ; --            ; --          ; Datapath_add_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_addsub_tb.v                   ; --            ; --          ; Datapath_sub_tb                   ;
+<<<<<<< HEAD
 ; EDA_TEST_BENCH_FILE                  ; Datapath_div_tb.v                      ; --            ; --          ; Datapath_div_tb                   ;
+=======
+; EDA_TEST_BENCH_FILE                  ; boothMul_tb.v                          ; --            ; --          ; boothMul_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; array_divider_tb.v                     ; --            ; --          ; array_divider_tb                  ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_TEST_BENCH_FILE                  ; shift_rotate_operations_tb.v           ; --            ; --          ; sr_tb                             ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_4bit_tb.v                          ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_andor_tb.v                    ; --            ; --          ; Datapath_or_tb                    ;
@@ -108,7 +139,12 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_and_tb                        ; --            ; --          ; Datapath_and_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_add_tb                        ; --            ; --          ; Datapath_add_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_sub_tb                        ; --            ; --          ; Datapath_sub_tb                   ;
+<<<<<<< HEAD
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_div_tb                        ; --            ; --          ; Datapath_div_tb                   ;
+=======
+; EDA_TEST_BENCH_MODULE_NAME           ; boothMul_tb                            ; --            ; --          ; boothMul_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; array_divider_tb                       ; --            ; --          ; array_divider_tb                  ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_TEST_BENCH_MODULE_NAME           ; sr_tb                                  ; --            ; --          ; sr_tb                             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_4bit_tb                            ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_or_tb                         ; --            ; --          ; Datapath_or_tb                    ;
@@ -119,12 +155,21 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; Datapath_or_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_add_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_sub_tb                        ; --            ; --          ; eda_simulation                    ;
+<<<<<<< HEAD
 ; EDA_TEST_BENCH_NAME                  ; Datapath_div_tb                        ; --            ; --          ; eda_simulation                    ;
+=======
+; EDA_TEST_BENCH_NAME                  ; boothMul_tb                            ; --            ; --          ; eda_simulation                    ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 110 ns                                 ; --            ; --          ; CLA_32bit_tb                      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_and_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_sub_tb                   ;
+<<<<<<< HEAD
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_div_tb                   ;
+=======
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                 ; --            ; --          ; boothMul_tb                       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; array_divider_tb                  ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                 ; --            ; --          ; CLA_4bit_tb                       ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_or_tb                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
@@ -152,12 +197,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4841 MB             ; 00:00:14                           ;
 ; Fitter               ; 00:01:06     ; 1.2                     ; 6346 MB             ; 00:01:16                           ;
 ; Assembler            ; 00:00:05     ; 1.0                     ; 4838 MB             ; 00:00:03                           ;
 ; Timing Analyzer      ; 00:00:07     ; 2.0                     ; 5057 MB             ; 00:00:05                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4732 MB             ; 00:00:01                           ;
 ; Total                ; 00:01:38     ; --                      ; --                  ; 00:01:39                           ;
+=======
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4920 MB             ; 00:00:30                           ;
+; Fitter               ; 00:04:00     ; 1.1                     ; 6876 MB             ; 00:18:46                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4843 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.9                     ; 4978 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4738 MB             ; 00:00:02                           ;
+; Total                ; 00:04:29     ; --                      ; --                  ; 00:19:28                           ;
+>>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
