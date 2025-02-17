@@ -80,8 +80,8 @@ always @(*) begin
 						end
 						
 		5'b01111		:	begin
-							result[63:32] = DIVLO;
-							result[31:0] = DIVHI;
+							result[63:32] = DIVHI;
+							result[31:0] = DIVLO;
 						end
 						
 		5'b10000		:	begin

@@ -1,3 +1,4 @@
-Warning (10268): Verilog HDL information at MDR.v(11): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/MDR.v Line: 11
-Warning (10268): Verilog HDL information at Datapath_addsub_tb.v(104): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_addsub_tb.v Line: 104
-Warning (10268): Verilog HDL information at Datapath_addsub_tb.v(285): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_addsub_tb.v Line: 285
+Warning (10268): Verilog HDL information at MDR.v(11): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/MDR.v Line: 11
+Warning (10268): Verilog HDL information at Datapath_addsub_tb.v(104): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_addsub_tb.v Line: 104
+Warning (10268): Verilog HDL information at Datapath_addsub_tb.v(285): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_addsub_tb.v Line: 285
+Warning (10268): Verilog HDL information at Datapath_div_tb.v(105): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_div_tb.v Line: 105

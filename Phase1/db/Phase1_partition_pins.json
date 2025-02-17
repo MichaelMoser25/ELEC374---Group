@@ -260,7 +260,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "op_code[2]",
+					"strict" : false
+				},
+				{
 					"name" : "op_code[3]",
+					"strict" : false
+				},
+				{
+					"name" : "op_code[4]",
 					"strict" : false
 				},
 				{
@@ -272,15 +280,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "op_code[2]",
-					"strict" : false
-				},
-				{
-					"name" : "op_code[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Zhighout",
+					"name" : "R15out",
 					"strict" : false
 				},
 				{
@@ -344,7 +344,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "R15out",
+					"name" : "Zhighout",
 					"strict" : false
 				},
 				{
@@ -496,11 +496,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_in[1]",
+					"name" : "data_in[4]",
 					"strict" : false
 				},
 				{
-					"name" : "data_in[4]",
+					"name" : "data_in[1]",
 					"strict" : false
 				},
 				{
