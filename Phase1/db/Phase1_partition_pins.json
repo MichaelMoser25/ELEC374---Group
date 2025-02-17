@@ -280,17 +280,6 @@
 					"strict" : false
 				},
 				{
-<<<<<<< HEAD
-					"name" : "R15out",
-=======
-					"name" : "op_code[2]",
-					"strict" : false
-				},
-				{
-					"name" : "op_code[4]",
-					"strict" : false
-				},
-				{
 					"name" : "PCout",
 					"strict" : false
 				},
@@ -300,7 +289,6 @@
 				},
 				{
 					"name" : "Zhighout",
->>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 					"strict" : false
 				},
 				{
@@ -376,27 +364,7 @@
 					"strict" : false
 				},
 				{
-<<<<<<< HEAD
-					"name" : "Zhighout",
-					"strict" : false
-				},
-				{
-					"name" : "LOout",
-					"strict" : false
-				},
-				{
-					"name" : "HIout",
-					"strict" : false
-				},
-				{
-					"name" : "PCout",
-					"strict" : false
-				},
-				{
-					"name" : "Zlowout",
-=======
 					"name" : "IRout",
->>>>>>> 9dfe66edbfac8282327c9727a04ffec37d821ca2
 					"strict" : false
 				},
 				{
