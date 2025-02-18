@@ -141,4 +141,5 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Datapath_neg
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id Datapath_negate_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Datapath_negate_tb -section_id Datapath_negate_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_negate_tb.v -section_id Datapath_negate_tb
+set_global_assignment -name VERILOG_FILE Datapath_mul_tb.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

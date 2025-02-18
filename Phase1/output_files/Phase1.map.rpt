@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Feb 17 17:42:25 2025
+Mon Feb 17 21:15:30 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 17 17:42:25 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 17 21:15:30 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
@@ -199,14 +199,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1375      ;
+; Estimate of Logic utilization (ALMs needed) ; 1374      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2236      ;
+; Combinational ALUT usage for logic          ; 2235      ;
 ;     -- 7 input functions                    ; 23        ;
-;     -- 6 input functions                    ; 351       ;
-;     -- 5 input functions                    ; 284       ;
+;     -- 6 input functions                    ; 350       ;
+;     -- 5 input functions                    ; 285       ;
 ;     -- 4 input functions                    ; 218       ;
-;     -- <=3 input functions                  ; 1360      ;
+;     -- <=3 input functions                  ; 1359      ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 832       ;
 ;                                             ;           ;
@@ -216,7 +216,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 832       ;
-; Total fan-out                               ; 13036     ;
+; Total fan-out                               ; 13032     ;
 ; Average fan-out                             ; 3.85      ;
 +---------------------------------------------+-----------+
 
@@ -226,8 +226,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name  ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------+--------------+
-; |Datapath                    ; 2236 (0)            ; 832 (0)                   ; 0                 ; 0          ; 157  ; 0            ; |Datapath                                                   ; Datapath     ; work         ;
-;    |ALU:alu_unit|            ; 1637 (285)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit                                      ; ALU          ; work         ;
+; |Datapath                    ; 2235 (0)            ; 832 (0)                   ; 0                 ; 0          ; 157  ; 0            ; |Datapath                                                   ; Datapath     ; work         ;
+;    |ALU:alu_unit|            ; 1636 (285)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit                                      ; ALU          ; work         ;
 ;       |CLA_32bit:adder|      ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder                      ; CLA_32bit    ; work         ;
 ;          |CLA_4bit:adder1|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1      ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder2|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder2      ; CLA_4bit     ; work         ;
@@ -237,8 +237,8 @@ https://fpgasoftware.intel.com/eula.
 ;          |CLA_4bit:adder6|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder6      ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder7|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder7      ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder8|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder8      ; CLA_4bit     ; work         ;
-;       |CLA_32bit:subtractor| ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor                 ; CLA_32bit    ; work         ;
-;          |CLA_4bit:adder1|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder1 ; CLA_4bit     ; work         ;
+;       |CLA_32bit:subtractor| ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor                 ; CLA_32bit    ; work         ;
+;          |CLA_4bit:adder1|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder1 ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder2|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder2 ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder3|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder3 ; CLA_4bit     ; work         ;
 ;          |CLA_4bit:adder4|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder4 ; CLA_4bit     ; work         ;
@@ -328,19 +328,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rInPort|q[20]                       ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rC|q[30]                            ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:MDR|q[23]                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_right:s_right|ShiftRight0 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_left:s_left|ShiftLeft0    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_left:s_left|ShiftLeft0    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_left:s_left|ShiftLeft0    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_right:s_right|ShiftRight0 ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_left:s_left|ShiftLeft0    ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|result[46]                      ;
-; 36:1               ; 8 bits    ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux20                           ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|shift_right:s_right|ShiftRight0 ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|result[58]                      ;
+; 36:1               ; 8 bits    ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux16                           ;
 ; 37:1               ; 4 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux27                           ;
-; 37:1               ; 4 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux5                            ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux7                            ;
 ; 39:1               ; 2 bits    ; 52 LEs        ; 34 LEs               ; 18 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux2                            ;
-; 39:1               ; 8 bits    ; 208 LEs       ; 144 LEs              ; 64 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux13                           ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux29                           ;
-; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |Datapath|Bus:bus_unit|Selector26                      ;
+; 39:1               ; 8 bits    ; 208 LEs       ; 144 LEs              ; 64 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux14                           ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; No         ; |Datapath|ALU:alu_unit|Mux28                           ;
+; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |Datapath|Bus:bus_unit|Selector16                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -382,7 +382,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     ENA SCLR          ; 768                         ;
 ;     ENA SCLR SLD      ; 32                          ;
 ;     ENA SLD           ; 32                          ;
-; arriav_lcell_comb     ; 2236                        ;
+; arriav_lcell_comb     ; 2235                        ;
 ;     arith             ; 1152                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 126                         ;
@@ -390,16 +390,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         3 data inputs ; 961                         ;
 ;     extend            ; 23                          ;
 ;         7 data inputs ; 23                          ;
-;     normal            ; 1061                        ;
+;     normal            ; 1060                        ;
 ;         2 data inputs ; 46                          ;
-;         3 data inputs ; 162                         ;
+;         3 data inputs ; 161                         ;
 ;         4 data inputs ; 218                         ;
-;         5 data inputs ; 284                         ;
-;         6 data inputs ; 351                         ;
+;         5 data inputs ; 285                         ;
+;         6 data inputs ; 350                         ;
 ; boundary_port         ; 157                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 140.20                      ;
-; Average LUT depth     ; 114.92                      ;
+; Average LUT depth     ; 115.06                      ;
 +-----------------------+-----------------------------+
 
 
@@ -408,7 +408,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -418,7 +418,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Mon Feb 17 17:42:07 2025
+    Info: Processing started: Mon Feb 17 21:15:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
@@ -474,6 +474,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: Datapath_div_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_div_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_negate_tb.v
     Info (12023): Found entity 1: Datapath_negate_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_negate_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_mul_tb.v
+    Info (12023): Found entity 1: Datapath_mul_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mul_tb.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(116): created implicit net for "MARIn" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 116
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 52
@@ -530,13 +532,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 7
-Info (21057): Implemented 3193 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3192 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 93 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 3036 logic cells
+    Info (21061): Implemented 3035 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Mon Feb 17 17:42:25 2025
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Mon Feb 17 21:15:30 2025
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:13
 

@@ -177,12 +177,12 @@ NRdiv divider (
 //   .product(MUL)
 
 logic_not l_not (
-	 .A(A),
+	 .A(B),
 	 .result(NOT)
 );
 
 logic_negate l_neg (
-	 .A(A),
+	 .A(B),
 	 .result(NEG)
 );
 

@@ -21,7 +21,7 @@ module Datapath_negate_tb;
 
     parameter DEFAULT = 4'b0000, REG_LOAD1A = 4'b0001, REG_LOAD1B = 4'b0010, REG_LOAD2A = 4'b0011,  
               REG_LOAD2B = 4'b0100, REG_LOAD3A = 4'b0101, REG_LOAD3B = 4'b0110, T0 = 4'b0111,  
-              T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;
+              T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011;
 
     reg [3:0] present_state = DEFAULT;
 
