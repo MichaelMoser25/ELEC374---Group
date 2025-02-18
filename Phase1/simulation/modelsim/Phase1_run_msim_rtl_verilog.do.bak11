@@ -13,6 +13,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---G
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/logic_operations.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/NRdiv.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/BoothMul.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/pc_register.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux.v}
