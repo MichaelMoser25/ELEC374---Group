@@ -6,7 +6,8 @@ input clk
 );
 	
 	
-wire [31:0] ADD, SUB, AND, OR, ROR, ROL, SHR, SHRA, SHL, DIVHI, DIVLO, MUL, NEG, NOT;
+wire [31:0] ADD, SUB, AND, OR, ROR, ROL, SHR, SHRA, SHL, DIVHI, DIVLO, NEG, NOT;
+wire [63:0] MUL;
 wire ADD_cout, SUB_cout;
 
 /* Operations specified:
@@ -85,8 +86,7 @@ always @(*) begin
 						end
 						
 		5'b10000		:	begin
-							result[63:32] = 0;
-							result[31:0] = MUL;
+							result[63:0] = MUL;
 						end						
 
 						
@@ -171,10 +171,11 @@ NRdiv divider (
 	.remainder(DIVHI)
 );
 
-//BoothMul multiplier (
-//	.multiplicand(A),
-//   .multiplier(B),
-//   .product(MUL)
+BoothMul multiplier (
+	.multiplicand(A),
+   .multiplier(B),
+   .product(MUL)
+);
 
 logic_not l_not (
 	 .A(B),

@@ -68,7 +68,7 @@ set_global_assignment -name VERILOG_FILE CLA_4bit_tb.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Datapath_negate_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Datapath_mul_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME CLA_4bit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CLA_4bit_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id CLA_4bit_tb
@@ -127,6 +127,11 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Datapath_div
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id Datapath_div_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Datapath_div_tb -section_id Datapath_div_tb
 set_global_assignment -name VERILOG_FILE Datapath_negate_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME Datapath_negate_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Datapath_negate_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id Datapath_negate_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Datapath_negate_tb -section_id Datapath_negate_tb
+set_global_assignment -name VERILOG_FILE Datapath_mul_tb.v
 set_global_assignment -name EDA_TEST_BENCH_FILE CLA_4bit_tb.v -section_id CLA_4bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE CLA_32bit_tb.v -section_id CLA_32bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE shift_rotate_operations_tb.v -section_id sr_tb
@@ -136,10 +141,10 @@ set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_addsub_tb.v -section_id
 set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_addsub_tb.v -section_id Datapath_sub_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE boothMul_tb.v -section_id boothMul_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_div_tb.v -section_id Datapath_div_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME Datapath_negate_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Datapath_negate_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id Datapath_negate_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Datapath_negate_tb -section_id Datapath_negate_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_negate_tb.v -section_id Datapath_negate_tb
-set_global_assignment -name VERILOG_FILE Datapath_mul_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME Datapath_mul_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Datapath_mul_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id Datapath_mul_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Datapath_mul_tb -section_id Datapath_mul_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_mul_tb.v -section_id Datapath_mul_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
