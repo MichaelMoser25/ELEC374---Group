@@ -6891,6 +6891,7 @@ data_in[27] => ShiftRight0.IN5
 data_in[28] => ShiftRight0.IN4
 data_in[29] => ShiftRight0.IN3
 data_in[30] => ShiftRight0.IN2
+data_in[31] => ShiftRight0.IN0
 data_in[31] => ShiftRight0.IN1
 shift_val[0] => ShiftRight0.IN64
 shift_val[1] => ShiftRight0.IN63

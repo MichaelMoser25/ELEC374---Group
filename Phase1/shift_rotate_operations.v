@@ -21,7 +21,7 @@ input wire [31:0] data_in,
 input wire [31:0] shift_val,
 output wire [31:0] data_out
 );
-	assign data_out = data_in >>> shift_val;
+	assign data_out = $signed(data_in) >>> shift_val;
 	
 endmodule
 

@@ -260,15 +260,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "op_code[3]",
+					"name" : "op_code[2]",
 					"strict" : false
 				},
 				{
 					"name" : "op_code[4]",
-					"strict" : false
-				},
-				{
-					"name" : "op_code[2]",
 					"strict" : false
 				},
 				{
@@ -277,6 +273,10 @@
 				},
 				{
 					"name" : "op_code[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op_code[3]",
 					"strict" : false
 				},
 				{
