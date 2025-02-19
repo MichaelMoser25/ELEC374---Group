@@ -30,10 +30,10 @@ input wire [31:0] data_in,
 input wire [31:0] rot_val,
 output reg [31:0] data_out
 );
-	reg r;
+	reg [4:0] r;
 	always @(*) begin
 	r = rot_val;
-	data_out = (data_in << r)|(data_in << 32-r);
+	data_out = (data_in << r)|(data_in >> (32-r));
 	end
 	
 endmodule
@@ -43,9 +43,9 @@ input wire [31:0] data_in,
 input wire [31:0] rot_val,
 output reg [31:0] data_out
 );
-	reg r;
+	reg [4:0] r;
 	always @(*) begin
 	r = rot_val;
-	data_out = (data_in >> r)|(data_in >> 32-r);
+	data_out = (data_in >> r)|(data_in << (32-r));
 	end
 endmodule
