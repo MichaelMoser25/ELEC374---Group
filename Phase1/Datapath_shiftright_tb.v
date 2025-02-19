@@ -77,7 +77,7 @@ module Datapath_shiftright_tb;
     r8_out = 0; r9_out = 0; r10_out = 0; r11_out = 0; r12_out = 0; r13_out = 0; r14_out = 0; r15_out = 0;
     hi_out = 0; lo_out = 0; zhigh_out = 0; zlow_out = 0; pc_out = 0; ir_out = 0; inport_out = 0; c_out = 0;
 	 MARin = 0;
-        op_code = 5'b01001; // opcode for shift right
+        op_code = 5'b00000;
         data_in = 32'h00000000;
 		          #5 clr = 0; 
     end
@@ -106,7 +106,7 @@ module Datapath_shiftright_tb;
                 {pc_out, zlow_out, mdr_out, r2_out, r6_out} <= 0;
                 {pc_in, mdr_in, ir_in, y_in, r2_in, r6_in} <= 0;
                 {read, pc_increment} <= 0;
-                data_in <= 32'h00000000
+                data_in <= 32'h00000000;
             end
             
             REG_LOAD1A: begin   
@@ -116,8 +116,8 @@ module Datapath_shiftright_tb;
             end 
 
             REG_LOAD1B: begin   
-                mdr_out <= 1; r2_in <= 1;   
-                #15 mdr_out <= 0; r2_in <= 0;          
+                mdr_out <= 1; r3_in <= 1;   
+                #15 mdr_out <= 0; r3_in <= 0;          
             end 
 
             REG_LOAD2A: begin   
@@ -127,8 +127,8 @@ module Datapath_shiftright_tb;
             end 
 				
 	         REG_LOAD2B: begin  
-                mdr_out <= 1; r6_in <= 1;   
-                #15 mdr_out <= 0; r6_in <= 0; 
+                mdr_out <= 1; r7_in <= 1;   
+                #15 mdr_out <= 0; r7_in <= 0; 
             end 			
 				
 
@@ -150,27 +150,23 @@ module Datapath_shiftright_tb;
             end 
 
             T3: begin 
-                r2_out <= 1; y_in <= 1;
-					 #15 r2_out <= 0; y_in <= 0;
+                r3_out <= 1; y_in <= 1;
+					 #15 r3_out <= 0; y_in <= 0;
             end 
 
             T4: begin 
-                r6_out <= 1; 
+                r7_out <= 1; 
 					 zlow_in <= 1; 
 					 zhigh_in <= 1; 
-					 op_code <= 5'b10000;
-					 #15 r6_out <= 0; zlow_in <= 0; zhigh_in <= 0 ;op_code <= 5'b01001; // Shift right opcode
+					 op_code <= 5'b01001;
+					 #15 r7_out <= 0; zlow_in <= 0; zhigh_in <= 0 ;op_code <= 5'b00000;
             end 
 
             T5: begin 
-                zlow_out <= 1; lo_in <= 1;	
-					 #15 zlow_out <= 0; lo_in <= 0;
+                zlow_out <= 1; r4_in <= 1;	
+					 #15 zlow_out <= 0; r4_in <= 0;
             end
 				
-				T6: begin 
-                zhigh_out <= 1; hi_in <= 1;
-					 #15 zhigh_out <= 0; hi_in <= 0;
-            end 
         endcase 
     end
 	
