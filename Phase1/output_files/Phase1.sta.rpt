@@ -1,5 +1,5 @@
 Timing Analyzer report for Phase1
-Tue Feb 18 21:12:30 2025
+Tue Feb 18 21:24:29 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -77,14 +77,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.83        ;
+; Average used               ; 1.81        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  32.7%      ;
-;     Processor 3            ;  27.9%      ;
-;     Processor 4            ;  22.4%      ;
+;     Processor 2            ;  31.8%      ;
+;     Processor 3            ;  27.6%      ;
+;     Processor 4            ;  22.0%      ;
 +----------------------------+-------------+
 
 
@@ -806,7 +806,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Tue Feb 18 21:12:20 2025
+    Info: Processing started: Tue Feb 18 21:24:19 2025
 Info: Command: quartus_sta Phase1 -c Phase1
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
@@ -863,9 +863,9 @@ Info (332146): Worst-case minimum pulse width slack is -0.538
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 5164 megabytes
-    Info: Processing ended: Tue Feb 18 21:12:30 2025
+    Info: Peak virtual memory: 5167 megabytes
+    Info: Processing ended: Tue Feb 18 21:24:29 2025
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

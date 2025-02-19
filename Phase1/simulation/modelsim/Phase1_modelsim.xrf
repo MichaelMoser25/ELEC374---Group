@@ -28,6 +28,7 @@ source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_ror_tb.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_rol_tb.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_shra_tb.v
+source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_shl_tb.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/db/Phase1.cbx.xml
 design_name = Datapath
 instance = comp, \dataHI[0]~output , dataHI[0]~output, Datapath, 1
