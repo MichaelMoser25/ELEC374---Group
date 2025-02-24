@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Feb 24 12:06:50 2025
+Mon Feb 24 13:37:34 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 24 12:06:50 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 24 13:37:34 2025       ;
 ; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
@@ -169,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
@@ -195,31 +195,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 3369      ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 5635      ;
-;     -- 7 input functions                    ; 98        ;
-;     -- 6 input functions                    ; 897       ;
-;     -- 5 input functions                    ; 2164      ;
-;     -- 4 input functions                    ; 662       ;
-;     -- <=3 input functions                  ; 1814      ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 832       ;
-;                                             ;           ;
-; I/O pins                                    ; 157       ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 832       ;
-; Total fan-out                               ; 30896     ;
-; Average fan-out                             ; 4.56      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 3489                      ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 5910                      ;
+;     -- 7 input functions                    ; 36                        ;
+;     -- 6 input functions                    ; 925                       ;
+;     -- 5 input functions                    ; 3240                      ;
+;     -- 4 input functions                    ; 759                       ;
+;     -- <=3 input functions                  ; 950                       ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 832                       ;
+;                                             ;                           ;
+; I/O pins                                    ; 157                       ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; Bus:bus_unit|Selector0~16 ;
+; Maximum fan-out                             ; 1125                      ;
+; Total fan-out                               ; 33973                     ;
+; Average fan-out                             ; 4.81                      ;
++---------------------------------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -227,9 +227,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name            ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+------------------------+--------------+
-; |Datapath                                ; 5635 (0)            ; 832 (0)                   ; 0                 ; 0          ; 157  ; 0            ; |Datapath                                                   ; Datapath               ; work         ;
-;    |ALU:alu_unit|                        ; 5059 (330)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit                                      ; ALU                    ; work         ;
-;       |BoothMul:multiplier|              ; 3102 (3102)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|BoothMul:multiplier                  ; BoothMul               ; work         ;
+; |Datapath                                ; 5910 (0)            ; 832 (0)                   ; 0                 ; 0          ; 157  ; 0            ; |Datapath                                                   ; Datapath               ; work         ;
+;    |ALU:alu_unit|                        ; 5292 (495)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit                                      ; ALU                    ; work         ;
+;       |BoothMul:multiplier|              ; 3093 (3093)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|BoothMul:multiplier                  ; BoothMul               ; work         ;
 ;       |CLA_32bit:adder|                  ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder                      ; CLA_32bit              ; work         ;
 ;          |CLA_4bit:adder1|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1      ; CLA_4bit               ; work         ;
 ;          |CLA_4bit:adder2|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder2      ; CLA_4bit               ; work         ;
@@ -240,20 +240,20 @@ https://fpgasoftware.intel.com/eula.
 ;          |CLA_4bit:adder7|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder7      ; CLA_4bit               ; work         ;
 ;          |CLA_4bit:adder8|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder8      ; CLA_4bit               ; work         ;
 ;       |CLA_32bit:subtractor|             ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor                 ; CLA_32bit              ; work         ;
-;          |CLA_4bit:adder1|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder1 ; CLA_4bit               ; work         ;
-;          |CLA_4bit:adder2|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder2 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder1|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder1 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder2|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder2 ; CLA_4bit               ; work         ;
 ;          |CLA_4bit:adder3|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder3 ; CLA_4bit               ; work         ;
-;          |CLA_4bit:adder4|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder4 ; CLA_4bit               ; work         ;
-;          |CLA_4bit:adder5|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder5 ; CLA_4bit               ; work         ;
-;          |CLA_4bit:adder6|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder6 ; CLA_4bit               ; work         ;
-;          |CLA_4bit:adder7|               ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder7 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder4|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder4 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder5|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder5 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder6|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder6 ; CLA_4bit               ; work         ;
+;          |CLA_4bit:adder7|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder7 ; CLA_4bit               ; work         ;
 ;          |CLA_4bit:adder8|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|CLA_32bit:subtractor|CLA_4bit:adder8 ; CLA_4bit               ; work         ;
-;       |NRdiv:divider|                    ; 1088 (1088)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|NRdiv:divider                        ; NRdiv                  ; work         ;
-;       |arithmetic_shift_right:s_right_a| ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|arithmetic_shift_right:s_right_a     ; arithmetic_shift_right ; work         ;
-;       |logic_negate:l_neg|               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|logic_negate:l_neg                   ; logic_negate           ; work         ;
-;       |rotate_left:r_left|               ; 159 (159)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|rotate_left:r_left                   ; rotate_left            ; work         ;
-;       |rotate_right:r_right|             ; 221 (221)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|rotate_right:r_right                 ; rotate_right           ; work         ;
-;    |Bus:bus_unit|                        ; 518 (518)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|Bus:bus_unit                                      ; Bus                    ; work         ;
+;       |NRdiv:divider|                    ; 1216 (1216)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|NRdiv:divider                        ; NRdiv                  ; work         ;
+;       |arithmetic_shift_right:s_right_a| ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|arithmetic_shift_right:s_right_a     ; arithmetic_shift_right ; work         ;
+;       |logic_negate:l_neg|               ; 111 (111)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|logic_negate:l_neg                   ; logic_negate           ; work         ;
+;       |rotate_left:r_left|               ; 102 (102)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|rotate_left:r_left                   ; rotate_left            ; work         ;
+;       |rotate_right:r_right|             ; 166 (166)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|ALU:alu_unit|rotate_right:r_right                 ; rotate_right           ; work         ;
+;    |Bus:bus_unit|                        ; 560 (560)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|Bus:bus_unit                                      ; Bus                    ; work         ;
 ;    |pc_register:PC_reg|                  ; 33 (33)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|pc_register:PC_reg                                ; pc_register            ; work         ;
 ;    |register:MDR|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:MDR                                      ; register               ; work         ;
 ;    |register:r0|                         ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|register:r0                                       ; register               ; work         ;
@@ -304,87 +304,87 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rY|q[16]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r0|q[23]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r1|q[25]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r2|q[14]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r3|q[4]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r4|q[15]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r5|q[4]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r6|q[13]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r7|q[9]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r8|q[5]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r9|q[5]                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r10|q[31]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rY|q[29]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r0|q[13]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r1|q[23]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r2|q[15]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r3|q[31]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r4|q[9]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r5|q[28]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r6|q[11]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r7|q[2]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r8|q[1]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r9|q[4]                                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r10|q[9]                                         ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r11|q[5]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r12|q[14]                                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r13|q[0]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r14|q[9]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r15|q[20]                                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rLO|q[4]                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rHI|q[14]                                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rZhigh|q[0]                                      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rZlow|q[19]                                      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|pc_register:PC_reg|pc_out[7]                              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rIR|q[17]                                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rInPort|q[15]                                    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rC|q[16]                                         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:MDR|q[2]                                         ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r12|q[10]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r13|q[27]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r14|q[25]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:r15|q[6]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rLO|q[23]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rHI|q[30]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rZhigh|q[5]                                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rZlow|q[11]                                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|pc_register:PC_reg|pc_out[24]                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rIR|q[29]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rInPort|q[28]                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:rC|q[6]                                          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|register:MDR|q[6]                                         ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux58                    ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|arithmetic_shift_right:s_right_a|ShiftRight0 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|arithmetic_shift_right:s_right_a|ShiftRight0 ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux48                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
 ; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
-; 8:1                ; 34 bits   ; 170 LEs       ; 102 LEs              ; 68 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux729                   ;
-; 8:1                ; 36 bits   ; 180 LEs       ; 108 LEs              ; 72 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux710                   ;
-; 8:1                ; 38 bits   ; 190 LEs       ; 114 LEs              ; 76 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux672                   ;
-; 8:1                ; 40 bits   ; 200 LEs       ; 120 LEs              ; 80 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux602                   ;
-; 8:1                ; 42 bits   ; 210 LEs       ; 126 LEs              ; 84 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux583                   ;
-; 8:1                ; 44 bits   ; 220 LEs       ; 132 LEs              ; 88 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux547                   ;
-; 8:1                ; 46 bits   ; 230 LEs       ; 138 LEs              ; 92 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux460                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux442                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux392                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux347                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux296                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux225                   ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux178                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|arithmetic_shift_right:s_right_a|ShiftRight0 ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux98                    ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux122                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux158                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftRight0             ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux233                   ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux287                   ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux328                   ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux393                   ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux431                   ;
+; 8:1                ; 46 bits   ; 230 LEs       ; 138 LEs              ; 92 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux501                   ;
+; 8:1                ; 44 bits   ; 220 LEs       ; 132 LEs              ; 88 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux529                   ;
+; 8:1                ; 42 bits   ; 210 LEs       ; 126 LEs              ; 84 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux550                   ;
+; 8:1                ; 40 bits   ; 200 LEs       ; 120 LEs              ; 80 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux595                   ;
+; 8:1                ; 38 bits   ; 190 LEs       ; 114 LEs              ; 76 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux661                   ;
+; 8:1                ; 36 bits   ; 180 LEs       ; 108 LEs              ; 72 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux706                   ;
+; 8:1                ; 34 bits   ; 170 LEs       ; 102 LEs              ; 68 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux720                   ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux300                   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux244                   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux211                   ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux64                    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux153                   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux93                    ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux186                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux244                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux300                   ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
-; 6:1                ; 19 bits   ; 76 LEs        ; 57 LEs               ; 19 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux413                   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux354                   ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftLeft0                ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux373                   ;
+; 6:1                ; 19 bits   ; 76 LEs        ; 57 LEs               ; 19 LEs                 ; No         ; |Datapath|ALU:alu_unit|BoothMul:multiplier|Mux417                   ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_right:r_right|ShiftLeft0              ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Datapath|ALU:alu_unit|rotate_left:r_left|ShiftRight0               ;
-; 40:1               ; 31 bits   ; 806 LEs       ; 310 LEs              ; 496 LEs                ; No         ; |Datapath|ALU:alu_unit|Mux3                                         ;
-; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |Datapath|Bus:bus_unit|Selector5                                    ;
+; 38:1               ; 32 bits   ; 800 LEs       ; 320 LEs              ; 480 LEs                ; No         ; |Datapath|ALU:alu_unit|Mux24                                        ;
+; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |Datapath|Bus:bus_unit|Selector10                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -426,26 +426,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     ENA SCLR          ; 768                         ;
 ;     ENA SCLR SLD      ; 32                          ;
 ;     ENA SLD           ; 32                          ;
-; arriav_lcell_comb     ; 5635                        ;
-;     arith             ; 3226                        ;
+; arriav_lcell_comb     ; 5910                        ;
+;     arith             ; 3322                        ;
 ;         0 data inputs ; 31                          ;
-;         1 data inputs ; 189                         ;
-;         2 data inputs ; 273                         ;
-;         3 data inputs ; 961                         ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 1764                        ;
-;     extend            ; 98                          ;
-;         7 data inputs ; 98                          ;
-;     normal            ; 2311                        ;
-;         2 data inputs ; 112                         ;
-;         3 data inputs ; 248                         ;
-;         4 data inputs ; 654                         ;
-;         5 data inputs ; 400                         ;
-;         6 data inputs ; 897                         ;
+;         1 data inputs ; 190                         ;
+;         2 data inputs ; 211                         ;
+;         3 data inputs ; 124                         ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 2726                        ;
+;     extend            ; 36                          ;
+;         7 data inputs ; 36                          ;
+;     normal            ; 2552                        ;
+;         2 data inputs ; 98                          ;
+;         3 data inputs ; 296                         ;
+;         4 data inputs ; 719                         ;
+;         5 data inputs ; 514                         ;
+;         6 data inputs ; 925                         ;
 ; boundary_port         ; 157                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 140.20                      ;
-; Average LUT depth     ; 77.21                       ;
+; Max LUT depth         ; 144.20                      ;
+; Average LUT depth     ; 81.63                       ;
 +-----------------------+-----------------------------+
 
 
@@ -454,7 +454,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:23     ;
+; Top            ; 00:00:33     ;
 +----------------+--------------+
 
 
@@ -464,7 +464,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Mon Feb 24 12:06:12 2025
+    Info: Processing started: Mon Feb 24 13:36:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_shiftright_tb.v
@@ -593,15 +593,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MARin" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 7
-Info (21057): Implemented 6592 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6867 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 93 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 6435 logic cells
+    Info (21061): Implemented 6710 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Mon Feb 24 12:06:50 2025
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Mon Feb 24 13:37:34 2025
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

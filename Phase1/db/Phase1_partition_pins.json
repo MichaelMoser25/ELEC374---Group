@@ -260,11 +260,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "op_code[2]",
+					"name" : "op_code[4]",
 					"strict" : false
 				},
 				{
-					"name" : "op_code[4]",
+					"name" : "op_code[3]",
+					"strict" : false
+				},
+				{
+					"name" : "op_code[2]",
 					"strict" : false
 				},
 				{
@@ -273,10 +277,6 @@
 				},
 				{
 					"name" : "op_code[1]",
-					"strict" : false
-				},
-				{
-					"name" : "op_code[3]",
 					"strict" : false
 				},
 				{
@@ -384,15 +384,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "clr",
+					"strict" : false
+				},
+				{
+					"name" : "RYin",
+					"strict" : false
+				},
+				{
 					"name" : "pc_increment",
 					"strict" : false
 				},
 				{
 					"name" : "PCin",
-					"strict" : false
-				},
-				{
-					"name" : "clr",
 					"strict" : false
 				},
 				{
@@ -404,7 +408,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_in[30]",
+					"name" : "data_in[31]",
 					"strict" : false
 				},
 				{
@@ -500,19 +504,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "data_in[30]",
+					"strict" : false
+				},
+				{
 					"name" : "data_in[29]",
 					"strict" : false
 				},
 				{
-					"name" : "data_in[31]",
+					"name" : "data_in[28]",
 					"strict" : false
 				},
 				{
 					"name" : "data_in[27]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[28]",
 					"strict" : false
 				},
 				{
@@ -621,10 +625,6 @@
 				},
 				{
 					"name" : "data_in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "RYin",
 					"strict" : false
 				}
 			]
