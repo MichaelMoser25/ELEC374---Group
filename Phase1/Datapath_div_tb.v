@@ -110,7 +110,7 @@ module Datapath_div_tb;
             end
             
             REG_LOAD1A: begin   
-                data_in <= 32'h00006338; 
+                data_in <= 32'hFFFFFFFA; 
                 read = 0; mdr_in = 0;                    
                 read <= 1; mdr_in <= 1;               
                 #15 read <= 0; mdr_in <= 0;  
@@ -122,7 +122,7 @@ module Datapath_div_tb;
             end 
 
             REG_LOAD2A: begin   
-                data_in <= 32'h000002E0; 
+                data_in <= 32'h00000002; 
                 read <= 1; mdr_in <= 1;   
                 #15 read <= 0; mdr_in <= 0;       
             end 
