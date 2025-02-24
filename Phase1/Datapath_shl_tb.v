@@ -140,7 +140,7 @@ module Datapath_shl_tb;
             T1: begin 
                 zlow_out <= 1; pc_in <= 1; read <= 1; mdr_in <= 1;   
                 data_in <= 32'b01011_0010_0001_1100_1000_0000_0000_0000; 
-					 #15 zlow_out <= 0; pc_in <= 0; read <= 0; mdr_in <= 0;
+					 #15 zlow_out <= 0; pc_in <= 0; read <= 0; mdr_in <= 0;`
             end 
 
             T2: begin 
