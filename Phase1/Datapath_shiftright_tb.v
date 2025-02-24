@@ -139,7 +139,7 @@ module Datapath_shiftright_tb;
 
             T1: begin 
                 zlow_out <= 1; pc_in <= 1; read <= 1; mdr_in <= 1;   
-                data_in <= 32'h1A2B8000; 
+                data_in <= 32'b01001_0100_0011_1001_0000_0000_0000_000; 
 					 #15 zlow_out <= 0; pc_in <= 0; read <= 0; mdr_in <= 0;
             end 
 
@@ -171,3 +171,4 @@ module Datapath_shiftright_tb;
     end
 	
 endmodule
+

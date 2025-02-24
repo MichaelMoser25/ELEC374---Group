@@ -140,7 +140,7 @@ module Datapath_ror_tb;
 
             T1: begin 
                 zlow_out <= 1; pc_in <= 1; read <= 1; mdr_in <= 1;   
-                data_in <= 32'b00111_0010_0001_1100_1000_0000_0000_000; 
+                data_in <= 32'b00111_0100_0011_1001_0000_0000_0000_000; 
 					 #15 zlow_out <= 0; pc_in <= 0; read <= 0; mdr_in <= 0;
             end 
 
@@ -168,4 +168,4 @@ module Datapath_ror_tb;
         endcase 
     end
 	
-endmodule	
+endmodule
