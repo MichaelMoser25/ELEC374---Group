@@ -14,6 +14,8 @@ module Datapath (
     output wire [31:0] dataHI, dataLO
 );
 
+wire BAout = 0; // add to signals later.
+
 wire [31:0] bus, MDmuxOut;
 
 wire [31:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, 
@@ -33,7 +35,7 @@ wire [31:0] MAR_data;
 wire [31:0] PC_data;
 
 Bus bus_unit (
-    .BusMuxInR0(reg0), .BusMuxInR1(reg1), .BusMuxInR2(reg2), .BusMuxInR3(reg3),
+    .BusMuxInR0(reg0Out), .BusMuxInR1(reg1), .BusMuxInR2(reg2), .BusMuxInR3(reg3),
     .BusMuxInR4(reg4), .BusMuxInR5(reg5), .BusMuxInR6(reg6), .BusMuxInR7(reg7),
     .BusMuxInR8(reg8), .BusMuxInR9(reg9), .BusMuxInR10(reg10), .BusMuxInR11(reg11),
     .BusMuxInR12(reg12), .BusMuxInR13(reg13), .BusMuxInR14(reg14), .BusMuxInR15(reg15),
@@ -52,6 +54,13 @@ Bus bus_unit (
 );
 
 register r0 (clr, clk, R0in, bus, reg0);
+mux rZeroMux (
+					.a(32'b0),
+					.b(reg0),
+					.enable(BAout),
+					.out(reg0Out)
+					);
+					
 register r1 (clr, clk, R1in, bus, reg1);
 register r2 (clr, clk, R2in, bus, reg2);
 register r3 (clr, clk, R3in, bus, reg3);

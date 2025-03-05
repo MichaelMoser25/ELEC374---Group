@@ -456,19 +456,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "R6in",
+					"name" : "R8in",
 					"strict" : false
 				},
 				{
-					"name" : "R7in",
+					"name" : "R3in",
 					"strict" : false
 				},
 				{
-					"name" : "R1in",
-					"strict" : false
-				},
-				{
-					"name" : "R0in",
+					"name" : "R2in",
 					"strict" : false
 				},
 				{
@@ -484,7 +480,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "R4in",
+					"name" : "R1in",
 					"strict" : false
 				},
 				{
@@ -492,15 +488,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "R8in",
+					"name" : "R4in",
 					"strict" : false
 				},
 				{
-					"name" : "R3in",
+					"name" : "R7in",
 					"strict" : false
 				},
 				{
-					"name" : "R2in",
+					"name" : "R6in",
 					"strict" : false
 				},
 				{
