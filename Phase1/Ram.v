@@ -1,17 +1,25 @@
 module Ram(
 	input clk, read, write,
-	input [7:0] address,
+	input [8:0] address,
 	input [31:0] data_in,
 	output reg [31:0] data_out
 	
 );
-	reg [32:0]memory [511:0];
+	reg [31:0]memory [0:511];
 	
-	always @(posedge clk) begin
+    initial begin
+			data_out = 32'd0;
+        $readmemh("test.hex", memory);
+    end
+
+	
+	always @(*) begin
 		if (write)
 			memory[address] <= data_in;
 		else if (read)
 			data_out <= memory[address];
 	end
+	
+	
 	
 endmodule 

@@ -1,5 +1,5 @@
 Flow report for Phase1
-Wed Mar 05 18:17:16 2025
+Sat Mar 08 20:12:54 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -38,29 +38,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 05 18:17:16 2025       ;
-; Quartus Prime Version           ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
-; Revision Name                   ; Phase1                                      ;
-; Top-level Entity Name           ; Datapath                                    ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CEBA4F23C7                                 ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 3,874 / 18,480 ( 21 % )                     ;
-; Total registers                 ; 800                                         ;
-; Total pins                      ; 157 / 224 ( 70 % )                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Sat Mar 08 20:12:54 2025       ;
+; Quartus Prime Version       ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
+; Revision Name               ; Phase1                                      ;
+; Top-level Entity Name       ; Datapath                                    ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CEBA4F23C7                                 ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/05/2025 18:12:48 ;
+; Start date & time ; 03/08/2025 20:12:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -79,11 +74,12 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251545081669246.174121636817592        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251545081669246.174148275932092        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_shiftright_tb            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_mul_tb                   ;
@@ -101,13 +97,14 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_div_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_mem_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_rol_tb.v                      ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_negate_tb.v                   ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_32bit_tb.v                         ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_mem_tb.v                      ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_shra_tb.v                     ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_shiftright_tb.v               ; --            ; --          ; Datapath_shiftright_tb            ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_mul_tb.v                      ; --            ; --          ; Datapath_mul_tb                   ;
@@ -126,6 +123,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_rol_tb                        ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_negate_tb                     ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_32bit_tb                           ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_mem_tb                        ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_shra_tb                       ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_shiftright_tb                 ; --            ; --          ; Datapath_shiftright_tb            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_mul_tb                        ; --            ; --          ; Datapath_mul_tb                   ;
@@ -157,10 +155,12 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; Datapath_shiftright_tb                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_shra_tb                       ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_shl_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_mem_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 110 ns                                 ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_shiftright_tb            ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_mul_tb                   ;
@@ -190,44 +190,33 @@ https://fpgasoftware.intel.com/eula.
 ; SMART_RECOMPILE                      ; On                                     ; Off           ; --          ; --                                ;
 ; TIMING_ANALYZER_MULTICORNER_ANALYSIS ; Off                                    ; On            ; --          ; --                                ;
 ; TOP_LEVEL_ENTITY                     ; Datapath                               ; Phase1        ; --          ; --                                ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                    ; --            ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4948 MB             ; 00:00:33                           ;
-; Fitter               ; 00:03:36     ; 1.2                     ; 6906 MB             ; 00:23:04                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4868 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:10     ; 2.4                     ; 5153 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4771 MB             ; 00:00:02                           ;
-; Total                ; 00:04:19     ; --                      ; --                  ; 00:23:54                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:39     ; 1.0                     ; 4811 MB             ; 00:00:37                           ;
+; Total                  ; 00:00:39     ; --                      ; --                  ; 00:00:37                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
-quartus_fit --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-quartus_asm --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-quartus_sta Phase1 -c Phase1
-quartus_eda --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
+quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
 
 
 

@@ -1,7 +1,7 @@
 module Datapath (
 		input clr, clk, MDRin, MDRout, pc_increment,
 		input [4:0] op_code,
-		input [31:0] data_in,
+//		input [31:0] data_in,
 
 		input wire R0in, R1in, R2in, R3in,  R4in, R5in, R6in, R7in, 
         R8in, R9in, R10in, R11in,  R12in, R13in, R14in, R15in, RYin, MARin, 
@@ -11,8 +11,11 @@ module Datapath (
 			 R8out, R9out, R10out, R11out,  R12out, R13out, R14out, R15out, 
 			 HIout, LOout, Zhighout, Zlowout, PCout, IRout, InPortout, Cout,
 
-    output wire [31:0] dataHI, dataLO
+    output wire [31:0] dataHI, dataLO,
+	 input memoryRead, memoryWrite
 );
+
+wire [31:0] memoryData;
 
 wire BAout = 0; // add to signals later.
 
@@ -96,7 +99,7 @@ register rY (clr, clk, RYin, bus, regY);
 
 mux MDmux  (
 				.a(bus),
-				.b(data_in),
+				.b(memoryData),
 				.enable(read), 
 				.out(MDmuxOut)
 );
@@ -135,6 +138,17 @@ ALU alu_unit (
 
 register rZhigh (clr, clk, Zhighin, alu_result[63:32], regZhigh);
 register rZlow (clr, clk, Zlowin, alu_result[31:0], regZlow);
+// Example signals, not conected
+
+Ram memory (
+	.clk(clk),
+	.read(memoryRead),
+	.write(memoryWrite),
+	.address(9'd0),
+//	.address(MAR_data[8:0]),
+	.data_in(regMDR),
+	.data_out(memoryData)
+);
 
 
 
