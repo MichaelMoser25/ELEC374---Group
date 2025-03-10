@@ -140,15 +140,15 @@ register rZhigh (clr, clk, Zhighin, alu_result[63:32], regZhigh);
 register rZlow (clr, clk, Zlowin, alu_result[31:0], regZlow);
 // Example signals, not conected
 
-Ram memory (
-	.clk(clk),
-	.read(memoryRead),
-	.write(memoryWrite),
-	.address(9'd0),
-//	.address(MAR_data[8:0]),
-	.data_in(regMDR),
-	.data_out(memoryData)
-);
+//Ram memory (
+//	.clk(clk),
+//	.read(memoryRead),
+//	.write(memoryWrite),
+//	.address(9'd0),
+////	.address(MAR_data[8:0]),
+//	.data_in(regMDR),
+//	.data_out(memoryData)
+//);
 
 
 

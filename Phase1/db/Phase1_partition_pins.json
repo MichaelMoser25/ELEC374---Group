@@ -494,14 +494,6 @@
 				{
 					"name" : "R6in",
 					"strict" : false
-				},
-				{
-					"name" : "memoryWrite",
-					"strict" : false
-				},
-				{
-					"name" : "memoryRead",
-					"strict" : false
 				}
 			]
 		}
