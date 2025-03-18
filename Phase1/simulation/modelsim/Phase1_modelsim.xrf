@@ -33,6 +33,7 @@ source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff.v
+source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v
 source_file = 1, C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/db/Phase1.cbx.xml
 design_name = Datapath
 instance = comp, \dataHI[0]~output , dataHI[0]~output, Datapath, 1
