@@ -9,7 +9,7 @@ module Ram(
 	
     initial begin
 			data_out = 32'd0;
-        $readmemh("test.hex", memory);
+        $readmemh("memory.hex", memory);
     end
 
 	
