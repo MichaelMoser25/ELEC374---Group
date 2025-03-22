@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Phase1
-Fri Mar 21 20:11:25 2025
+Sat Mar 22 13:26:55 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -9,13 +9,15 @@ Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:subtractor"
-  6. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:adder"
-  7. Port Connectivity Checks: "register:MAR"
-  8. Port Connectivity Checks: "mux:rZeroMux"
-  9. Analysis & Elaboration Messages
- 10. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |Datapath
+  5. Parameter Settings for User Entity Instance: Ram:memory
+  6. Analysis & Elaboration Settings
+  7. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:subtractor"
+  8. Port Connectivity Checks: "ALU:alu_unit|CLA_32bit:adder"
+  9. Port Connectivity Checks: "register:MAR"
+ 10. Port Connectivity Checks: "mux:rZeroMux"
+ 11. Analysis & Elaboration Messages
+ 12. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -42,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 21 20:11:25 2025       ;
+; Analysis & Elaboration Status ; Successful - Sat Mar 22 13:26:55 2025       ;
 ; Quartus Prime Version         ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                 ; Phase1                                      ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -71,6 +73,26 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Datapath ;
++----------------+------------+--------------------------------------------+
+; Parameter Name ; Value      ; Type                                       ;
++----------------+------------+--------------------------------------------+
+; MEM_FILE       ; memory.hex ; String                                     ;
++----------------+------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Ram:memory ;
++----------------+------------+---------------------------+
+; Parameter Name ; Value      ; Type                      ;
++----------------+------------+---------------------------+
+; MEM_FILE       ; memory.hex ; String                    ;
++----------------+------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -206,7 +228,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Fri Mar 21 20:11:09 2025
+    Info: Processing started: Sat Mar 22 13:26:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file select_encode.v
@@ -253,14 +275,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux.v
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: Ram File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_mem_tb.v
-    Info (12023): Found entity 1: Datapath_mem_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 2
+    Info (12023): Found entity 1: Datapath_mem_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file con_ff.v
     Info (12023): Found entity 1: CON_FF File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file input_output_ports.v
     Info (12023): Found entity 1: outport File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 1
     Info (12023): Found entity 2: inport File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 20
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:sel_enc" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 57
+Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:sel_enc" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 55
 Warning (10230): Verilog HDL assignment warning at select_encode.v(27): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 27
 Warning (10230): Verilog HDL assignment warning at select_encode.v(28): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 28
 Warning (10230): Verilog HDL assignment warning at select_encode.v(36): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 36
@@ -269,14 +291,14 @@ Warning (10230): Verilog HDL assignment warning at select_encode.v(45): truncate
 Warning (10230): Verilog HDL assignment warning at select_encode.v(46): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 46
 Warning (10272): Verilog HDL Case Statement warning at select_encode.v(31): case item expression covers a value already covered by a previous case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 31
 Warning (10270): Verilog HDL Case Statement warning at select_encode.v(21): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 21
-Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:sign_ext" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 62
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 82
+Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:sign_ext" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 60
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 80
 Warning (10763): Verilog HDL warning at Bus.v(19): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
 Warning (10270): Verilog HDL Case Statement warning at Bus.v(19): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
-Info (12128): Elaborating entity "register" for hierarchy "register:r0" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 84
-Info (12128): Elaborating entity "mux" for hierarchy "mux:rZeroMux" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 90
-Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC_reg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 117
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 146
+Info (12128): Elaborating entity "register" for hierarchy "register:r0" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 82
+Info (12128): Elaborating entity "mux" for hierarchy "mux:rZeroMux" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 88
+Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC_reg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 115
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 144
 Info (12128): Elaborating entity "CLA_32bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 115
 Info (12128): Elaborating entity "CLA_4bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 19
 Info (12128): Elaborating entity "logic_and" for hierarchy "ALU:alu_unit|logic_and:l_and" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 128
@@ -293,40 +315,40 @@ Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(26): case item
 Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 28
 Info (12128): Elaborating entity "logic_not" for hierarchy "ALU:alu_unit|logic_not:l_not" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 183
 Info (12128): Elaborating entity "logic_negate" for hierarchy "ALU:alu_unit|logic_negate:l_neg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 188
-Info (12128): Elaborating entity "Ram" for hierarchy "Ram:memory" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 169
-Warning (10240): Verilog HDL Always Construct warning at Ram.v(17): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[0]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[1]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[2]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[3]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[4]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[5]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[6]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[7]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[8]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[9]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[10]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[11]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[12]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[13]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[14]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[15]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[16]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[17]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[18]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[19]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[20]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[21]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[22]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[23]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[24]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[25]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[26]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[27]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[28]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[29]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[30]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[31]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (12128): Elaborating entity "Ram" for hierarchy "Ram:memory" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 156
+Warning (10240): Verilog HDL Always Construct warning at Ram.v(19): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[0]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[1]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[2]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[3]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[4]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[5]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[6]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[7]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[8]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[9]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[10]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[11]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[12]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[13]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[14]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[15]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[16]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[17]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[18]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[19]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[20]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[21]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[22]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[23]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[24]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[25]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[26]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[27]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[28]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[29]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[30]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
+Info (10041): Inferred latch for "data_out[31]" at Ram.v(19) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 19
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Phase1 -section_id Top was ignored
@@ -353,11 +375,11 @@ Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Phase1 -section_id Top was ignored
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 40 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 41 warnings
     Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Fri Mar 21 20:11:25 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Processing ended: Sat Mar 22 13:26:55 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +--------------------------------------------+

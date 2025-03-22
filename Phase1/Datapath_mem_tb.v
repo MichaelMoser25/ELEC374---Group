@@ -7,7 +7,6 @@ module Datapath_mem_tb;
     
     reg mdr_in, mdr_out, y_in,MARin, pc_increment;
     
-    reg [31:0] instruction;
 	 
 	 reg Gra, Grb, Grc, BAout, Rin, Rout;
 
@@ -32,13 +31,12 @@ module Datapath_mem_tb;
     // Instantiate the Datapath module
 	 
 	 
-    Datapath #(.MEM_FILE("memory.hex")) DUT (
+    Datapath #(.MEM_FILE("loadCase1.hex")) DUT (
         .clr(clr),
         .clk(clk),
         .MDRin(mdr_in),
         .MDRout(mdr_out),
         .pc_increment(pc_increment),
-        .instruction(instruction),
 		  .Gra(Gra),
 		  .Grb(Grb),
 		  .Grc(Grc),
@@ -89,7 +87,7 @@ module Datapath_mem_tb;
     
     MARin = 0; 
 
-        instruction = 32'd0; alu_control <= 5'd0;
+         alu_control <= 5'd0;
 		          #5 clr = 0; 
     end
 
@@ -128,7 +126,7 @@ module Datapath_mem_tb;
 
 			 MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
 			 ir_in <= 0; y_in <= 0;
-			 read <= 0; instruction[31:27] <= 5'd0;
+			 read <= 0; 
 			 clr <= 0; memRead <= 0; memWrite <= 0; 
 //			 PC_tb_enable <= 0;
 
@@ -170,7 +168,7 @@ module Datapath_mem_tb;
         Reg_load1f: begin
             zlow_out <= 1; Gra <= 1;
 			#5   Rin = 1;
-			instruction[26:23] <= 4'd4;
+//			instruction[26:23] <= 4'd4;
 			#10 zlow_out <= 0;
 			#5 Rin <= 0; Gra <= 0;
         end

@@ -1,7 +1,5 @@
 module Datapath #(parameter MEM_FILE = "memory.hex")(
 		input clr, clk, MDRin, MDRout, pc_increment,
-		input [31:0] instruction,
-
 		// Control signals for select_encode_logic
 		input wire Gra, Grb, Grc, Rin, Rout, BAout, RYin,
 
