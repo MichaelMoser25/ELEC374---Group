@@ -1,4 +1,7 @@
 `timescale 1ns/10ps
+`define TEST_CASE 1 
+// 1: ld r4, 0x54
+// 2: ld r6, 0x63(R2) 
 module Datapath_mem_tb;
     reg clk, clr;
     
@@ -27,7 +30,9 @@ module Datapath_mem_tb;
     reg [3:0] present_state = Default;
 
     // Instantiate the Datapath module
-    Datapath DUT (
+	 
+	 
+    Datapath #(.MEM_FILE("memory.hex")) DUT (
         .clr(clr),
         .clk(clk),
         .MDRin(mdr_in),

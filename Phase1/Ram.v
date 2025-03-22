@@ -1,4 +1,4 @@
-module Ram(
+module Ram #(parameter MEM_FILE = "memory.hex" )(
 	input clk, read, write,
 	input [8:0] address,
 	input [31:0] data_in,
@@ -9,7 +9,9 @@ module Ram(
 	
     initial begin
 			data_out = 32'd0;
-        $readmemh("memory.hex", memory);
+			$readmemh(MEM_FILE, memory);
+//			$readmemh("memory.hex", memory);
+
     end
 
 	

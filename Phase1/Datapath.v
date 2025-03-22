@@ -1,4 +1,4 @@
-module Datapath (
+module Datapath #(parameter MEM_FILE = "memory.hex")(
 		input clr, clk, MDRin, MDRout, pc_increment,
 		input [31:0] instruction,
 
@@ -147,19 +147,8 @@ ALU alu_unit (
 
 register rZhigh (clr, clk, Zhighin, alu_result[63:32], regZhigh);
 register rZlow (clr, clk, Zlowin, alu_result[31:0], regZlow);
-//wire [9:0]postOffsetAddress;
-//assign postOffsetAddress = MAR_data[8:0]+C_sign_extended;
 
-//Ram memory (
-//	.clk(clk),
-//	.read(memoryRead),
-//	.write(memoryWrite),
-//	.address(9'd0),
-////	.address(MAR_data[8:0]),
-//	.data_in(regMDR),
-//	.data_out(memoryData)
-//);
-Ram memory (
+Ram #(.MEM_FILE(MEM_FILE)) memory (
     .clk(clk),
     .read(memoryRead),
     .write(memoryWrite),
