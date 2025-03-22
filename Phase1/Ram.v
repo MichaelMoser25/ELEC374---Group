@@ -10,8 +10,6 @@ module Ram #(parameter MEM_FILE = "memory.hex" )(
     initial begin
 			data_out = 32'd0;
 			$readmemh(MEM_FILE, memory);
-//			$readmemh("memory.hex", memory);
-
     end
 
 	
