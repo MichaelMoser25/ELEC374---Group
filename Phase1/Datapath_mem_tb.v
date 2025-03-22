@@ -17,7 +17,6 @@ module Datapath_mem_tb;
 
     // Outputs
     wire [31:0] data_hi, data_lo;
-	 reg [15:0] rin_debug,rout_debug;
 
 	 reg memRead, memWrite;
 
@@ -38,6 +37,8 @@ module Datapath_mem_tb;
 		  .Gra(Gra),
 		  .Grb(Grb),
 		  .Grc(Grc),
+		  .Rin(Rin),
+		  .Rout(Rout),
 		  .BAout(BAout),
 		  
 //        .data_in(data_in),
@@ -59,9 +60,7 @@ module Datapath_mem_tb;
         .dataHI(data_hi),
         .dataLO(data_lo),
 		  .memoryRead(memRead),
-		  .memoryWrite(memWrite),
-		  .rin_debug(rin_debug),
-		  .rout_debug(rout_debug)
+		  .memoryWrite(memWrite)
 
     );
 
@@ -113,42 +112,14 @@ module Datapath_mem_tb;
 
     always @(present_state) begin 
         case (present_state)
-//            DEFAULT: begin 
-//                pc_out <= 0; zlow_out <= 0; mdr_out <= 0;
-////                r3_out <= 0; r7_out <= 0; r3_in <= 0; r4_in <= 0; r7_in <= 0;
-//					 pc_in <= 0; mdr_in <= 0; ir_in <= 0; y_in <= 0;
-//                pc_increment <= 0; mdr_in <= 0;
-//                 memRead <= 0; memWrite <=0;
-//            end
-//				
-//				            REG_LOAD1A: begin 
-//					 instruction = 32'b00000100000000000000000000000000;
-//                read <= 0; mdr_in <= 0;                    
-//                memRead <= 1; 
-////					 r2_in <= 1;               
-//                #15 memRead <= 0; 
-////					 r2_in <= 0;  
-//		            end 
-//
-//            
-//            REG_LOAD1B: begin                     
-//                read <= 1; mdr_in <= 1;               
-//                #15 read <= 0; mdr_in <= 0;  
-//		            end 
-//
-//            REG_LOAD1C: begin   
-//                mdr_out <= 1;
-////					 r3_in <= 1;   
-//                #15 mdr_out <= 0;
-////					 r3_in <= 0;          
-//            end 
+
 		Default: begin
 			pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
 			lo_out <= 0; zhigh_out <= 0; c_out <= 0;
 //			In_Port_out <= 0;
 			lo_in <= 0; hi_in <= 0; MARin <= 0;
-			rin_debug <= 0; rout_debug <= 0;
 			pc_increment <= 0;
+			Rin <= 0; Rout <=0;
 
 			 MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
 			 ir_in <= 0; y_in <= 0;
@@ -181,7 +152,7 @@ module Datapath_mem_tb;
 			   ir_in <= 0;
         end
         Reg_load1d: begin
-            Grb <= 1; BAout <= 1;
+            Grb <= 1; BAout <= 1; 
             #5 y_in <= 1;
 			#10 Grb <= 0; BAout <= 0;
             #5 y_in <= 0;
@@ -192,13 +163,11 @@ module Datapath_mem_tb;
             #15 z_in <= 0; c_out <= 0;
         end
         Reg_load1f: begin
-            zlow_out <= 1;
-			#5  Gra <= 1; 
-			 rin_debug <= 16'b0000000000010000;
+            zlow_out <= 1; Gra <= 1;
+			#5   Rin = 1;
 			instruction[26:23] <= 4'd4;
 			#10 zlow_out <= 0;
 			#5 Rin <= 0; Gra <= 0;
-			rin_debug <= 16'd0;
         end
 		T0: begin
 			 pc_out <= 1; alu_control <= 5'd19; MARin <= 1;
@@ -221,10 +190,10 @@ module Datapath_mem_tb;
 			 #5  MARin <= 0; ir_in <= 0;
         end
         T3: begin
-            Grb <= 1; BAout <= 1; alu_control <= 5'd3;
-            #5 y_in <= 1;
+            Grb <= 1;  BAout <= 1; alu_control <= 5'd3;
+            #5 y_in <= 1; Rin = 1;
 			#10 Grb <= 0;
-            #5 y_in <= 0; BAout <= 0;
+            #5 y_in <= 0; BAout <= 0; Rin = 0;
         end
         T4: begin
             c_out <= 1;
@@ -240,11 +209,9 @@ module Datapath_mem_tb;
             #15 read <= 0; memRead <= 0; mdr_in <= 0;
         end
         T7: begin
-				//instruction[26:22] <= 4'd4;
-				rin_debug <= 16'b0000000000010000;
-            #5 mdr_out <= 1; Gra <=1; Rin <= 1;
+				Gra <=1;
+            #5 mdr_out <= 1;  Rin <= 1;
             #15 mdr_out <= 0; Gra <=0; Rin <= 0;
-				rin_debug <= 16'd0;
 
 //        end
 //        endcase

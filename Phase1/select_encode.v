@@ -1,55 +1,53 @@
+
 module select_encode_logic(
-    input [31:0] IR,              // Instruction Register
-    input Gra, Grb, Grc,          // Register selection signals
-    input Rin, Rout, BAout,       // Control signals
-    output [15:0] R_in,           // R0in - R15in signals
-    output [15:0] R_out           // R0out - R15out signals
+	 input clk,
+    input [31:0] IR,              
+    input Gra, Grb, Grc, 
+    input Rin_enable, Rout_enable,
+    output reg [15:0] R_in,
+    output reg [15:0] R_out
 );
 
-    // Extract register fields from IR
-    wire [3:0] Ra = IR[26:23];     // Ra field
-    wire [3:0] Rb = IR[22:19];     // Rb field
-    wire [3:0] Rc = IR[18:15];     // Rc field
 
-    // Intermediate signals for selected register
-    wire [3:0] selected_reg;
-    wire [15:0] decoded_reg;
+reg [3:0] currentReg;
 
-    // Select register field based on Gra, Grb, Grc
-    assign selected_reg = (Gra) ? Ra :
-                          (Grb) ? Rb :
-                          (Grc) ? Rc : 4'b0000;
+always @(*) begin
 
-    // 4-to-16 decoder for register selection
-    assign decoded_reg = (selected_reg == 4'b0000) ? 16'b0000000000000001 :
-                        (selected_reg == 4'b0001) ? 16'b0000000000000010 :
-                        (selected_reg == 4'b0010) ? 16'b0000000000000100 :
-                        (selected_reg == 4'b0011) ? 16'b0000000000001000 :
-                        (selected_reg == 4'b0100) ? 16'b0000000000010000 :
-                        (selected_reg == 4'b0101) ? 16'b0000000000100000 :
-                        (selected_reg == 4'b0110) ? 16'b0000000001000000 :
-                        (selected_reg == 4'b0111) ? 16'b0000000010000000 :
-                        (selected_reg == 4'b1000) ? 16'b0000000100000000 :
-                        (selected_reg == 4'b1001) ? 16'b0000001000000000 :
-                        (selected_reg == 4'b1010) ? 16'b0000010000000000 :
-                        (selected_reg == 4'b1011) ? 16'b0000100000000000 :
-                        (selected_reg == 4'b1100) ? 16'b0001000000000000 :
-                        (selected_reg == 4'b1101) ? 16'b0010000000000000 :
-                        (selected_reg == 4'b1110) ? 16'b0100000000000000 :
-                        (selected_reg == 4'b1111) ? 16'b1000000000000000 : 16'b0000000000000000;
+	R_in = 16'd0;
+	R_out = 16'd0;
+	currentReg = 4'b000;
 
-    // Generate R_in signals
-    assign R_in = (Rin) ? decoded_reg : 16'b0;
-
-    // Generate R_out signals
-    // Handle BAout special case: when BAout is 1 and R0 is selected, R0out should be 0
-    // For registers R1-R15, output the selected register normally
-    wire [15:0] rout_temp = (Rout) ? decoded_reg : 16'b0;
-    
-    // When BAout is asserted
-    // - If register 0 is selected, R0out should be 0 (to output zeros to the bus)
-    // - If any other register is selected, its value should go to the bus
-    assign R_out = (BAout) ? ((decoded_reg == 16'b0000000000000001) ? 16'b0 : decoded_reg) : rout_temp;
+		
+		case(IR[31:27]) 
+		
+		5'b00000, 5'b00001, 5'b00010, 5'b01100, 5'b01101,
+		5'b01110, 5'b01111, 5'b10000, 5'b10001, 5'b10010: begin // I format
+			if (Gra) currentReg = IR[26:23];
+			if (Grb) currentReg = IR[22:19];
+			if (Rin_enable) R_in = (1 << currentReg);
+			if (Rout_enable) R_out = (1 << currentReg);
+			end
+			
+				5'b00001, 5'b00010, 5'b00011, 5'b00100,5'b00101,
+				5'b00110, 5'b00111, 5'b01000: begin // R format
+			if (Gra) currentReg = IR[26:23];
+			if (Grb) currentReg = IR[22:19];
+			if (Grc) currentReg = IR[18:15];
+			if (Rin_enable) R_in = (1 << currentReg);
+			if (Rout_enable) R_out = (1 << currentReg);
+			end
+			
+			
+			
+			5'b10011, 5'b10100, 5'b10101, 5'b10110, 5'b10111, 5'b11000, 5'b11001: begin // J format, B format
+			if (Gra) currentReg = IR[26:23];
+			if (Grb) currentReg = IR[22:19];
+			if (Rin_enable) R_in = (1 << currentReg);
+			if (Rout_enable) R_out = (1 << currentReg);
+			end
+			
+	endcase
+end
 
 endmodule
 

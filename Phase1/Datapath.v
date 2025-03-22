@@ -3,7 +3,7 @@ module Datapath (
 		input [31:0] instruction,
 
 		// Control signals for select_encode_logic
-		input wire Gra, Grb, Grc, BAout, RYin,
+		input wire Gra, Grb, Grc, Rin, Rout, BAout, RYin,
 
         input wire MARin, HIin, LOin, Zhighin, Zlowin, PCin, IRin, InPortin, Cin, read,
 
@@ -11,8 +11,7 @@ module Datapath (
 		input [4:0] alu_control,
 
         output wire [31:0] dataHI, dataLO,
-	    input memoryRead, memoryWrite,
-		 input [15:0] rin_debug, rout_debug
+	    input memoryRead, memoryWrite
 );
 
 wire [31:0] memoryData;
@@ -23,8 +22,7 @@ wire [31:0] bus, MDmuxOut;
 // Register outputs
 wire [31:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, 
     reg8, reg9, reg10, reg11, reg12, reg13, reg14, reg15, regY, 
-    regHI, regLO, regIR, regMDR, regInPort, regC, regZlow, regZhigh;
-	 
+    regHI, regLO, regIR, regMDR, regInPort, regZlow, regZhigh;
 // For BAout mux
 wire [31:0] reg0Out;
 
@@ -44,21 +42,16 @@ wire [31:0] C_sign_extended;
 wire [15:0] R_in;  // R0in to R15in
 wire [15:0] R_out; // R0out to R15out
 
-wire [15:0] R_in_debug;  // R0in to R15in
-wire [15:0] R_out_debug; // R0out to R15out
-
-assign R_in_debug = rin_debug;
-assign R_out_debug = rout_debug;
 
 // Instantiate select_encode_logic module
 select_encode_logic sel_enc (
+	 .clk(clk),
     .IR(regIR),
     .Gra(Gra),
     .Grb(Grb),
     .Grc(Grc),
-    .Rin(Rin),
-    .Rout(Rout),
-    .BAout(BAout),
+    .Rin_enable(Rin),
+    .Rout_enable(Rout),
     .R_in(R_in),
     .R_out(R_out)
 );
@@ -78,17 +71,17 @@ Bus bus_unit (
     .C_sign_extended(C_sign_extended),  // Connect to sign extended value
 
     // Connect to individual register output signals from select_encode_logic
-    .R0out(R_out_debug[0]), .R1out(R_out_debug[1]), .R2out(R_out[2]), .R3out(R_out_debug[3]),
-    .R4out(R_out_debug[4]), .R5out(R_out_debug[5]), .R6out(R_out_debug[6]), .R7out(R_out_debug[7]),
-    .R8out(R_out_debug[8]), .R9out(R_out_debug[9]), .R10out(R_out_debug[10]), .R11out(R_out_debug[11]),
-    .R12out(R_out_debug[12]), .R13out(R_out_debug[13]), .R14out(R_out_debug[14]), .R15out(R_out_debug[15]),
+    .R0out(R_out[0]), .R1out(R_out[1]), .R2out(R_out[2]), .R3out(R_out[3]),
+    .R4out(R_out[4]), .R5out(R_out[5]), .R6out(R_out[6]), .R7out(R_out[7]),
+    .R8out(R_out[8]), .R9out(R_out[9]), .R10out(R_out[10]), .R11out(R_out[11]),
+    .R12out(R_out[12]), .R13out(R_out[13]), .R14out(R_out[14]), .R15out(R_out[15]),
     .HIout(HIout), .LOout(LOout), .Zhighout(Zhighout), .Zlowout(Zlowout),
     .PCout(PCout), .IRout(IRout), .MDRout(MDRout), .InPortout(InPortout), .Cout(Cout),
 
     .BusMuxOut(bus) 
 );
 
-register r0 (clr, clk, R_in_debug[0], bus, reg0);
+register r0 (clr, clk, R_in[0], bus, reg0);
 mux rZeroMux (
     .a(32'b0),
     .b(reg0),
@@ -96,21 +89,21 @@ mux rZeroMux (
     .out(reg0Out)
 );
 					
-register r1 (clr, clk, R_in_debug[1], bus, reg1);
-register r2 (clr, clk, R_in_debug[2], bus, reg2);
-register r3 (clr, clk, R_in_debug[3], bus, reg3);
-register r4 (clr, clk, R_in_debug[4], bus, reg4);
-register r5 (clr, clk, R_in_debug[5], bus, reg5);
-register r6 (clr, clk, R_in_debug[6], bus, reg6);
-register r7 (clr, clk, R_in_debug[7], bus, reg7);
-register r8 (clr, clk, R_in_debug[8], bus, reg8);
-register r9 (clr, clk, R_in_debug[9], bus, reg9);
-register r10 (clr, clk, R_in_debug[10], bus, reg10);
-register r11 (clr, clk, R_in_debug[11], bus, reg11);
-register r12 (clr, clk, R_in_debug[12], bus, reg12);
-register r13 (clr, clk, R_in_debug[13], bus, reg13);
-register r14 (clr, clk, R_in_debug[14], bus, reg14);
-register r15 (clr, clk, R_in_debug[15], bus, reg15);
+register r1 (clr, clk, R_in[1], bus, reg1);
+register r2 (clr, clk, R_in[2], bus, reg2);
+register r3 (clr, clk, R_in[3], bus, reg3);
+register r4 (clr, clk, R_in[4], bus, reg4);
+register r5 (clr, clk, R_in[5], bus, reg5);
+register r6 (clr, clk, R_in[6], bus, reg6);
+register r7 (clr, clk, R_in[7], bus, reg7);
+register r8 (clr, clk, R_in[8], bus, reg8);
+register r9 (clr, clk, R_in[9], bus, reg9);
+register r10 (clr, clk, R_in[10], bus, reg10);
+register r11 (clr, clk, R_in[11], bus, reg11);
+register r12 (clr, clk, R_in[12], bus, reg12);
+register r13 (clr, clk, R_in[13], bus, reg13);
+register r14 (clr, clk, R_in[14], bus, reg14);
+register r15 (clr, clk, R_in[15], bus, reg15);
 
 register rHI (clr, clk, HIin, bus, regHI);
 register rLO (clr, clk, LOin, bus, regLO);
