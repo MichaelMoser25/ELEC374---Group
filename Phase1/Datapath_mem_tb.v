@@ -395,7 +395,7 @@ module Datapath_mem_tb;
                         clr <= 0; memRead <= 0; memWrite <= 0; 
                         Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
                     end
-                    Reg_load1a: begin
+						  Reg_load1a: begin
                         pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
                         #5 z_in <= 1;
                         #10 pc_out <= 0; 
@@ -414,22 +414,12 @@ module Datapath_mem_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
-                    end
+
                     T0: begin
                         pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
                         #5 z_in <= 1; 
@@ -547,7 +537,7 @@ module Datapath_mem_tb;
                         clr <= 0; memRead <= 0; memWrite <= 0; 
                         Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
                     end
-                    Reg_load1a: begin
+						  Reg_load1a: begin
                         pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
                         #5 z_in <= 1;
                         #10 pc_out <= 0; 
@@ -566,21 +556,10 @@ module Datapath_mem_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
-                    end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
                     T0: begin
                         pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
@@ -635,7 +614,7 @@ module Datapath_mem_tb;
                         clr <= 0; memRead <= 0; memWrite <= 0; 
                         Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
                     end
-                    Reg_load1a: begin
+						  Reg_load1a: begin
                         pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
                         #5 z_in <= 1;
                         #10 pc_out <= 0; 
@@ -654,21 +633,10 @@ module Datapath_mem_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
-                    end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
                     T0: begin
                         pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
@@ -729,7 +697,7 @@ module Datapath_mem_tb;
                         clr <= 0; memRead <= 0; memWrite <= 0; 
                         Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
                     end
-                    Reg_load1a: begin
+						  Reg_load1a: begin
                         pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
                         #5 z_in <= 1;
                         #10 pc_out <= 0; 
@@ -748,21 +716,10 @@ module Datapath_mem_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
-                    end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
                     T0: begin
                         pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;

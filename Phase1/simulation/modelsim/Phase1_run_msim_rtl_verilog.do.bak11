@@ -19,6 +19,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---G
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/pc_register.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/mux.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v}
 
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v}
 
