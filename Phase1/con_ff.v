@@ -17,9 +17,9 @@ assign condition_met = ((C2[1:0] == 2'b00) && (value == 0))  ||  // brzr: branch
 // Flip-flop to store condition when enabled
 always @(posedge clk or posedge reset) begin
     if (reset)
-        CON <= 1'b0;
+        result <= 1'b0;
     else if (CONin)
-        CON <= condition_met;
+        result <= condition_met;
 end
 
 endmodule

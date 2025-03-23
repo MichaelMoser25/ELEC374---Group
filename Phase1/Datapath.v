@@ -85,9 +85,9 @@ Bus bus_unit (
 
 register r0 (clr, clk, R_in[0], bus, reg0);
 mux rZeroMux (
-    .a(32'b0),
-    .b(reg0),
-    .enable(~BAout),
+    .a(reg0),
+    .b(32'b0),
+    .enable(BAout),
     .out(reg0Out)
 );
 					
@@ -159,7 +159,7 @@ Ram #(.MEM_FILE(MEM_FILE)) memory (
     .data_out(memoryData)
 );
 
-con_ff CON_FF(
+CON_FF con_ff(
 	.clk(clk),
 	.reset(1'b0),
 	.CONin(1'b1),
