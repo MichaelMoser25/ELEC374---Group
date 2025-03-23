@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define TEST_CASE 8
+`define TEST_CASE 11
 
 module con_ff_tb;
     reg clk, clr;
@@ -417,7 +417,7 @@ module con_ff_tb;
 			  .memoryRead(memRead),
 			  .memoryWrite(memWrite)
 			);
-			end else if (`TEST_CASE==10) begin
+			end else if (`TEST_CASE==11) begin
 				Datapath #(.MEM_FILE("specialCase.hex")) DUT (
 			  .clr(clr),
 			  .clk(clk),
@@ -461,10 +461,14 @@ module con_ff_tb;
 	 endgenerate
 	 
 	 // Clock generation
-    initial begin
-        clk = 0;
-        forever #10 clk = ~clk; // 10 ns period
-    end
+    reg sim_end;
+	 initial begin
+		  clk = 0;
+		  sim_end = 0;
+		  #10000 sim_end = 1; // Auto-terminate after 10000 time units
+	 end
+
+	 always #10 if (!sim_end) clk = ~clk;
  
     initial begin
         clr = 1;
