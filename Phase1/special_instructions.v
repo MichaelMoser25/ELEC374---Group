@@ -133,13 +133,13 @@ module mips_mfhi_mflo (
             
             MFHI_EXEC: begin
                 // Execute MFHI - move HI register to destination register (rd)
-                // For demonstration, specifically move to R3
+                // move to R3
                 registers[3] <= HI;
             end
             
             MFLO_EXEC: begin
                 // Execute MFLO - move LO register to destination register (rd)
-                // For demonstration, specifically move to R2
+                // move to R2
                 registers[2] <= LO;
             end
             
