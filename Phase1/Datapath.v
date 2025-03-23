@@ -10,6 +10,7 @@ module Datapath #(parameter MEM_FILE = "memory.hex")(
 
         output wire [31:0] dataHI, dataLO,
 	    input memoryRead, memoryWrite
+		 
 );
 
 wire [31:0] memoryData;
@@ -39,6 +40,9 @@ wire [31:0] C_sign_extended;
 // Decoder outputs
 wire [15:0] R_in;  // R0in to R15in
 wire [15:0] R_out; // R0out to R15out
+
+//CON FF result
+wire CON_FF_result;
 
 
 // Instantiate select_encode_logic module
@@ -153,6 +157,15 @@ Ram #(.MEM_FILE(MEM_FILE)) memory (
     .address(MAR_data[8:0]),  
     .data_in(regMDR),
     .data_out(memoryData)
+);
+
+con_ff CON_FF(
+	.clk(clk),
+	.reset(1'b0),
+	.CONin(1'b1),
+	.C2(regIR[22:19]),
+	.value(bus),
+	.result(CON_FF_result)
 );
 
 endmodule
