@@ -3,9 +3,9 @@ module Datapath #(parameter MEM_FILE = "memory.hex")(
 		// Control signals for select_encode_logic
 		input wire Gra, Grb, Grc, Rin, Rout, BAout, RYin,
 
-        input wire MARin, HIin, LOin, Zhighin, Zlowin, PCin, IRin, InPortin, Cin, read,
+        input wire MARin, HIin, LOin, Zhighin, Zlowin, PCin, IRin, OutPort_write, Cin, read,
 
-		input wire HIout, LOout, Zhighout, Zlowout, PCout, IRout, InPortout, Cout,
+		input wire HIout, LOout, Zhighout, Zlowout, PCout, IRout, InPort_read, Cout,
 		input [4:0] alu_control,
 
         output wire [31:0] dataHI, dataLO,
@@ -45,6 +45,9 @@ wire [15:0] R_out; // R0out to R15out
 wire CON_FF_result;
 
 
+//IO temp signals
+wire [31:0] inport_d, outport_q;
+
 // Instantiate select_encode_logic module
 select_encode_logic sel_enc (
 	 .clk(clk),
@@ -78,7 +81,7 @@ Bus bus_unit (
     .R8out(R_out[8]), .R9out(R_out[9]), .R10out(R_out[10]), .R11out(R_out[11]),
     .R12out(R_out[12]), .R13out(R_out[13]), .R14out(R_out[14]), .R15out(R_out[15]),
     .HIout(HIout), .LOout(LOout), .Zhighout(Zhighout), .Zlowout(Zlowout),
-    .PCout(PCout), .IRout(IRout), .MDRout(MDRout), .InPortout(InPortout), .Cout(Cout),
+    .PCout(PCout), .IRout(IRout), .MDRout(MDRout), .InPortout(InPort_read), .Cout(Cout),
 
     .BusMuxOut(bus) 
 );
@@ -119,7 +122,6 @@ pc_register PC_reg (
 );
 
 register rIR (clr, clk, IRin, bus, regIR);
-register rInPort (clr, clk, InPortin, bus, regInPort);
 register rY (clr, clk, RYin, bus, regY);
 
 mux MDmux (
@@ -159,13 +161,29 @@ Ram #(.MEM_FILE(MEM_FILE)) memory (
     .data_out(memoryData)
 );
 
-CON_FF con_ff(
+con_ff Con_FF(
 	.clk(clk),
 	.reset(1'b0),
 	.CONin(1'b1),
 	.C2(regIR[22:19]),
 	.value(bus),
 	.result(CON_FF_result)
+);
+
+inport InPort(
+	.clr(clr),
+	.clock(clk),
+	.enable(InPort_read),
+	.D(inport_d),
+	.Q(regInPort)
+);
+
+outport OutPort(
+	.clr(clr),
+	.clock(clk),
+	.enable(OutPort_write),
+	.D(bus),
+	.Q(outport_q)
 );
 
 endmodule

@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define TEST_CASE 1
+`define TEST_CASE 2
 // 1: out R6
 // 2: in R3 
 
@@ -177,21 +177,10 @@ module Datapath_io_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
-                    end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
 
                     T0: begin

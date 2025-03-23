@@ -1,4 +1,4 @@
-module CON_FF (
+module con_ff (
     input wire clk,         // Clock signal
     input wire reset,       // Asynchronous reset
     input wire CONin,       // Enable signal from control unit
