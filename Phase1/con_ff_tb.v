@@ -417,6 +417,44 @@ module con_ff_tb;
 			  .memoryRead(memRead),
 			  .memoryWrite(memWrite)
 			);
+			end else if (`TEST_CASE==10) begin
+				Datapath #(.MEM_FILE("specialCase.hex")) DUT (
+			  .clr(clr),
+			  .clk(clk),
+			  .MDRin(mdr_in),
+			  .MDRout(mdr_out),
+			  .pc_increment(pc_increment),
+			  .Gra(Gra),
+			  .Grb(Grb),
+			  .Grc(Grc),
+			  .Rin(Rin),
+			  .Rout(Rout),
+			  .BAout(BAout),
+			  .RYin(y_in), 
+			  .MARin(MARin),
+			  .HIin(hi_in), 
+			  .LOin(lo_in),
+			  .Zhighin(z_in), 
+			  .Zlowin(z_in),
+			  .PCin(pc_in), 
+			  .IRin(ir_in), 
+			  .InPortin(inport_in), 
+			  .Cin(c_in), 
+			  .read(read),
+			  .HIout(hi_out), 
+			  .LOout(lo_out),
+			  .Zhighout(zhigh_out), 
+			  .Zlowout(zlow_out),
+			  .PCout(pc_out), 
+			  .IRout(ir_out), 
+			  .InPortout(inport_out), 
+			  .Cout(c_out),
+			  .alu_control(alu_control),
+			  .dataHI(data_hi),
+			  .dataLO(data_lo),
+			  .memoryRead(memRead),
+			  .memoryWrite(memWrite)
+			);
 		
 		end
 	 
@@ -635,6 +673,84 @@ module con_ff_tb;
 				
 				9: begin 
 				// jal R3, where R3 = 0x1000
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Grb <= 1; BAout <= 1; 
+                        #5 y_in <= 1;
+                        #10 Grb <= 0; BAout <= 0;
+                        #5 y_in <= 0;
+                    end
+                    Reg_load1e: begin
+                        c_out <= 1; alu_control <= 5'd3;
+                        #5 z_in <= 1;
+                        #15 z_in <= 0; c_out <= 0;
+                    end
+                    Reg_load1f: begin
+                        zlow_out <= 1; Gra <= 1;
+                        #5 Rin = 1;
+                        #10 zlow_out <= 0;
+                        #5 Rin <= 0; Gra <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; pc_in <= 1;
+								#10 Gra <= 0; Rout <= 0; pc_in <= 0;
+                    end
+
+					  endcase
+					end
+				11: begin 
+				// mfhi R3, mflo R2 --> ldi R0, 0x1234    ldi R1, 0x5678
                 case (present_state)
 
                     Default: begin
