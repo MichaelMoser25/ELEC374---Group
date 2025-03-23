@@ -541,11 +541,12 @@ module con_ff_tb;
 								c_out <= 1; // ADD ??;
 								z_in <= 1;
 								#10 c_out <= 0; z_in <= 0;
+								end
 						  T6: begin
 								zlow_out <= 1; // evaluate CON FF result and PC if necessary
 								#10 zlow_out <= 0;
 						  end
-					  end
+					  
 				  endcase
 				end
 				
@@ -553,8 +554,7 @@ module con_ff_tb;
 				
 				
 				
-				
-				9: begin 
+				10: begin 
 				// jr R2, where R2 = 0x8000
                 case (present_state)
 
@@ -626,10 +626,9 @@ module con_ff_tb;
                         #5 MARin <= 0; ir_in <= 0;
 						  end
 						  T3: begin
-								Gra <= 1; Rout <= 1; PCin <= 1;
-								#10 Gra <= 0; Rout <= 0; PCin <= 0;
+								Gra <= 1; Rout <= 1; pc_in <= 1;
+								#10 Gra <= 0; Rout <= 0; pc_in <= 0;
 						  end
-					  end
 				  endcase
 				end
 				
@@ -706,16 +705,13 @@ module con_ff_tb;
                         #5 MARin <= 0; ir_in <= 0;
 						  end
 						  T3: begin
-								Gra <= 1; Rout <= 1; PCin <= 1;
-								#10 Gra <= 0; Rout <= 0; PCin <= 0;
-						  end
+								Gra <= 1; Rout <= 1; pc_in <= 1;
+								#10 Gra <= 0; Rout <= 0; pc_in <= 0;
+                    end
 
-					  end
-				  endcase
-				end
-	
-			 endcase
-		 
+					  endcase
+					end
+                endcase
 
 
     end
