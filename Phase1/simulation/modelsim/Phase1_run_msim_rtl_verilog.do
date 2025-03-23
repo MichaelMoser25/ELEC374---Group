@@ -21,9 +21,9 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---G
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v}
 
-vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1 {C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Datapath_mem_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Datapath_immediate_tb
 
 add wave *
 view structure
