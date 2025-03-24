@@ -1,5 +1,5 @@
 // Created with SRC-ASM (https://github.com/davlaf/elec374-assembler)
-  @0 0880FF01 // ldi  R1, 0xFF01   
+  @0 0887FFCE // ldi R1, -50   
   @1 9890001B // brpl R1, 27       
   @2 00000000
   @3 00000000

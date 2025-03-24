@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define TEST_CASE 1
+`define TEST_CASE 6
 
 module con_ff_tb;
     reg clk, clr;
@@ -723,7 +723,7 @@ module con_ff_tb;
 				  endcase
 				end
 				3: begin 
-				// brnz R1, 27 where R1 = 0xFF
+				// brnz R1, 27 where R1 = -10
                 case (present_state)
 
                     Default: begin
@@ -963,7 +963,7 @@ module con_ff_tb;
 				  endcase
 				end
 				6: begin 
-				// brpl R1, 27 where R1 = 0xFFFFF01
+				// brpl R1, 27 where R1 = -50
                 case (present_state)
 
                     Default: begin
