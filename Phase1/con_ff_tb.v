@@ -1,9 +1,5 @@
 `timescale 1ns/10ps
-<<<<<<< Updated upstream
-`define TEST_CASE 12
-=======
-`define TEST_CASE 8
->>>>>>> Stashed changes
+`define TEST_CASE 1
 
 module con_ff_tb;
     reg clk, clr;
@@ -443,7 +439,6 @@ module con_ff_tb;
 			  .CON_FF_result(CON_flag)
 			);
 			end else if (`TEST_CASE==11) begin
-<<<<<<< Updated upstream
 				 Datapath #(.MEM_FILE("mfhiCase.hex")) DUT (
 					.clr(clr),
 					.clk(clk),
@@ -479,7 +474,9 @@ module con_ff_tb;
 					.dataHI(data_hi),
 					.dataLO(data_lo),
 					.memoryRead(memRead),
-					.memoryWrite(memWrite)
+					.memoryWrite(memWrite),
+					.CON_FF_in(CON_in),
+					.CON_FF_result(CON_flag)
 			 );
 				end else if (`TEST_CASE==12) begin
 					 Datapath #(.MEM_FILE("mfloCase.hex")) DUT (
@@ -517,54 +514,12 @@ module con_ff_tb;
 						.dataHI(data_hi),
 						.dataLO(data_lo),
 						.memoryRead(memRead),
-						.memoryWrite(memWrite)
+						.memoryWrite(memWrite),
+						.CON_FF_in(CON_in),
+						.CON_FF_result(CON_flag)
 				 );
 				 
 				 end
-=======
-				Datapath #(.MEM_FILE("specialCase.hex")) DUT (
-			  .clr(clr),
-			  .clk(clk),
-			  .MDRin(mdr_in),
-			  .MDRout(mdr_out),
-			  .pc_increment(pc_increment),
-			  .Gra(Gra),
-			  .Grb(Grb),
-			  .Grc(Grc),
-			  .Rin(Rin),
-			  .Rout(Rout),
-			  .BAout(BAout),
-			  .RYin(y_in), 
-			  .MARin(MARin),
-			  .HIin(hi_in), 
-			  .LOin(lo_in),
-			  .Zhighin(z_in), 
-			  .Zlowin(z_in),
-			  .PCin(pc_in), 
-			  .IRin(ir_in), 
-			  .OutPort_write(outport_write), 
-			  .Cin(c_in), 
-			  .read(read),
-			  .HIout(hi_out), 
-			  .LOout(lo_out),
-			  .Zhighout(zhigh_out), 
-			  .Zlowout(zlow_out),
-			  .PCout(pc_out), 
-			  .IRout(ir_out), 
-			  .InPort_read(inport_read), 
-			  .Cout(c_out),
-			  .alu_control(alu_control),
-			  .dataHI(data_hi),
-			  .dataLO(data_lo),
-			  .memoryRead(memRead),
-			  .memoryWrite(memWrite),
-			  .CON_FF_in(CON_in),
-			  .CON_FF_result(CON_flag)
-			);
-		
-		end
->>>>>>> Stashed changes
-	 
 	 endgenerate
 	 
 	 // Clock generation
@@ -676,15 +631,11 @@ module con_ff_tb;
 								#10 pc_out <= 0; y_in <= 0;
 						  end
 						  T5: begin
-								c_out <= 1; // ADD ??;
+								c_out <= 1; alu_control <= 5'b00011;
 								z_in <= 1;
-								#10 c_out <= 0; z_in <= 0;
+								#15 c_out <= 0; z_in <= 0;
 								end
 						  T6: begin
-<<<<<<< Updated upstream
-								zlow_out <= 1; // evaluate CON FF result and PC if necessary
-								#10 zlow_out <= 0;
-=======
 								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
 								#15 zlow_out <= 0; pc_in <= 0;
 						  end
@@ -1247,7 +1198,6 @@ module con_ff_tb;
 						  T6: begin
 								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
 								#15 zlow_out <= 0; pc_in <= 0;
->>>>>>> Stashed changes
 						  end
 					  
 				  endcase
