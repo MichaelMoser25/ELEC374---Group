@@ -7,15 +7,22 @@ module con_ff (
     output reg result          // Condition flag output
 );
 
+reg [31:0] temp; // temp variable for sign extension
+
+always @(*) begin
+	temp = {{16{value[15]}}, value[15:0]};
+end
+
+
 // Combinational logic to evaluate the condition
 wire condition_met;
-assign condition_met = ((C2[1:0] == 2'b00) && (value == 0))  ||  // brzr: branch if zero
-                       ((C2[1:0] == 2'b01) && (value != 0))  ||  // brnz: branch if nonzero
-                       ((C2[1:0] == 2'b10) && ((value[31] == 0) && value != 0)) || // brpl: branch if positive
-                       ((C2[1:0] == 2'b11) && (value[31] == 1));  // brmi: branch if negative
+assign condition_met = ((C2[1:0] == 2'b00) && (temp == 0))  ||  // brzr: branch if zero
+                       ((C2[1:0] == 2'b01) && (temp != 0))  ||  // brnz: branch if nonzero
+                       ((C2[1:0] == 2'b10) && ((temp[31] == 0) && temp != 0)) || // brpl: branch if positive
+                       ((C2[1:0] == 2'b11) && (temp[31] == 1));  // brmi: branch if negative
 
 // Flip-flop to store condition when enabled
-always @(posedge clk or posedge reset) begin
+always @(*) begin
     if (reset)
         result <= 1'b0;
     else if (CONin)

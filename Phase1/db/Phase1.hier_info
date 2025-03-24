@@ -100,6 +100,8 @@ dataLO[30] << alu_result[30].DB_MAX_OUTPUT_PORT_TYPE
 dataLO[31] << alu_result[31].DB_MAX_OUTPUT_PORT_TYPE
 memoryRead => memoryRead.IN1
 memoryWrite => memoryWrite.IN1
+CON_FF_in => CON_FF_in.IN1
+CON_FF_result << con_ff:Con_FF.result
 
 
 |Datapath|select_encode_logic:sel_enc
@@ -13465,9 +13467,9 @@ data_out[31] <= data_out[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Datapath|con_ff:Con_FF
-clk => result~reg0.CLK
-reset => result~reg0.ACLR
-CONin => result~reg0.ENA
+clk => ~NO_FANOUT~
+reset => result$latch.ACLR
+CONin => result$latch.LATCH_ENABLE
 C2[0] => Equal0.IN1
 C2[0] => Equal1.IN0
 C2[0] => Equal2.IN1
@@ -13493,26 +13495,26 @@ value[11] => Equal3.IN20
 value[12] => Equal3.IN19
 value[13] => Equal3.IN18
 value[14] => Equal3.IN17
-value[15] => Equal3.IN16
-value[16] => Equal3.IN15
-value[17] => Equal3.IN14
-value[18] => Equal3.IN13
-value[19] => Equal3.IN12
-value[20] => Equal3.IN11
-value[21] => Equal3.IN10
-value[22] => Equal3.IN9
-value[23] => Equal3.IN8
-value[24] => Equal3.IN7
-value[25] => Equal3.IN6
-value[26] => Equal3.IN5
-value[27] => Equal3.IN4
-value[28] => Equal3.IN3
-value[29] => Equal3.IN2
-value[30] => Equal3.IN1
-value[31] => condition_met.IN1
-value[31] => condition_met.IN1
-value[31] => Equal3.IN0
-result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[15] => condition_met.IN1
+value[15] => condition_met.IN1
+value[15] => Equal3.IN0
+value[16] => ~NO_FANOUT~
+value[17] => ~NO_FANOUT~
+value[18] => ~NO_FANOUT~
+value[19] => ~NO_FANOUT~
+value[20] => ~NO_FANOUT~
+value[21] => ~NO_FANOUT~
+value[22] => ~NO_FANOUT~
+value[23] => ~NO_FANOUT~
+value[24] => ~NO_FANOUT~
+value[25] => ~NO_FANOUT~
+value[26] => ~NO_FANOUT~
+value[27] => ~NO_FANOUT~
+value[28] => ~NO_FANOUT~
+value[29] => ~NO_FANOUT~
+value[30] => ~NO_FANOUT~
+value[31] => ~NO_FANOUT~
+result <= result$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Datapath|inport:InPort

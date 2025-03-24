@@ -9,7 +9,10 @@ module Datapath #(parameter MEM_FILE = "memory.hex")(
 		input [4:0] alu_control,
 
         output wire [31:0] dataHI, dataLO,
-	    input memoryRead, memoryWrite
+	    input memoryRead, memoryWrite,
+		 
+		 input CON_FF_in,
+		 output wire CON_FF_result
 		 
 );
 
@@ -40,9 +43,6 @@ wire [31:0] C_sign_extended;
 // Decoder outputs
 wire [15:0] R_in;  // R0in to R15in
 wire [15:0] R_out; // R0out to R15out
-
-//CON FF result
-wire CON_FF_result;
 
 
 //IO temp signals
@@ -164,7 +164,7 @@ Ram #(.MEM_FILE(MEM_FILE)) memory (
 con_ff Con_FF(
 	.clk(clk),
 	.reset(1'b0),
-	.CONin(1'b1),
+	.CONin(CON_FF_in),
 	.C2(regIR[22:19]),
 	.value(bus),
 	.result(CON_FF_result)

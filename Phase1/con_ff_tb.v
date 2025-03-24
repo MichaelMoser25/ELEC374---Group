@@ -1,5 +1,9 @@
 `timescale 1ns/10ps
+<<<<<<< Updated upstream
 `define TEST_CASE 12
+=======
+`define TEST_CASE 8
+>>>>>>> Stashed changes
 
 module con_ff_tb;
     reg clk, clr;
@@ -8,12 +12,13 @@ module con_ff_tb;
     
     reg Gra, Grb, Grc, BAout, Rin, Rout;
 
-    reg hi_in, lo_in, z_in, pc_in, ir_in, inport_in, c_in, read;
+    reg hi_in, lo_in, z_in, pc_in, ir_in, outport_write, c_in, read;
     reg [4:0] alu_control;
     
-    reg hi_out, lo_out, zhigh_out, zlow_out, pc_out, ir_out, inport_out, c_out;
+    reg hi_out, lo_out, zhigh_out, zlow_out, pc_out, ir_out, inport_read, c_out;
 	 
-	 reg CONin;
+	 reg CON_in;
+	 wire CON_flag;
 	 
 	 
     // Outputs
@@ -49,7 +54,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -58,13 +63,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		end else if (`TEST_CASE ==2) begin
 			Datapath #(.MEM_FILE("brzrCase2.hex")) DUT (
@@ -87,7 +94,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -96,13 +103,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		
 		
@@ -127,7 +136,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -136,13 +145,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		
 		end else if (`TEST_CASE==4) begin
@@ -166,7 +177,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -175,13 +186,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		
 		
@@ -206,7 +219,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -215,13 +228,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		
 		
@@ -246,7 +261,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -255,13 +270,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 			
 			end else if (`TEST_CASE==7) begin
@@ -285,7 +302,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -294,13 +311,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 			
 			end else if (`TEST_CASE==8) begin
@@ -324,7 +343,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -333,13 +352,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 			end else if (`TEST_CASE==9) begin
 				Datapath #(.MEM_FILE("jrCase.hex")) DUT (
@@ -362,7 +383,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -371,13 +392,15 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 			end else if (`TEST_CASE==10) begin
 				Datapath #(.MEM_FILE("jalCase.hex")) DUT (
@@ -400,7 +423,7 @@ module con_ff_tb;
 			  .Zlowin(z_in),
 			  .PCin(pc_in), 
 			  .IRin(ir_in), 
-			  .InPortin(inport_in), 
+			  .OutPort_write(outport_write), 
 			  .Cin(c_in), 
 			  .read(read),
 			  .HIout(hi_out), 
@@ -409,15 +432,18 @@ module con_ff_tb;
 			  .Zlowout(zlow_out),
 			  .PCout(pc_out), 
 			  .IRout(ir_out), 
-			  .InPortout(inport_out), 
+			  .InPort_read(inport_read), 
 			  .Cout(c_out),
 			  .alu_control(alu_control),
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 			end else if (`TEST_CASE==11) begin
+<<<<<<< Updated upstream
 				 Datapath #(.MEM_FILE("mfhiCase.hex")) DUT (
 					.clr(clr),
 					.clk(clk),
@@ -495,6 +521,49 @@ module con_ff_tb;
 				 );
 				 
 				 end
+=======
+				Datapath #(.MEM_FILE("specialCase.hex")) DUT (
+			  .clr(clr),
+			  .clk(clk),
+			  .MDRin(mdr_in),
+			  .MDRout(mdr_out),
+			  .pc_increment(pc_increment),
+			  .Gra(Gra),
+			  .Grb(Grb),
+			  .Grc(Grc),
+			  .Rin(Rin),
+			  .Rout(Rout),
+			  .BAout(BAout),
+			  .RYin(y_in), 
+			  .MARin(MARin),
+			  .HIin(hi_in), 
+			  .LOin(lo_in),
+			  .Zhighin(z_in), 
+			  .Zlowin(z_in),
+			  .PCin(pc_in), 
+			  .IRin(ir_in), 
+			  .OutPort_write(outport_write), 
+			  .Cin(c_in), 
+			  .read(read),
+			  .HIout(hi_out), 
+			  .LOout(lo_out),
+			  .Zhighout(zhigh_out), 
+			  .Zlowout(zlow_out),
+			  .PCout(pc_out), 
+			  .IRout(ir_out), 
+			  .InPort_read(inport_read), 
+			  .Cout(c_out),
+			  .alu_control(alu_control),
+			  .dataHI(data_hi),
+			  .dataLO(data_lo),
+			  .memoryRead(memRead),
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
+			);
+		
+		end
+>>>>>>> Stashed changes
 	 
 	 endgenerate
 	 
@@ -511,8 +580,8 @@ module con_ff_tb;
     initial begin
         clr = 1;
         Gra = 0; Grb = 0; Grc = 0; Rin = 0; Rout = 0; BAout = 0;
-        hi_in = 0; lo_in = 0; z_in = 0; pc_in = 0; ir_in = 0; inport_in = 0; c_in = 0; read = 0;
-        hi_out = 0; lo_out = 0; zhigh_out = 0; zlow_out = 0; pc_out = 0; ir_out = 0; inport_out = 0; c_out = 0;
+        hi_in = 0; lo_in = 0; z_in = 0; pc_in = 0; ir_in = 0; outport_write = 0; c_in = 0; read = 0;
+        hi_out = 0; lo_out = 0; zhigh_out = 0; zlow_out = 0; pc_out = 0; ir_out = 0; inport_read = 0; c_out = 0;
         MARin = 0; 
         alu_control <= 5'd0;
         #5 clr = 0; 
@@ -573,21 +642,10 @@ module con_ff_tb;
                         ir_in <= 0;
                     end
                     Reg_load1d: begin
-                        Grb <= 1; BAout <= 1; 
-                        #5 y_in <= 1;
-                        #10 Grb <= 0; BAout <= 0;
-                        #5 y_in <= 0;
-                    end
-                    Reg_load1e: begin
-                        c_out <= 1; alu_control <= 5'd3;
-                        #5 z_in <= 1;
-                        #15 z_in <= 0; c_out <= 0;
-                    end
-                    Reg_load1f: begin
-                        zlow_out <= 1; Gra <= 1;
-                        #5 Rin = 1;
-                        #10 zlow_out <= 0;
-                        #5 Rin <= 0; Gra <= 0;
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
                     end
 
                     T0: begin
@@ -610,8 +668,8 @@ module con_ff_tb;
                         #5 MARin <= 0; ir_in <= 0;
 						  end
 						  T3: begin
-								Gra <= 1; Rout <= 1; CONin <= 1;
-								#10 Gra <= 0; Rout <= 0; CONin <= 0;
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
 						  end
 						  T4: begin
 								pc_out <= 1; y_in <= 1;
@@ -623,15 +681,577 @@ module con_ff_tb;
 								#10 c_out <= 0; z_in <= 0;
 								end
 						  T6: begin
+<<<<<<< Updated upstream
 								zlow_out <= 1; // evaluate CON FF result and PC if necessary
 								#10 zlow_out <= 0;
+=======
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
 						  end
 					  
 				  endcase
 				end
-				
-				
-				
+				2: begin 
+				// brzr R1, 27 where R1 = 0x44
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				3: begin 
+				// brnz R1, 27 where R1 = 0xFF
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				4: begin 
+				// brnz R1, 27 where R1 = 0x0
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				5: begin 
+				// brpl R1, 27 where R1 = 0x10
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				6: begin 
+				// brpl R1, 27 where R1 = 0xFFFFF01
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				7: begin 
+				// brmi R1, 27 where R1 = 0xFFFFFF99
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+						  end
+					  
+				  endcase
+				end
+				8: begin 
+				// brmi R1, 27 where R1 = 0x0
+                case (present_state)
+
+                    Default: begin
+                        pc_out <= 0; zlow_out <= 0; mdr_out <= 0; hi_out <= 0; 
+                        lo_out <= 0; zhigh_out <= 0; c_out <= 0;
+                        lo_in <= 0; hi_in <= 0; MARin <= 0;
+                        pc_increment <= 0;
+                        Rin <= 0; Rout <= 0;
+                        MARin <= 0; z_in <= 0; pc_in <= 0; mdr_in <= 0; 
+                        ir_in <= 0; y_in <= 0;
+                        read <= 0; 
+                        clr <= 0; memRead <= 0; memWrite <= 0; 
+                        Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
+                    end
+						  Reg_load1a: begin
+                        pc_increment <= 1; pc_out <= 1; alu_control <= 5'd19;
+                        #5 z_in <= 1;
+                        #10 pc_out <= 0; 
+                        #5 z_in <= 0; alu_control <= 5'd0; MARin <= 0;
+                    end
+                    Reg_load1b: begin
+                        read <= 1; zlow_out <= 1;  pc_in <= 1;
+                        #5 memRead <= 1;  mdr_in <= 1;
+                        #10 zlow_out <= 0; memRead <= 0;
+                        pc_out <= 0; read <= 0; mdr_in <= 0; pc_in <= 0;   pc_increment <= 0;
+                    end
+                    Reg_load1c: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        ir_in <= 0;
+                    end
+                    Reg_load1d: begin
+                        Gra <= 1; c_out <=1;
+                        #5 Rin <= 1;
+                        #10 Gra <= 0;
+                        #5 Rin <= 0; c_out <= 0;
+                    end
+
+                    T0: begin
+                        pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+                        #5 z_in <= 1; 
+                        #10 pc_out <= 0;
+                        #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+                    end
+                    T1: begin
+                        memRead <= 1; zlow_out <= 1;  pc_in <=1;
+                        #5 read <= 1; pc_in <= 1; mdr_in <= 1; 
+                        #5 //mdr_in <= 1;
+                        #5 zlow_out <= 0; memRead <= 0;
+                        #5 pc_out <= 0; read <= 0; pc_in <= 0; mdr_in <= 0;   pc_in <=0; pc_increment <= 0;
+                    end
+                    T2: begin
+                        mdr_out <= 1;
+                        #5 ir_in <= 1; 
+                        #10 mdr_out <= 0;
+                        #5 MARin <= 0; ir_in <= 0;
+						  end
+						  T3: begin
+								Gra <= 1; Rout <= 1; CON_in <= 1;
+								#10 Gra <= 0; Rout <= 0; CON_in <= 0;
+						  end
+						  T4: begin
+								pc_out <= 1; y_in <= 1;
+								#10 pc_out <= 0; y_in <= 0;
+						  end
+						  T5: begin
+								c_out <= 1; alu_control <= 5'b00011;
+								z_in <= 1;
+								#15 c_out <= 0; z_in <= 0;
+								end
+						  T6: begin
+								zlow_out <= 1; pc_in <= (CON_flag == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
+>>>>>>> Stashed changes
+						  end
+					  
+				  endcase
+				end
 				
 				
 				10: begin 
