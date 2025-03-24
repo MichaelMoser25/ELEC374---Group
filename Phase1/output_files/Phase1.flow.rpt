@@ -1,5 +1,5 @@
 Flow report for Phase1
-Sun Mar 23 18:59:10 2025
+Sun Mar 23 21:54:32 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sun Mar 23 18:59:10 2025       ;
+; Flow Status                 ; Successful - Sun Mar 23 21:54:32 2025       ;
 ; Quartus Prime Version       ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name               ; Phase1                                      ;
 ; Top-level Entity Name       ; Datapath                                    ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/23/2025 18:59:04 ;
+; Start date & time ; 03/23/2025 21:54:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -74,12 +74,13 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251545081669246.174277074303800        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 1098028399810.174278126216996          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_immediate_tb             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_io_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_shiftright_tb            ;
@@ -98,7 +99,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_immediate_tb                  ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Datapath_io_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
@@ -106,6 +107,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; Datapath_immediate_tb.v                ; --            ; --          ; Datapath_immediate_tb             ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_negate_tb.v                   ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_FILE                  ; CLA_32bit_tb.v                         ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; Datapath_io_tb.v                       ; --            ; --          ; Datapath_io_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_mem_tb.v                      ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_shra_tb.v                     ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; Datapath_shiftright_tb.v               ; --            ; --          ; Datapath_shiftright_tb            ;
@@ -126,6 +128,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_immediate_tb                  ; --            ; --          ; Datapath_immediate_tb             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_negate_tb                     ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CLA_32bit_tb                           ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_io_tb                         ; --            ; --          ; Datapath_io_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_mem_tb                        ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_shra_tb                       ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Datapath_shiftright_tb                 ; --            ; --          ; Datapath_shiftright_tb            ;
@@ -160,11 +163,13 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; Datapath_shl_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_mem_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Datapath_immediate_tb                  ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Datapath_io_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; Datapath_immediate_tb             ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_negate_tb                ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 110 ns                                 ; --            ; --          ; CLA_32bit_tb                      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; Datapath_io_tb                    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; Datapath_mem_tb                   ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_shra_tb                  ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                 ; --            ; --          ; Datapath_shiftright_tb            ;
@@ -204,18 +209,18 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4790 MB             ; 00:00:14                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4785 MB             ; 00:00:21                           ;
+; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:21                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++------------------------+----------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname     ; OS Name    ; OS Version ; Processor type ;
++------------------------+----------------------+------------+------------+----------------+
+; Analysis & Elaboration ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+----------------------+------------+------------+----------------+
 
 
 ------------

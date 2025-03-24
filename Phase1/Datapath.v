@@ -174,7 +174,7 @@ inport InPort(
 	.clr(clr),
 	.clock(clk),
 	.enable(InPort_read),
-	.D(inport_d),
+	.D(32'd22),
 	.Q(regInPort)
 );
 

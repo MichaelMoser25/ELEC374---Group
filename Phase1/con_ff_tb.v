@@ -580,13 +580,13 @@ module con_ff_tb;
 								#10 pc_out <= 0; y_in <= 0;
 						  end
 						  T5: begin
-								c_out <= 1; // ADD ??;
+								c_out <= 1; alu_control <= 5'b00011;
 								z_in <= 1;
-								#10 c_out <= 0; z_in <= 0;
+								#15 c_out <= 0; z_in <= 0;
 								end
 						  T6: begin
-								zlow_out <= 1; // evaluate CON FF result and PC if necessary
-								#10 zlow_out <= 0;
+								zlow_out <= 1; pc_in <= 1; // evaluate CON FF result and PC if necessary
+								#15 zlow_out <= 0; pc_in <= 0;
 						  end
 					  
 				  endcase

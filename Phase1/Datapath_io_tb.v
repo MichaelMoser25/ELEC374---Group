@@ -244,8 +244,9 @@ module Datapath_io_tb;
                         #5 MARin <= 0; ir_in <= 0;
                     end
                     T3: begin
-                        Gra <= 1; Rout <= 1; inport_read <= 1;
-                        #15 Gra <= 0; Rout <= 0; inport_read = 0;
+                        Gra <= 1; Rin <= 1; 
+								#5 inport_read <= 1;
+                        #15 Gra <= 0; Rin <= 0; inport_read = 0;
                     end
 						  
 					  endcase
