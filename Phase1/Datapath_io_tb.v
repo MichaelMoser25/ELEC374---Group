@@ -15,6 +15,9 @@ module Datapath_io_tb;
     reg [4:0] alu_control;
     
     reg hi_out, lo_out, zhigh_out, zlow_out, pc_out, ir_out, inport_read, c_out;
+	 
+	 reg CON_in;
+	 wire CON_flag;
 
     // Outputs
     wire [31:0] data_hi, data_lo;
@@ -65,7 +68,9 @@ module Datapath_io_tb;
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		end else if (`TEST_CASE ==2) begin
 			Datapath #(.MEM_FILE("inCase.hex")) DUT (
@@ -103,7 +108,9 @@ module Datapath_io_tb;
 			  .dataHI(data_hi),
 			  .dataLO(data_lo),
 			  .memoryRead(memRead),
-			  .memoryWrite(memWrite)
+			  .memoryWrite(memWrite),
+			  .CON_FF_in(CON_in),
+			  .CON_FF_result(CON_flag)
 			);
 		end
 	endgenerate

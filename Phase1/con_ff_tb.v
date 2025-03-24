@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define TEST_CASE 6
+`define TEST_CASE 8
 
 module con_ff_tb;
     reg clk, clr;
