@@ -1399,10 +1399,9 @@ module con_ff_tb;
 						  end
 						  
 						  Reg_load1d: begin
-								// Initialize HI register with test value 0x12345678
 								hi_in <= 1;
-								c_out <= 1;  // If this puts the immediate value on the bus
-								#10 hi_in <= 0; c_out <= 0;
+								 c_out <= 1;  // This puts some value on the bus, but we need to ensure it's the right value
+								 #10 hi_in <= 0; c_out <= 0;
 						  end
 						  
 						  Reg_load1e: begin
@@ -1501,9 +1500,10 @@ module con_ff_tb;
 						  Reg_load1d: begin
 								// Load a specific value (0x87654321) into the LO register
 								// First put a value on the bus (using immediate value circuit)
-								c_out <= 1; alu_control <= 5'd0;  // Pass through immediate value
-								#5 lo_in <= 1; // Now enable writing to LO
-								#10 c_out <= 0; lo_in <= 0;
+								
+								c_out <= 1;       // Put immediate on bus
+								 #5 lo_in <= 1;    // Enable LO register
+								 #10 c_out <= 0; lo_in <= 0;
 						  end
 						  
 						  Reg_load1e: begin
@@ -1548,32 +1548,32 @@ module con_ff_tb;
 						  end
 						  
 						  T4: begin
-								// Return to T0 to fetch MFLO instruction
-								pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
-								#5 z_in <= 1; 
-								#10 pc_out <= 0;
-								#5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
-						  end
-						  
-						  T5: begin
-								// Fetch MFLO instruction
-								memRead <= 1; zlow_out <= 1; pc_in <= 1;
-								#5 read <= 1; mdr_in <= 1; 
-								#10 zlow_out <= 0; memRead <= 0;
-								#5 read <= 0; pc_in <= 0; mdr_in <= 0; pc_increment <= 0;
-						  end
-						  
-						  T6: begin
-								// Load MFLO instruction into IR
-								mdr_out <= 1;
-								#5 ir_in <= 1; 
-								#10 mdr_out <= 0;
-								ir_in <= 0;
-								
-								// Now execute the MFLO instruction in the next cycle
-								#5 lo_out <= 1; Gra <= 1; Rin <= 1;
-								#10 lo_out <= 0; Gra <= 0; Rin <= 0;
-						  end
+								 // After the LDI instruction completes, 
+								 // Start the fetch of the MFLO instruction
+								 pc_out <= 1; alu_control <= 5'd19; MARin <= 1; pc_increment <= 1;
+								 #5 z_in <= 1; 
+								 #10 pc_out <= 0;
+								 #5 MARin <= 0; z_in <= 0; alu_control <= 5'd0;
+							end
+
+							T5: begin
+								 // Load MFLO instruction
+								 memRead <= 1; zlow_out <= 1; pc_in <= 1;
+								 #5 read <= 1; mdr_in <= 1; 
+								 #10 zlow_out <= 0; memRead <= 0;
+								 #5 read <= 0; pc_in <= 0; mdr_in <= 0; pc_increment <= 0;
+							end
+
+							T6: begin
+								 // Execute MFLO instruction
+								 mdr_out <= 1;
+								 #5 ir_in <= 1;
+								 #10 mdr_out <= 0; ir_in <= 0;
+								 
+								 // Execute the MFLO - copy from LO to R2
+								 #5 lo_out <= 1; Gra <= 1; Rin <= 1;
+								 #10 lo_out <= 0; Gra <= 0; Rin <= 0;
+							end
 					 endcase
 				end
 					
