@@ -1,5 +1,5 @@
 Flow report for Phase1
-Mon Mar 24 13:24:31 2025
+Wed Mar 26 14:24:13 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Mar 24 13:24:31 2025       ;
+; Flow Status                 ; Successful - Wed Mar 26 14:24:13 2025       ;
 ; Quartus Prime Version       ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name               ; Phase1                                      ;
-; Top-level Entity Name       ; Datapath                                    ;
+; Top-level Entity Name       ; CPU                                         ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CEBA4F23C7                                 ;
 ; Timing Models               ; Final                                       ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2025 13:24:19 ;
+; Start date & time ; 03/26/2025 14:23:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 1098028399810.174283705811612          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251545081669246.174301343823740        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DAtapath_add_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_rol_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Datapath_immediate_tb             ;
@@ -193,18 +193,18 @@ https://fpgasoftware.intel.com/eula.
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --          ; --                                ;
 ; OPTIMIZATION_TECHNIQUE               ; Speed                                  ; Balanced      ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; CPU         ; Top                               ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; CPU         ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; CPU         ; Top                               ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
 ; SMART_RECOMPILE                      ; On                                     ; Off           ; --          ; --                                ;
 ; TIMING_ANALYZER_MULTICORNER_ANALYSIS ; Off                                    ; On            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; Datapath                               ; Phase1        ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; CPU                                    ; Phase1        ; --          ; --                                ;
 ; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                    ; --            ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
@@ -214,18 +214,18 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4785 MB             ; 00:00:28                           ;
-; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 4791 MB             ; 00:00:37                           ;
+; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:37                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+------------------------+----------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname     ; OS Name    ; OS Version ; Processor type ;
-+------------------------+----------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Braeden-HP-Envy-X360 ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+----------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; Brian-XPS        ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------

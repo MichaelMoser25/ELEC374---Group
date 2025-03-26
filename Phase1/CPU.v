@@ -1,20 +1,9 @@
-module Datapath #(parameter MEM_FILE = "memory.hex")(
-		input clr, clk, MDRin, MDRout, pc_increment,
-		// Control signals for select_encode_logic
-		input wire Gra, Grb, Grc, Rin, Rout, BAout, RYin,
-
-        input wire MARin, HIin, LOin, Zhighin, Zlowin, PCin, IRin, OutPort_write, Cin, read,
-
-		input wire HIout, LOout, Zhighout, Zlowout, PCout, IRout, InPort_read, Cout,
-		input [4:0] alu_control,
-
-        output wire [31:0] dataHI, dataLO,
-	    input memoryRead, memoryWrite,
-		 
-		 input CON_FF_in,
-		 output wire CON_FF_result
-		 
+module CPU (
+	input clk, clr, 
+	output wire [31:0] outport_data, busOut,
+	input wire [31:0] inport_data
 );
+
 
 wire [31:0] memoryData;
 
@@ -47,53 +36,6 @@ wire [15:0] R_out; // R0out to R15out
 
 //IO temp signals
 wire [31:0] inport_d, outport_q;
-
-ControlUnit control_unit (
-    .clk(clk),
-    .clr(clr),
-    .IR(IR),
-    .CON_FF_result(CON_FF_result),
-
-    .MDRin(MDRin),
-    .MDRout(MDRout),
-    .pc_increment(pc_increment),
-
-    .Gra(Gra),
-    .Grb(Grb),
-    .Grc(Grc),
-    .Rin(Rin),
-    .Rout(Rout),
-    .BAout(BAout),
-    .RYin(RYin),
-
-    .MARin(MARin),
-    .HIin(HIin),
-    .LOin(LOin),
-    .Zhighin(Zhighin),
-    .Zlowin(Zlowin),
-    .PCin(PCin),
-    .IRin(IRin),
-    .OutPort_write(OutPort_write),
-    .Cin(Cin),
-    .read(read),
-
-    .HIout(HIout),
-    .LOout(LOout),
-    .Zhighout(Zhighout),
-    .Zlowout(Zlowout),
-    .PCout(PCout),
-    .IRout(IRout),
-    .InPort_read(InPort_read),
-    .Cout(Cout),
-
-    .alu_control(alu_control),
-
-    .memoryRead(memoryRead),
-    .memoryWrite(memoryWrite),
-
-    .CON_FF_in(CON_FF_in)
-);
-
 
 // Instantiate select_encode_logic module
 select_encode_logic sel_enc (
@@ -199,7 +141,7 @@ ALU alu_unit (
 register rZhigh (clr, clk, Zhighin, alu_result[63:32], regZhigh);
 register rZlow (clr, clk, Zlowin, alu_result[31:0], regZlow);
 
-Ram #(.MEM_FILE(MEM_FILE)) memory (
+Ram memory (
     .clk(clk),
     .read(memoryRead),
     .write(memoryWrite),
