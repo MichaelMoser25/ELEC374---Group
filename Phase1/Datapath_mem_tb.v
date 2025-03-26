@@ -666,7 +666,7 @@ module Datapath_mem_tb;
                     T4: begin
                         c_out <=1;
                         #5 z_in <= 1;
-                        #15 c_out <=1; z_in <= 0; alu_control <= 5'd0;
+                        #15 c_out <=0; z_in <= 0; alu_control <= 5'd0;
                     end
                     T5: begin
                         #5 zlow_out <= 1; MARin <= 1;
@@ -749,7 +749,7 @@ module Datapath_mem_tb;
                     T4: begin
                         c_out <=1;
                         #5 z_in <= 1;
-                        #15 c_out <=1; z_in <= 0; alu_control <= 5'd0;
+                        #15 c_out <=0; z_in <= 0; alu_control <= 5'd0;
                     end
                     T5: begin
                         #5 zlow_out <= 1; MARin <= 1;

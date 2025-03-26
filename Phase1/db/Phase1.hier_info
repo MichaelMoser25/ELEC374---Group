@@ -100,7 +100,11 @@ inport_data[31] => ~NO_FANOUT~
 
 
 |CPU|ControlUnit:control_unit
-clk => state~11.DATAIN
+clk => state~14.DATAIN
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
@@ -140,16 +144,11 @@ IR[23] => ~NO_FANOUT~
 IR[24] => ~NO_FANOUT~
 IR[25] => ~NO_FANOUT~
 IR[26] => ~NO_FANOUT~
-IR[27] => Equal0.IN9
-IR[27] => Equal1.IN9
-IR[28] => Equal0.IN8
-IR[28] => Equal1.IN8
-IR[29] => Equal0.IN7
-IR[29] => Equal1.IN7
-IR[30] => Equal0.IN6
-IR[30] => Equal1.IN6
-IR[31] => Equal0.IN5
-IR[31] => Equal1.IN5
+IR[27] => Decoder0.IN4
+IR[28] => Decoder0.IN3
+IR[29] => Decoder0.IN2
+IR[30] => Decoder0.IN1
+IR[31] => Decoder0.IN0
 CON_FF_result => ~NO_FANOUT~
 mdr_in <= <GND>
 mdr_out <= <GND>

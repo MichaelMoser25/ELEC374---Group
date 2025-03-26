@@ -24,7 +24,7 @@ module ControlUnit (
 	
 	reg [6:0] state;
 	parameter reset_state = 7'b1111111, T0 = 7'd0, T1 = 7'd1, T2 = 7'd2, ld_T3 = 7'd3, ld_T4 = 7'd4, ld_T5 = 7'd5, ld_T6 = 7'd6, ld_T7 = 7'd7,
-									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10;	
+									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10, st_T3 = 7'd11, st_T4 = 7'd12, st_T5 = 7'd13, st_T6 = 7'd14;	
 
 
 	    initial begin
@@ -50,6 +50,7 @@ module ControlUnit (
 						case (IR[31:27])
 							5'b00000: state = ld_T3; // load
 							5'b00001: state = ldi_T3; // Load immediate
+							5'b00010: state = st_T3;
 										
 								
 					
@@ -65,6 +66,12 @@ module ControlUnit (
 				ldi_T3: state = ldi_T4;
 				ldi_T4: state = ldi_T5;
 				ldi_T5: state = T0;
+				st_T3: state = st_T4;
+				st_T4: state = st_T5;
+				st_T5: state = st_T6;
+				st_T6: state = T0;
+
+
 			
 			endcase
 		end
@@ -98,7 +105,7 @@ module ControlUnit (
 				#5 MARin <= 0; ir_in <= 0;
 			end
 			ld_T3: begin
-				Grb <= 1; BAout <= 0; alu_control <= 5'd3;
+				Grb <= 1; BAout <= 1; alu_control <= 5'd3;
 				#5 y_in <= 1; Rout = 1;
 				#10 Grb <= 0;
 				#5 y_in <= 0; BAout <= 0; Rout = 0;	
@@ -122,7 +129,7 @@ module ControlUnit (
 				#15 mdr_out <= 0; Gra <= 0; Rin <= 0;
 			end
 			ldi_T3: begin
-				Grb <= 1; BAout <= 0; alu_control <= 5'd3;
+				Grb <= 1; BAout <= 1; alu_control <= 5'd3;
 				#5 y_in <= 1; Rout = 1;
 				#10 Grb <= 0;
 				#5 y_in <= 0; BAout <= 0; Rout = 0;
@@ -136,7 +143,27 @@ module ControlUnit (
 				#5 zlow_out <= 1; Rin <= 1; Gra <= 1;
 				#15 zlow_out <= 0; Rin <= 0; Gra <= 0;
 			end
-			endcase
+			st_T3: begin
+				Grb <= 1; BAout <= 1; alu_control <= 5'd3;
+				#5 y_in <= 1; Rout = 1;
+				#10 Grb <= 0;
+				#5 y_in <= 0; BAout <= 0; Rout = 0;
+			end
+			st_T4: begin
+				c_out <=1;
+				#5 z_in <= 1;
+				#15 c_out <=0; z_in <= 0; alu_control <= 5'd0;
+			end
+			st_T5: begin
+				#5 zlow_out <= 1; MARin <= 1;
+				#15 zlow_out <= 0; MARin <= 0;
+			end
+			st_T6: begin
+				#5 Rout <=1; Gra <= 1; mdr_in <= 1;
+				#5  memWrite <= 1;
+				#15  Rout <=0; Gra <= 0; memWrite <= 0; mdr_in <= 0;
+			end
+		endcase
 
 	
 	end
