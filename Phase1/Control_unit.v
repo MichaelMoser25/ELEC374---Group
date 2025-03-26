@@ -5,20 +5,22 @@ module ControlUnit (
     input wire CON_FF_result,  // Condition code from datapath
 
     // Control signal outputs to Datapath
-    output wire MDRin, MDRout, pc_increment,
+    output wire mdr_in, mdr_out, pc_increment,
 
     // Register selection control
-    output wire Gra, Grb, Grc, Rin, Rout, BAout, RYin,
+    output wire Gra, Grb, Grc, Rin, Rout, BAout, y_in,
 
-    output wire MARin, HIin, LOin, Zhighin, Zlowin, PCin, IRin, OutPort_write, Cin, read,
-    output wire HIout, LOout, Zhighout, Zlowout, PCout, IRout, InPort_read, Cout,
+    output wire MARin, hi_in, lo_in, Zhighin, Zlowin, pc_in, ir_in, OutPort_write, c_in, read,
+    output wire hi_out, lo_out, zhigh_out, zlow_out, pc_out, ir_out, InPort_read, c_out,
 
     output wire [4:0] alu_control,  // ALU control code
 
-    output wire memoryRead, memoryWrite,
+    output wire memRead, memWrite,
 
     output wire CON_FF_in
 );
-	
+	wire z_in;
+	assign Zhighin = z_in;
+	assign Zlowin = z_in;
 
 endmodule                                   

@@ -37,6 +37,52 @@ wire [15:0] R_out; // R0out to R15out
 //IO temp signals
 wire [31:0] inport_d, outport_q;
 
+ControlUnit control_unit (
+    .clk(clk),
+    .clr(clr),
+    .IR(IR),
+    .CON_FF_result(CON_FF_result),
+
+    .mdr_in(MDRin),
+    .mdr_out(MDRout),
+    .pc_increment(pc_increment),
+
+    .Gra(Gra),
+    .Grb(Grb),
+    .Grc(Grc),
+    .Rin(Rin),
+    .Rout(Rout),
+    .BAout(BAout),
+    .y_in(RYin),
+
+    .MARin(MARin),
+    .hi_in(HIin),
+    .lo_in(LOin),
+    .Zhighin(Zhighin),
+    .Zlowin(Zlowin),
+    .pc_in(PCin),
+    .ir_in(IRin),
+    .OutPort_write(OutPort_write),
+    .c_in(Cin),
+    .read(read),
+
+    .hi_out(HIout),
+    .lo_out(LOout),
+    .zhigh_out(Zhighout),
+    .zlow_out(Zlowout),
+    .pc_out(PCout),
+    .ir_out(IRout),
+    .InPort_read(InPort_read),
+    .c_out(Cout),
+
+    .alu_control(alu_control),
+
+    .memRead(memoryRead),
+    .memWrite(memoryWrite),
+
+    .CON_FF_in(CON_FF_in)
+);
+
 // Instantiate select_encode_logic module
 select_encode_logic sel_enc (
 	 .clk(clk),
