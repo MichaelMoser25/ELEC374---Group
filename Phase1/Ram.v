@@ -1,4 +1,4 @@
-module Ram #(parameter MEM_FILE = "memory.hex" )(
+module Ram #(parameter MEM_FILE = "testP3.hex" )(
 	input clk, read, write,
 	input [8:0] address,
 	input [31:0] data_in,

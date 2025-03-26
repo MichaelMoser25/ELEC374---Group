@@ -1,3 +1,4 @@
+`timescale 1ns/10ps
 module CPU (
 	input clk, clr, 
 	output wire [31:0] outport_data, busOut,
@@ -36,11 +37,45 @@ wire [15:0] R_out; // R0out to R15out
 
 //IO temp signals
 wire [31:0] inport_d, outport_q;
+wire [4:0] alu_control;
+wire CON_FF_result;
+wire MDRin;
+wire MDRout;
+wire pc_increment;
+wire Gra;
+wire Grb;
+wire Grc;
+wire Rin;
+wire Rout;
+wire BAout;
+wire RYin;
+wire MARin;
+wire HIin;
+wire LOin;
+wire Z_in;
+wire PCin;
+wire IRin;
+wire OutPort_write;
+wire Cin;
+wire read;
+wire HIout;
+wire LOout;
+wire Zhighout;
+wire Zlowout;
+wire PCout;
+wire IRout;
+wire InPort_read;
+wire Cout;
+wire memoryRead;
+wire memoryWrite;
+wire CON_FF_in;
+
+
 
 ControlUnit control_unit (
     .clk(clk),
     .clr(clr),
-    .IR(IR),
+    .IR(regIR),
     .CON_FF_result(CON_FF_result),
 
     .mdr_in(MDRin),
@@ -58,8 +93,7 @@ ControlUnit control_unit (
     .MARin(MARin),
     .hi_in(HIin),
     .lo_in(LOin),
-    .Zhighin(Zhighin),
-    .Zlowin(Zlowin),
+    .z_in(Z_in),
     .pc_in(PCin),
     .ir_in(IRin),
     .OutPort_write(OutPort_write),
@@ -184,8 +218,8 @@ ALU alu_unit (
     .clk(clk)
 );
 
-register rZhigh (clr, clk, Zhighin, alu_result[63:32], regZhigh);
-register rZlow (clr, clk, Zlowin, alu_result[31:0], regZlow);
+register rZhigh (clr, clk, Z_in, alu_result[63:32], regZhigh);
+register rZlow (clr, clk, Z_in, alu_result[31:0], regZlow);
 
 Ram memory (
     .clk(clk),
