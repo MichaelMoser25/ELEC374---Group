@@ -189,8 +189,7 @@ module ControlUnit (
 				#15 zlow_out <= 0; MARin <= 0;
 			end
 			st_T6: begin
-				#5 Rout <=1; Gra <= 1; mdr_in <= 1;
-				#5  memWrite <= 1;
+				#5 Rout <=1; Gra <= 1; mdr_in <= 1;memWrite <= 1;
 				#15  Rout <=0; Gra <= 0; memWrite <= 0; mdr_in <= 0;
 			end
 			div_T3: begin 
