@@ -32,9 +32,13 @@ module ControlUnit (
 									and_T3 = 7'd23, and_T4 = 7'd24, and_T5 = 7'd25,
 									or_T3 = 7'd26, or_T4 = 7'd27, or_T5 = 7'd28,
 									br_T3 = 7'd29, br_T4 = 7'd30, br_T5 = 7'd31, br_T6 = 7'd32,
-									
-									add_T3 = 7'd33, add_T4 = 7'd34, add_T5 = 7'd35, addi_T3 = 7'd36, addi_T4 = 7'd37, addi_T5 = 7'd38,
-									andi_T3 = 7'd39, andi_T4 = 7'd40, andi_T5 = 7'd41, ori_T3 = 7'd42, ori_T4 = 7'd43, ori_T5 = 7'd44, sub_T3 = 7'd45, sub_T4 = 7'd46, sub_T5 = 7'd47;
+									add_T3 = 7'd33, add_T4 = 7'd34, add_T5 = 7'd35, 
+									addi_T3 = 7'd36, addi_T4 = 7'd37, addi_T5 = 7'd38,
+									andi_T3 = 7'd39, andi_T4 = 7'd40, andi_T5 = 7'd41, 
+									ori_T3 = 7'd42, ori_T4 = 7'd43, ori_T5 = 7'd44, 
+									sub_T3 = 7'd45, sub_T4 = 7'd46, sub_T5 = 7'd47,
+									in_T3 = 7'd48,
+									out_T3 = 7'd49;
 									
 
 
@@ -73,6 +77,9 @@ module ControlUnit (
 							5'b01100: state = addi_T3;
 							5'b01101: state = andi_T3;
 							5'b01110: state = ori_T3;
+							5'b10110: state = in_T3; // in
+							5'b10111: state = out_T3; // out
+							
 
 
 
@@ -140,6 +147,10 @@ module ControlUnit (
 				br_T4: state = br_T5;
 				br_T5: state = br_T6;
 				br_T6: state = T0;
+				
+				in_T3: state = T0;
+				
+				out_T3: state = T0;
 			
 			endcase
 		end
@@ -378,8 +389,16 @@ module ControlUnit (
 		  sub_T5: begin 
 			 zlow_out <= 1; Rin <= 1; Gra <= 1;
 			 #15 zlow_out <= 0; Rin <= 0; Gra <= 0;
-
-			end 
+			end
+		  in_T3: begin
+			Gra <= 1; Rin <= 1; 
+			#5 InPort_read <= 1;
+         #15 Gra <= 0; Rin <= 0; InPort_read <= 0;
+		  end
+		  out_T3: begin
+			Gra <= 1; Rout <= 1; OutPort_write<= 1;
+         #15 Gra <= 0; Rout <= 0; OutPort_write <= 0;
+		  end
 
 	endcase
 
