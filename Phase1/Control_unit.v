@@ -33,8 +33,8 @@ module ControlUnit (
 									or_T3 = 7'd26, or_T4 = 7'd27, or_T5 = 7'd28,
 									br_T3 = 7'd29, br_T4 = 7'd30, br_T5 = 7'd31, br_T6 = 7'd32,
 									
-									addi_T3 = 7'd36, addi_T4 = 7'd37, addi_T5 = 7'd38,
-									andi_T3 = 7'd39, andi_T4 = 7'd40, andi_T5 = 7'd41, ori_T3 = 7'd42, ori_T4 = 7'd43, ori_T5 = 7'd44;
+									add_T3 = 7'd33, add_T4 = 7'd34, add_T5 = 7'd35, addi_T3 = 7'd36, addi_T4 = 7'd37, addi_T5 = 7'd38,
+									andi_T3 = 7'd39, andi_T4 = 7'd40, andi_T5 = 7'd41, ori_T3 = 7'd42, ori_T4 = 7'd43, ori_T5 = 7'd44, sub_T3 = 7'd45, sub_T4 = 7'd46, sub_T5 = 7'd47;
 									
 
 
@@ -62,15 +62,19 @@ module ControlUnit (
 							5'b00000: state = ld_T3; // load
 							5'b00001: state = ldi_T3; // Load immediate
 							5'b00010: state = st_T3;  // store
+							5'b00011: state = add_T3;
+							5'b00100: state = sub_T3;
+							5'b00101: state = and_T3; // and
+							5'b00110: state = or_T3; // or
 							5'b01111: state = div_T3; // div
 							5'b10001: state = neg_T3; // neg
 							5'b10010: state = not_T3; // not
-							5'b00101: state = and_T3; // and
-							5'b00110: state = or_T3; // or
 							5'b10011: state = br_T3; // branch
 							5'b01100: state = addi_T3;
 							5'b01101: state = andi_T3;
 							5'b01110: state = ori_T3;
+
+
 
 
 										
@@ -123,6 +127,14 @@ module ControlUnit (
 				ori_T3: state = ori_T4;
 				ori_T4: state = ori_T5;
 				ori_T5: state = T0;
+				
+				add_T3: state = add_T4;
+				add_T4: state = add_T5;
+				add_T5: state = T0;
+				
+				sub_T3: state = sub_T4;
+				sub_T4: state = sub_T5;
+				sub_T5: state = T0;
 
 
 			
@@ -327,6 +339,36 @@ module ControlUnit (
 				#5 zlow_out <= 1; Gra <= 1; Rin <=1;
 				#15 zlow_out <= 0; Gra <= 0; Rin <=0;
 			end
+		  add_T3: begin 
+			 Rout <= 1; Grb <= 1; y_in <= 1;
+			 #15 Rout <= 0; Grb <= 0; y_in <= 0;
+			end 
+
+	     add_T4: begin 
+			 Rout <= 1; Grc <= 1; z_in <= 1; alu_control <= 5'b00011;
+			 #15 Rout <= 0; Grc <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end 
+
+		  add_T5: begin 
+			 zlow_out <= 1; Rin <= 1; Gra <= 1;
+			 #15 zlow_out <= 0; Rin <= 0; Gra <= 0;
+
+			end 
+		  sub_T3: begin 
+			 Rout <= 1; Grb <= 1; y_in <= 1;
+			 #15 Rout <= 0; Grb <= 0; y_in <= 0;
+			end 
+
+	     sub_T4: begin 
+			 Rout <= 1; Grc <= 1; z_in <= 1; alu_control <= 5'b00100;
+			 #15 Rout <= 0; Grc <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end 
+
+		  sub_T5: begin 
+			 zlow_out <= 1; Rin <= 1; Gra <= 1;
+			 #15 zlow_out <= 0; Rin <= 0; Gra <= 0;
+
+			end 
 
 	endcase
 
