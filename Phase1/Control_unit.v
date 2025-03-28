@@ -27,7 +27,9 @@ module ControlUnit (
 									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10, st_T3 = 7'd11, st_T4 = 7'd12, st_T5 = 7'd13, st_T6 = 7'd14, 
 									div_T3 = 7'd15, div_T4 = 7'd16, div_T5 = 7'd17, div_T6 = 7'd18,
 									neg_T3 = 7'd19, neg_T4 = 7'd20,
-									not_T3 = 7'd21, not_T4 = 7'd22;
+									not_T3 = 7'd21, not_T4 = 7'd22,
+									and_T3 = 7'd23, and_T4 = 7'd24, and_T5 = 7'd25,
+									or_T3 = 7'd26, or_T4 = 7'd27, or_T5 = 7'd28;
 									
 
 
@@ -58,7 +60,8 @@ module ControlUnit (
 							5'b01111: state = div_T3; // div
 							5'b10001: state = neg_T3; // neg
 							5'b10010: state = not_T3; // not
-							
+							5'b00101: state = and_T3; // and
+							5'b00110: state = or_T3; // or
 										
 								
 					
@@ -86,6 +89,17 @@ module ControlUnit (
 				
 				neg_T3: state = neg_T4;
 				neg_T4: state = T0;
+				
+				not_T3: state = not_T4;
+				not_T4: state = T0;
+				
+				and_T3: state = and_T4;
+				and_T4: state = and_T5;
+				and_T5: state = T0;
+				
+				or_T3: state = or_T4;
+				or_T4: state = or_T5;
+				or_T5: state = T0;
 
 
 			
@@ -193,7 +207,7 @@ module ControlUnit (
          end
 			div_T6: begin 
 				zhigh_out <= 1; hi_in <= 1;
-				#15 zhigh_out <= 0; hi_in <= 0;`
+				#15 zhigh_out <= 0; hi_in <= 0;
          end
 			neg_T3: begin
 				Gra <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10001;
@@ -202,6 +216,30 @@ module ControlUnit (
 			neg_T4: begin
 				Grb <= 1; Rin <= 1; zlow_out <= 1;
 				#15 Grb <= 0; Rin <= 0; zlow_out <= 0;
+			end
+			and_T3: begin
+				Grb <= 1; Rout <= 1; y_in <= 1;
+				#15 Grb <= 0; Rout <= 0; y_in <= 0;
+			end
+			and_T4: begin
+				Grc <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b00101;
+				#15 Grc <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end
+			and_T5: begin
+				Gra <= 1; Rin <= 1; zlow_out <= 1;
+				#15 Gra <= 0; Rin <= 0; zlow_out <= 0;
+			end
+			or_T3: begin
+				Grb <= 1; Rout <= 1; y_in <= 1;
+				#15 Grb <= 0; Rout <= 0; y_in <= 0;
+			end
+			or_T4: begin
+				Grc <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b00110;
+				#15 Grc <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end
+			or_T5: begin
+				Gra <= 1; Rin <= 1; zlow_out <= 1;
+				#15 Gra <= 0; Rin <= 0; zlow_out <= 0;
 			end
 			
 		endcase

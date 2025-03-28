@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Phase1
-Fri Mar 28 12:19:50 2025
+Fri Mar 28 14:43:43 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 28 12:19:50 2025       ;
+; Analysis & Elaboration Status ; Successful - Fri Mar 28 14:43:43 2025       ;
 ; Quartus Prime Version         ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                 ; Phase1                                      ;
 ; Top-level Entity Name         ; CPU                                         ;
@@ -108,6 +108,12 @@ https://fpgasoftware.intel.com/eula.
 ; neg_T4         ; 0010100 ; Unsigned Binary                            ;
 ; not_T3         ; 0010101 ; Unsigned Binary                            ;
 ; not_T4         ; 0010110 ; Unsigned Binary                            ;
+; and_T3         ; 0010111 ; Unsigned Binary                            ;
+; and_T4         ; 0011000 ; Unsigned Binary                            ;
+; and_T5         ; 0011001 ; Unsigned Binary                            ;
+; or_T3          ; 0011010 ; Unsigned Binary                            ;
+; or_T4          ; 0011011 ; Unsigned Binary                            ;
+; or_T5          ; 0011100 ; Unsigned Binary                            ;
 +----------------+---------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -295,7 +301,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Fri Mar 28 12:19:41 2025
+    Info: Processing started: Fri Mar 28 14:43:33 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_io_tb.v
@@ -399,59 +405,60 @@ Warning (10230): Verilog HDL assignment warning at CPU.v(24): truncated value wi
 Warning (10034): Output port "outport_data" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 4
 Warning (10034): Output port "busOut" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 4
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:control_unit" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 118
-Info (10264): Verilog HDL Case Statement information at Control_unit.v(48): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 48
-Warning (10270): Verilog HDL Case Statement warning at Control_unit.v(104): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
-Info (10264): Verilog HDL Case Statement information at Control_unit.v(104): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "alu_control", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_increment", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "z_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memRead", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zlow_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "ir_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "y_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "c_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memWrite", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "lo_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zhigh_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "hi_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "hi_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "zhigh_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "lo_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "memWrite" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Rin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Gra" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "c_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Rout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "y_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "BAout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Grb" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "ir_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "mdr_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "mdr_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "read" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "zlow_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "memRead" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "z_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_increment" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "MARin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[0]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[1]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[2]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[3]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[4]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10270): Verilog HDL Case Statement warning at Control_unit.v(118): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 118
+Info (10264): Verilog HDL Case Statement information at Control_unit.v(118): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 118
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "pc_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "alu_control", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "pc_increment", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "z_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "memRead", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "zlow_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "pc_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "mdr_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "mdr_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "ir_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "y_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "c_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "memWrite", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "lo_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "zhigh_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "hi_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(117): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "Grc" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "hi_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "zhigh_out" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "lo_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "memWrite" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "Rin" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "Gra" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "c_out" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "Rout" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "y_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "BAout" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "Grb" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "ir_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "mdr_out" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "mdr_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "read" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "pc_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "zlow_out" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "memRead" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "z_in" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "pc_increment" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "MARin" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "alu_control[0]" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "alu_control[1]" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "alu_control[2]" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "alu_control[3]" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "alu_control[4]" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
+Info (10041): Inferred latch for "pc_out" at Control_unit.v(117) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 117
 Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:sel_enc" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 131
 Warning (10230): Verilog HDL assignment warning at select_encode.v(27): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 27
 Warning (10230): Verilog HDL assignment warning at select_encode.v(28): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 28
@@ -616,11 +623,11 @@ Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Phase1 -section_id Top was ignored
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Fri Mar 28 12:19:50 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 105 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Fri Mar 28 14:43:43 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +--------------------------------------------+
