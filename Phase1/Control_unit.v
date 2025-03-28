@@ -193,7 +193,7 @@ module ControlUnit (
          end
 			div_T6: begin 
 				zhigh_out <= 1; hi_in <= 1;
-				#15 zhigh_out <= 0; hi_in <= 0;`
+				#15 zhigh_out <= 0; hi_in <= 0;
          end
 			neg_T3: begin
 				Gra <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10001;

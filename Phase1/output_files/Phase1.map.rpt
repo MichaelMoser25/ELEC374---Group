@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Phase1
-Fri Mar 28 12:19:50 2025
+Fri Mar 28 13:54:20 2025
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 28 12:19:50 2025       ;
+; Analysis & Elaboration Status ; Successful - Fri Mar 28 13:54:20 2025       ;
 ; Quartus Prime Version         ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                 ; Phase1                                      ;
 ; Top-level Entity Name         ; CPU                                         ;
@@ -68,8 +68,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -295,301 +295,301 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-    Info: Processing started: Fri Mar 28 12:19:41 2025
+    Info: Processing started: Fri Mar 28 13:54:10 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_io_tb.v
-    Info (12023): Found entity 1: Datapath_io_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 7
+    Info (12023): Found entity 1: Datapath_io_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file select_encode.v
-    Info (12023): Found entity 1: select_encode_logic File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 2
-    Info (12023): Found entity 2: sign_extension File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 55
+    Info (12023): Found entity 1: select_encode_logic File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 2
+    Info (12023): Found entity 2: sign_extension File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Bus.v Line: 1
+    Info (12023): Found entity 1: Bus File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
-    Info (12023): Found entity 1: MemoryDataRegister File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/MDR.v Line: 1
+    Info (12023): Found entity 1: MemoryDataRegister File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/MDR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit.v
-    Info (12023): Found entity 1: CLA_4bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_4bit.v Line: 1
+    Info (12023): Found entity 1: CLA_4bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_4bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cla_32bit.v
-    Info (12023): Found entity 1: CLA_32bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 1
+    Info (12023): Found entity 1: CLA_32bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rca_4bit.v
-    Info (12023): Found entity 1: RCA_4bit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/RCA_4bit.v Line: 1
+    Info (12023): Found entity 1: RCA_4bit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/RCA_4bit.v Line: 1
 Info (12021): Found 5 design units, including 5 entities, in source file shift_rotate_operations.v
-    Info (12023): Found entity 1: shift_left File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 1
-    Info (12023): Found entity 2: shift_right File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 10
-    Info (12023): Found entity 3: arithmetic_shift_right File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 19
-    Info (12023): Found entity 4: rotate_left File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 28
-    Info (12023): Found entity 5: rotate_right File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 41
+    Info (12023): Found entity 1: shift_left File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 1
+    Info (12023): Found entity 2: shift_right File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 10
+    Info (12023): Found entity 3: arithmetic_shift_right File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 19
+    Info (12023): Found entity 4: rotate_left File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 28
+    Info (12023): Found entity 5: rotate_right File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/shift_rotate_operations.v Line: 41
 Info (12021): Found 4 design units, including 4 entities, in source file logic_operations.v
-    Info (12023): Found entity 1: logic_and File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/logic_operations.v Line: 1
-    Info (12023): Found entity 2: logic_or File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/logic_operations.v Line: 9
-    Info (12023): Found entity 3: logic_not File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/logic_operations.v Line: 17
-    Info (12023): Found entity 4: logic_negate File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/logic_operations.v Line: 25
+    Info (12023): Found entity 1: logic_and File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 1
+    Info (12023): Found entity 2: logic_or File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 9
+    Info (12023): Found entity 3: logic_not File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 17
+    Info (12023): Found entity 4: logic_negate File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/logic_operations.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file nrdiv.v
-    Info (12023): Found entity 1: NRdiv File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/NRdiv.v Line: 1
+    Info (12023): Found entity 1: NRdiv File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nrdiv_tb.v
-    Info (12023): Found entity 1: NRdiv_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/NRdiv_tb.v Line: 3
+    Info (12023): Found entity 1: NRdiv_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/NRdiv_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file boothmul.v
-    Info (12023): Found entity 1: BoothMul File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/BoothMul.v Line: 1
+    Info (12023): Found entity 1: BoothMul File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc_register.v
-    Info (12023): Found entity 1: pc_register File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/pc_register.v Line: 1
-Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux.v Line: 1
+    Info (12023): Found entity 1: pc_register File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/pc_register.v Line: 1
+Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux.v
-    Info (12023): Found entity 1: mux File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/mux.v Line: 1
+    Info (12023): Found entity 1: mux File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: Ram File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 1
-Warning (10274): Verilog HDL macro warning at Datapath_mem_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 3
+    Info (12023): Found entity 1: Ram File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 1
+Warning (10274): Verilog HDL macro warning at Datapath_mem_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_mem_tb.v
-    Info (12023): Found entity 1: Datapath_mem_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 13
+    Info (12023): Found entity 1: Datapath_mem_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file con_ff.v
-    Info (12023): Found entity 1: con_ff File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff.v Line: 1
+    Info (12023): Found entity 1: con_ff File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file input_output_ports.v
-    Info (12023): Found entity 1: outport File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 1
-    Info (12023): Found entity 2: inport File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 18
-Warning (10274): Verilog HDL macro warning at con_ff_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 3
+    Info (12023): Found entity 1: outport File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 1
+    Info (12023): Found entity 2: inport File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 18
+Warning (10274): Verilog HDL macro warning at con_ff_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file con_ff_tb.v
-    Info (12023): Found entity 1: con_ff_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 4
-Warning (10274): Verilog HDL macro warning at Datapath_immediate_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 3
+    Info (12023): Found entity 1: con_ff_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 4
+Warning (10274): Verilog HDL macro warning at Datapath_immediate_tb.v(3): overriding existing definition for macro "TEST_CASE", which was defined in "Datapath_io_tb.v", line 3 File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_immediate_tb.v
-    Info (12023): Found entity 1: Datapath_immediate_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 8
+    Info (12023): Found entity 1: Datapath_immediate_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
-    Info (12023): Found entity 1: ControlUnit File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 2
+    Info (12023): Found entity 1: ControlUnit File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
-    Info (12023): Found entity 1: CPU File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 2
+    Info (12023): Found entity 1: CPU File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file phase3_tb.v
-    Info (12023): Found entity 1: phase3_tb File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/phase3_tb.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(54): created implicit net for "IR" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at con_ff_tb.v(462): created implicit net for "inport_in" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 462
-Warning (10236): Verilog HDL Implicit Net warning at con_ff_tb.v(471): created implicit net for "inport_out" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 471
-Warning (10236): Verilog HDL Implicit Net warning at CPU.v(23): created implicit net for "dataHI" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at CPU.v(24): created implicit net for "dataLO" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 24
-Warning (10037): Verilog HDL or VHDL warning at Datapath_io_tb.v(75): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 75
-Warning (10037): Verilog HDL or VHDL warning at Datapath_io_tb.v(35): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 35
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(236): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 236
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(196): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 196
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(156): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 156
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(117): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 117
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(77): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 77
-Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(39): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 39
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(481): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 481
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(441): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 441
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(401): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 401
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(361): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 361
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(321): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 321
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(280): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 280
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(239): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 239
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(197): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 197
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(155): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 155
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(114): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 114
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(72): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 72
-Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(32): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 32
-Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(112): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 112
-Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(71): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 71
-Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(33): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 33
+    Info (12023): Found entity 1: phase3_tb File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/phase3_tb.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(54): created implicit net for "IR" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at con_ff_tb.v(462): created implicit net for "inport_in" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 462
+Warning (10236): Verilog HDL Implicit Net warning at con_ff_tb.v(471): created implicit net for "inport_out" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 471
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(23): created implicit net for "dataHI" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(24): created implicit net for "dataLO" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 24
+Warning (10037): Verilog HDL or VHDL warning at Datapath_io_tb.v(75): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 75
+Warning (10037): Verilog HDL or VHDL warning at Datapath_io_tb.v(35): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_io_tb.v Line: 35
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(236): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 236
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(196): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 196
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(156): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 156
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(117): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 117
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(77): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 77
+Warning (10037): Verilog HDL or VHDL warning at Datapath_mem_tb.v(39): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_mem_tb.v Line: 39
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(481): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 481
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(441): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 441
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(401): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 401
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(361): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 361
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(321): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 321
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(280): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 280
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(239): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 239
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(197): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 197
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(155): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 155
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(114): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 114
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(72): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 72
+Warning (10037): Verilog HDL or VHDL warning at con_ff_tb.v(32): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff_tb.v Line: 32
+Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(112): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 112
+Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(71): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 71
+Warning (10037): Verilog HDL or VHDL warning at Datapath_immediate_tb.v(33): conditional expression evaluates to a constant File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Datapath_immediate_tb.v Line: 33
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at CPU.v(23): object "dataHI" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 23
-Warning (10036): Verilog HDL or VHDL warning at CPU.v(24): object "dataLO" assigned a value but never read File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 24
-Warning (10230): Verilog HDL assignment warning at CPU.v(23): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 23
-Warning (10230): Verilog HDL assignment warning at CPU.v(24): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 24
-Warning (10034): Output port "outport_data" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 4
-Warning (10034): Output port "busOut" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 4
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:control_unit" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 118
-Info (10264): Verilog HDL Case Statement information at Control_unit.v(48): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 48
-Warning (10270): Verilog HDL Case Statement warning at Control_unit.v(104): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
-Info (10264): Verilog HDL Case Statement information at Control_unit.v(104): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "alu_control", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_increment", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "z_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memRead", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zlow_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "ir_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "y_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "c_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memWrite", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "lo_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zhigh_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "hi_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "hi_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "zhigh_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "lo_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "memWrite" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Rin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Gra" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "c_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Rout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "y_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "BAout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "Grb" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "ir_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "mdr_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "mdr_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "read" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "zlow_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "memRead" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "z_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_increment" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "MARin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[0]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[1]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[2]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[3]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "alu_control[4]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (10041): Inferred latch for "pc_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
-Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:sel_enc" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 131
-Warning (10230): Verilog HDL assignment warning at select_encode.v(27): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 27
-Warning (10230): Verilog HDL assignment warning at select_encode.v(28): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 28
-Warning (10230): Verilog HDL assignment warning at select_encode.v(36): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 36
-Warning (10230): Verilog HDL assignment warning at select_encode.v(37): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 37
-Warning (10230): Verilog HDL assignment warning at select_encode.v(45): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 45
-Warning (10230): Verilog HDL assignment warning at select_encode.v(46): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 46
-Warning (10272): Verilog HDL Case Statement warning at select_encode.v(31): case item expression covers a value already covered by a previous case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 31
-Warning (10270): Verilog HDL Case Statement warning at select_encode.v(21): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/select_encode.v Line: 21
-Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:sign_ext" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 136
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 156
-Warning (10763): Verilog HDL warning at Bus.v(19): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Bus.v Line: 19
-Warning (10270): Verilog HDL Case Statement warning at Bus.v(19): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Bus.v Line: 19
-Info (12128): Elaborating entity "register" for hierarchy "register:r0" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 158
-Info (12128): Elaborating entity "mux" for hierarchy "mux:rZeroMux" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 164
-Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC_reg" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 191
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 219
-Info (12128): Elaborating entity "CLA_32bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 115
-Info (12128): Elaborating entity "CLA_4bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 19
-Info (12128): Elaborating entity "logic_and" for hierarchy "ALU:alu_unit|logic_and:l_and" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 128
-Info (12128): Elaborating entity "logic_or" for hierarchy "ALU:alu_unit|logic_or:l_or" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 134
-Info (12128): Elaborating entity "shift_left" for hierarchy "ALU:alu_unit|shift_left:s_left" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 140
-Info (12128): Elaborating entity "shift_right" for hierarchy "ALU:alu_unit|shift_right:s_right" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 146
-Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "ALU:alu_unit|arithmetic_shift_right:s_right_a" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 152
-Info (12128): Elaborating entity "rotate_left" for hierarchy "ALU:alu_unit|rotate_left:r_left" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 158
-Info (12128): Elaborating entity "rotate_right" for hierarchy "ALU:alu_unit|rotate_right:r_right" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 164
-Info (12128): Elaborating entity "NRdiv" for hierarchy "ALU:alu_unit|NRdiv:divider" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 172
-Info (12128): Elaborating entity "BoothMul" for hierarchy "ALU:alu_unit|BoothMul:multiplier" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 178
-Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(25): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/BoothMul.v Line: 25
-Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(26): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/BoothMul.v Line: 26
-Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/BoothMul.v Line: 28
-Info (12128): Elaborating entity "logic_not" for hierarchy "ALU:alu_unit|logic_not:l_not" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 183
-Info (12128): Elaborating entity "logic_negate" for hierarchy "ALU:alu_unit|logic_negate:l_neg" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/ALU.v Line: 188
-Info (12128): Elaborating entity "Ram" for hierarchy "Ram:memory" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 231
-Warning (10240): Verilog HDL Always Construct warning at Ram.v(17): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[0]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[1]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[2]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[3]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[4]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[5]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[6]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[7]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[8]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[9]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[10]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[11]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[12]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[13]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[14]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[15]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[16]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[17]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[18]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[19]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[20]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[21]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[22]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[23]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[24]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[25]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[26]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[27]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[28]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[29]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[30]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (10041): Inferred latch for "data_out[31]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/Ram.v Line: 17
-Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:Con_FF" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 240
-Warning (10240): Verilog HDL Always Construct warning at con_ff.v(26): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff.v Line: 26
-Info (10041): Inferred latch for "result" at con_ff.v(26) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/con_ff.v Line: 26
-Info (12128): Elaborating entity "inport" for hierarchy "inport:InPort" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 248
-Warning (10240): Verilog HDL Always Construct warning at input_output_ports.v(29): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[0]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[1]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[2]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[3]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[4]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[5]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[6]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[7]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[8]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[9]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[10]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[11]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[12]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[13]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[14]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[15]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[16]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[17]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[18]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[19]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[20]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[21]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[22]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[23]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[24]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[25]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[26]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[27]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[28]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[29]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[30]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (10041): Inferred latch for "Q[31]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
-Info (12128): Elaborating entity "outport" for hierarchy "outport:OutPort" File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/CPU.v Line: 256
-Warning (10240): Verilog HDL Always Construct warning at input_output_ports.v(8): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[0]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[1]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[2]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[3]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[4]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[5]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[6]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[7]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[8]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[9]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[10]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[11]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[12]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[13]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[14]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[15]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[16]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[17]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[18]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[19]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[20]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[21]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[22]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[23]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[24]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[25]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[26]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[27]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[28]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[29]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[30]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
-Info (10041): Inferred latch for "Q[31]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(23): object "dataHI" assigned a value but never read File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 23
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(24): object "dataLO" assigned a value but never read File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 24
+Warning (10230): Verilog HDL assignment warning at CPU.v(23): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 23
+Warning (10230): Verilog HDL assignment warning at CPU.v(24): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 24
+Warning (10034): Output port "outport_data" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 4
+Warning (10034): Output port "busOut" at CPU.v(4) has no driver File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 4
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:control_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 118
+Info (10264): Verilog HDL Case Statement information at Control_unit.v(48): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 48
+Warning (10270): Verilog HDL Case Statement warning at Control_unit.v(104): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
+Info (10264): Verilog HDL Case Statement information at Control_unit.v(104): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 104
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "alu_control", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_increment", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "z_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memRead", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zlow_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "pc_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "mdr_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "ir_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "y_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "c_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "memWrite", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "lo_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "zhigh_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Warning (10240): Verilog HDL Always Construct warning at Control_unit.v(103): inferring latch(es) for variable "hi_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "hi_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "zhigh_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "lo_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "memWrite" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "Rin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "Gra" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "c_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "Rout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "y_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "BAout" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "Grb" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "ir_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "mdr_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "mdr_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "read" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "pc_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "zlow_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "memRead" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "z_in" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "pc_increment" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "MARin" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "alu_control[0]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "alu_control[1]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "alu_control[2]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "alu_control[3]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "alu_control[4]" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (10041): Inferred latch for "pc_out" at Control_unit.v(103) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Control_unit.v Line: 103
+Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:sel_enc" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 131
+Warning (10230): Verilog HDL assignment warning at select_encode.v(27): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 27
+Warning (10230): Verilog HDL assignment warning at select_encode.v(28): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 28
+Warning (10230): Verilog HDL assignment warning at select_encode.v(36): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 36
+Warning (10230): Verilog HDL assignment warning at select_encode.v(37): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 37
+Warning (10230): Verilog HDL assignment warning at select_encode.v(45): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 45
+Warning (10230): Verilog HDL assignment warning at select_encode.v(46): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 46
+Warning (10272): Verilog HDL Case Statement warning at select_encode.v(31): case item expression covers a value already covered by a previous case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 31
+Warning (10270): Verilog HDL Case Statement warning at select_encode.v(21): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/select_encode.v Line: 21
+Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:sign_ext" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 136
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 156
+Warning (10763): Verilog HDL warning at Bus.v(19): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
+Warning (10270): Verilog HDL Case Statement warning at Bus.v(19): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Bus.v Line: 19
+Info (12128): Elaborating entity "register" for hierarchy "register:r0" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 158
+Info (12128): Elaborating entity "mux" for hierarchy "mux:rZeroMux" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 164
+Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC_reg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 191
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 219
+Info (12128): Elaborating entity "CLA_32bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 115
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "ALU:alu_unit|CLA_32bit:adder|CLA_4bit:adder1" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CLA_32bit.v Line: 19
+Info (12128): Elaborating entity "logic_and" for hierarchy "ALU:alu_unit|logic_and:l_and" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 128
+Info (12128): Elaborating entity "logic_or" for hierarchy "ALU:alu_unit|logic_or:l_or" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 134
+Info (12128): Elaborating entity "shift_left" for hierarchy "ALU:alu_unit|shift_left:s_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 140
+Info (12128): Elaborating entity "shift_right" for hierarchy "ALU:alu_unit|shift_right:s_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 146
+Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "ALU:alu_unit|arithmetic_shift_right:s_right_a" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 152
+Info (12128): Elaborating entity "rotate_left" for hierarchy "ALU:alu_unit|rotate_left:r_left" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 158
+Info (12128): Elaborating entity "rotate_right" for hierarchy "ALU:alu_unit|rotate_right:r_right" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 164
+Info (12128): Elaborating entity "NRdiv" for hierarchy "ALU:alu_unit|NRdiv:divider" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 172
+Info (12128): Elaborating entity "BoothMul" for hierarchy "ALU:alu_unit|BoothMul:multiplier" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 178
+Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(25): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 25
+Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(26): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 26
+Warning (10199): Verilog HDL Case Statement warning at BoothMul.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/BoothMul.v Line: 28
+Info (12128): Elaborating entity "logic_not" for hierarchy "ALU:alu_unit|logic_not:l_not" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 183
+Info (12128): Elaborating entity "logic_negate" for hierarchy "ALU:alu_unit|logic_negate:l_neg" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/ALU.v Line: 188
+Info (12128): Elaborating entity "Ram" for hierarchy "Ram:memory" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 231
+Warning (10240): Verilog HDL Always Construct warning at Ram.v(17): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[0]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[1]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[2]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[3]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[4]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[5]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[6]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[7]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[8]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[9]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[10]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[11]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[12]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[13]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[14]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[15]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[16]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[17]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[18]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[19]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[20]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[21]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[22]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[23]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[24]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[25]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[26]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[27]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[28]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[29]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[30]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (10041): Inferred latch for "data_out[31]" at Ram.v(17) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/Ram.v Line: 17
+Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:Con_FF" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 240
+Warning (10240): Verilog HDL Always Construct warning at con_ff.v(26): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v Line: 26
+Info (10041): Inferred latch for "result" at con_ff.v(26) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/con_ff.v Line: 26
+Info (12128): Elaborating entity "inport" for hierarchy "inport:InPort" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 248
+Warning (10240): Verilog HDL Always Construct warning at input_output_ports.v(29): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[0]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[1]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[2]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[3]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[4]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[5]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[6]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[7]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[8]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[9]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[10]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[11]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[12]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[13]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[14]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[15]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[16]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[17]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[18]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[19]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[20]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[21]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[22]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[23]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[24]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[25]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[26]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[27]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[28]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[29]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[30]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (10041): Inferred latch for "Q[31]" at input_output_ports.v(29) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 29
+Info (12128): Elaborating entity "outport" for hierarchy "outport:OutPort" File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/CPU.v Line: 256
+Warning (10240): Verilog HDL Always Construct warning at input_output_ports.v(8): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[0]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[1]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[2]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[3]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[4]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[5]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[6]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[7]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[8]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[9]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[10]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[11]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[12]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[13]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[14]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[15]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[16]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[17]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[18]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[19]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[20]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[21]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[22]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[23]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[24]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[25]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[26]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[27]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[28]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[29]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[30]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
+Info (10041): Inferred latch for "Q[31]" at input_output_ports.v(8) File: C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/input_output_ports.v Line: 8
 Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Phase1 -section_id Top was ignored
@@ -615,17 +615,17 @@ Warning (20013): Ignored 24 assignments for entity "Phase1" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Phase1 -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Phase1 -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Fri Mar 28 12:19:50 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 105 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Fri Mar 28 13:54:20 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/18.1/elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg.
+The suppressed messages can be found in C:/intelFPGA_lite/18.1/Elec374/ELEC374---Group/Phase1/output_files/Phase1.map.smsg.
 
 
