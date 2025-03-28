@@ -1,7 +1,7 @@
 // Created with SRC-ASM (https://github.com/davlaf/elec374-assembler)
-  @0 0900000A // ldi R2, 10        
+  @0 0B80000A // ldi R7, 10        
   @1 09800005 // ldi R3, 5         
-  @2 79180000 // div R2, R3        
+  @2 321B8000 // or R4, R3, R7     
   @3 00000000
   @4 00000000
   @5 00000000
