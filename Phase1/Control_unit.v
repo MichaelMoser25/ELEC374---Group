@@ -136,7 +136,10 @@ module ControlUnit (
 				sub_T4: state = sub_T5;
 				sub_T5: state = T0;
 
-
+				br_T3: state = br_T4;
+				br_T4: state = br_T5;
+				br_T5: state = br_T6;
+				br_T6: state = T0;
 			
 			endcase
 		end
@@ -244,12 +247,20 @@ module ControlUnit (
 				#15 zhigh_out <= 0; hi_in <= 0;
          end
 			neg_T3: begin
-				Gra <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10001;
-				#15 Gra <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+				Grb <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10001;
+				#15 Grb <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
 			end
 			neg_T4: begin
-				Grb <= 1; Rin <= 1; zlow_out <= 1;
-				#15 Grb <= 0; Rin <= 0; zlow_out <= 0;
+				Gra <= 1; Rin <= 1; zlow_out <= 1;
+				#15 Gra <= 0; Rin <= 0; zlow_out <= 0;
+			end
+			not_T3: begin
+				Grb <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10010;
+				#15 Grb <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end
+			not_T4: begin
+				Gra <= 1; Rin <= 1; zlow_out <= 1;
+				#15 Gra <= 0; Rin <= 0; zlow_out <= 0;
 			end
 			and_T3: begin
 				Grb <= 1; Rout <= 1; y_in <= 1;
