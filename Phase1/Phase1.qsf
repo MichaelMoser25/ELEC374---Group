@@ -180,6 +180,7 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id phase3_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id phase3_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase3_tb -section_id phase3_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE phase3_tb.v -section_id phase3_tb
+set_global_assignment -name HEX_FILE temp.hex
 set_global_assignment -name HEX_FILE testP3.hex
 set_global_assignment -name VERILOG_FILE Datapath_io_tb.v
 set_global_assignment -name HEX_FILE ori.hex

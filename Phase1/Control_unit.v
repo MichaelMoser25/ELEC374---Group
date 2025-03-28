@@ -24,7 +24,11 @@ module ControlUnit (
 	
 	reg [6:0] state;
 	parameter reset_state = 7'b1111111, T0 = 7'd0, T1 = 7'd1, T2 = 7'd2, ld_T3 = 7'd3, ld_T4 = 7'd4, ld_T5 = 7'd5, ld_T6 = 7'd6, ld_T7 = 7'd7,
-									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10, st_T3 = 7'd11, st_T4 = 7'd12, st_T5 = 7'd13, st_T6 = 7'd14;	
+									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10, st_T3 = 7'd11, st_T4 = 7'd12, st_T5 = 7'd13, st_T6 = 7'd14, 
+									div_T3 = 7'd15, div_T4 = 7'd16, div_T5 = 7'd17, div_T6 = 7'd18,
+									neg_T3 = 7'd19, neg_T4 = 7'd20,
+									not_T3 = 7'd21, not_T4 = 7'd22;
+									
 
 
 	    initial begin
@@ -50,7 +54,11 @@ module ControlUnit (
 						case (IR[31:27])
 							5'b00000: state = ld_T3; // load
 							5'b00001: state = ldi_T3; // Load immediate
-							5'b00010: state = st_T3;
+							5'b00010: state = st_T3;  // store
+							5'b01111: state = div_T3; // div
+							5'b10001: state = neg_T3; // neg
+							5'b10010: state = not_T3; // not
+							
 										
 								
 					
@@ -70,6 +78,14 @@ module ControlUnit (
 				st_T4: state = st_T5;
 				st_T5: state = st_T6;
 				st_T6: state = T0;
+				
+				div_T3: state = div_T4;
+				div_T4: state = div_T5;
+				div_T5: state = div_T6;
+				div_T6: state = T0;
+				
+				neg_T3: state = neg_T4;
+				neg_T4: state = T0;
 
 
 			
@@ -163,6 +179,31 @@ module ControlUnit (
 				#5  memWrite <= 1;
 				#15  Rout <=0; Gra <= 0; memWrite <= 0; mdr_in <= 0;
 			end
+			div_T3: begin 
+				Gra <= 1; Rout <= 1; y_in <= 1;
+				#15 Gra <= 0; Rout <= 0; y_in <= 0;
+            end
+			div_T4: begin 
+				Grb <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b01111;
+				#15 Grb <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+         end
+			div_T5: begin 
+				zlow_out <= 1; lo_in <= 1;	
+				#15 zlow_out <= 0; lo_in <= 0;
+         end
+			div_T6: begin 
+				zhigh_out <= 1; hi_in <= 1;
+				#15 zhigh_out <= 0; hi_in <= 0;`
+         end
+			neg_T3: begin
+				Gra <= 1; Rout <= 1; z_in <= 1; alu_control <= 5'b10001;
+				#15 Gra <= 0; Rout <= 0; z_in <= 0; alu_control <= 5'b00000;
+			end
+			neg_T4: begin
+				Grb <= 1; Rin <= 1; zlow_out <= 1;
+				#15 Grb <= 0; Rin <= 0; zlow_out <= 0;
+			end
+			
 		endcase
 
 	

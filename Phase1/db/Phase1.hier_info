@@ -100,7 +100,14 @@ inport_data[31] => ~NO_FANOUT~
 
 
 |CPU|ControlUnit:control_unit
-clk => state~14.DATAIN
+clk => state~18.DATAIN
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
+clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
 clr => state.OUTPUTSELECT
