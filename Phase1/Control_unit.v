@@ -3,7 +3,7 @@ module ControlUnit (
     input wire clk,
     input wire clr,  // Reset signal
     input wire [31:0] IR,  // Instruction Register (could be output from datapath IR)
-    input wire CON_FF_result,  // Condition code from datapath
+    input wire CON_FF_result,  // branch condition met? 1 or 0
 
     // Control signal outputs to Datapath
     output reg mdr_in, mdr_out, pc_increment,
@@ -22,6 +22,7 @@ module ControlUnit (
 );
 
 	
+	
 	reg [6:0] state;
 	parameter reset_state = 7'b1111111, T0 = 7'd0, T1 = 7'd1, T2 = 7'd2, ld_T3 = 7'd3, ld_T4 = 7'd4, ld_T5 = 7'd5, ld_T6 = 7'd6, ld_T7 = 7'd7,
 									ldi_T3 = 7'd8, ldi_T4 = 7'd9, ldi_T5 = 7'd10, st_T3 = 7'd11, st_T4 = 7'd12, st_T5 = 7'd13, st_T6 = 7'd14, 
@@ -29,7 +30,9 @@ module ControlUnit (
 									neg_T3 = 7'd19, neg_T4 = 7'd20,
 									not_T3 = 7'd21, not_T4 = 7'd22,
 									and_T3 = 7'd23, and_T4 = 7'd24, and_T5 = 7'd25,
-									or_T3 = 7'd26, or_T4 = 7'd27, or_T5 = 7'd28;
+									or_T3 = 7'd26, or_T4 = 7'd27, or_T5 = 7'd28,
+									br_T3 = 7'd29, br_T4 = 7'd30, br_T5 = 7'd31, br_T6 = 7'd32;
+									
 									
 
 
@@ -62,6 +65,7 @@ module ControlUnit (
 							5'b10010: state = not_T3; // not
 							5'b00101: state = and_T3; // and
 							5'b00110: state = or_T3; // or
+							5'b10011: state = br_T3; // branch
 										
 								
 					
@@ -240,6 +244,23 @@ module ControlUnit (
 				Gra <= 1; Rin <= 1; zlow_out <= 1;
 				#15 Gra <= 0; Rin <= 0; zlow_out <= 0;
 			end
+			br_T3: begin
+				Gra <= 1; Rout <= 1; CON_FF_in <= 1;
+				#10 Gra <= 0; Rout <= 0; CON_FF_in <= 0;
+		   end
+		   br_T4: begin
+				pc_out <= 1; y_in <= 1;
+				#10 pc_out <= 0; y_in <= 0;
+		   end
+		   br_T5: begin
+				c_out <= 1; alu_control <= 5'b00011;
+				z_in <= 1;
+				#15 c_out <= 0; z_in <= 0;
+			end
+		   br_T6: begin
+				zlow_out <= 1; pc_in <= (CON_FF_result == 1) ? 1 : 0; // evaluate CON FF result and PC if necessary
+				#15 zlow_out <= 0; pc_in <= 0;
+		   end
 			
 		endcase
 

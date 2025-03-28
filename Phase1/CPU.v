@@ -38,7 +38,6 @@ wire [15:0] R_out; // R0out to R15out
 //IO temp signals
 wire [31:0] inport_d, outport_q;
 wire [4:0] alu_control;
-wire CON_FF_result;
 wire MDRin;
 wire MDRout;
 wire pc_increment;
@@ -69,6 +68,7 @@ wire Cout;
 wire memoryRead;
 wire memoryWrite;
 wire CON_FF_in;
+wire CON_FF_result;
 
 
 
@@ -76,7 +76,6 @@ ControlUnit control_unit (
     .clk(clk),
     .clr(clr),
     .IR(regIR),
-    .CON_FF_result(CON_FF_result),
 
     .mdr_in(MDRin),
     .mdr_out(MDRout),
@@ -114,7 +113,8 @@ ControlUnit control_unit (
     .memRead(memoryRead),
     .memWrite(memoryWrite),
 
-    .CON_FF_in(CON_FF_in)
+    .CON_FF_in(CON_FF_in),
+	 .CON_FF_result(CON_FF_result)
 );
 
 // Instantiate select_encode_logic module
